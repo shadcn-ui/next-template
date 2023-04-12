@@ -13,7 +13,7 @@ A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 
 ## Tailwind CSS Features
 
-- Class merging with `taiwind-merge`
+- Class merging with `tailwind-merge`
 - Animation with `tailwindcss-animate`
 - Conditional classes with `clsx`
 - Variants with `class-variance-authority`
