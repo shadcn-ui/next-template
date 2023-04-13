@@ -1,4 +1,5 @@
-import * as React from "react"
+'use client'
+
 import { useTheme } from "next-themes"
 
 import { Icons } from "@/components/icons"

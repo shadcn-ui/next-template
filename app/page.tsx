@@ -1,22 +1,36 @@
-import Head from "next/head"
-import Link from "next/link"
+import { Metadata } from "next";
+import Link from "next/link";
 
-import { siteConfig } from "@/config/site"
-import { Layout } from "@/components/layout"
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
 
-export default function IndexPage() {
-  return (
-    <Layout>
-      <Head>
-        <title>Next.js</title>
-        <meta
-          name="description"
-          content="Next.js template for building apps with Radix UI and Tailwind CSS"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export const metadata: Metadata = {
+   title: 'Next.js',
+   description: 'Next.js template for building apps with Radix UI and Tailwind CSS',
+   keywords: ['Next.js', 'React', 'Tailwind CSS', 'Radix UI'],
+   authors: [{ name: 'shadcn', url: 'https://shadcn.com/' }],
+   themeColor: [
+      { media: '(prefers-color-scheme: light)', color: 'white' },
+      { media: '(prefers-color-scheme: dark)', color: '#0f172a' },
+   ],
+   openGraph: {
+      title: 'Next.js',
+      description: 'Next.js template for building apps with Radix UI and Tailwind CSS',
+      url: 'https://template.shadcn.com/',
+      siteName: 'Next.js',
+      locale: 'en_US',
+      type: 'website',
+   },
+   twitter: {
+      card: 'summary_large_image',
+      title: 'Next.js template',
+      description: 'Next.js template for building apps with Radix UI and Tailwind CSS',
+      creator: '@shadcn',
+   },
+}
+
+export default function Page() {
+   return (
       <section className="container grid items-center gap-6 pt-6 pb-8 md:py-10">
         <div className="flex max-w-[980px] flex-col items-start gap-2">
           <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
@@ -47,6 +61,5 @@ export default function IndexPage() {
           </Link>
         </div>
       </section>
-    </Layout>
-  )
-}
+   )
+ }
