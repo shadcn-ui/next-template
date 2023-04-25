@@ -32,7 +32,7 @@ const index = () => {
             Bring Product Managers and Developers into alignment. No guesswork
             required.
           </h3>
-          <p className="px-6 py-3 mt-8 text-white rounded-full bg-mainBlue">
+          <p className="px-6 py-3 mt-8 text-center text-white rounded-full bg-mainBlue">
             Start your risk free trial - no credit card required
           </p>
         </div>
