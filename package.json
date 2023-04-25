@@ -14,18 +14,20 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
-    "class-variance-authority": "^0.4.0",
-    "clsx": "^1.2.1",
-    "cmdk": "^0.2.0",
+    "@tanstack/react-query": "^4.29.3",
+    "@tanstack/react-query-devtools": "^4.29.3",
+    "axios": "^1.3.5",
+    "framer-motion": "^10.12.4",
     "lucide-react": "0.105.0-alpha.4",
     "next": "^13.3.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
-    "react-day-picker": "^8.6.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.31.3",
+    "tailwind-children": "^0.5.0",
     "tailwind-merge": "^1.12.0",
-    "tailwindcss-animate": "^1.0.5"
+    "tailwindcss-animate": "^1.0.5",
+    "tailwindcss-safe-area": "^0.2.2"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",

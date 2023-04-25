@@ -1,60 +1,64 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  plugins: [
+    require("tailwindcss-safe-area"),
+    require("tailwind-children"),
+    require("tailwindcss-animate"),
+  ],
+  variants: {
+    display: [
+      "children",
+      "default",
+      "children-first",
+      "children-last",
+      "children-odd",
+      "children-even",
+      "children-not-first",
+      "children-not-last",
+      "children-hover",
+      "hover",
+      "children-focus",
+      "focus",
+      "children-focus-within",
+      "focus-within",
+      "children-active",
+      "active",
+      "children-visited",
+      "visited",
+      "children-disabled",
+      "disabled",
+      "responsive",
+    ],
+  },
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1530px",
       },
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        transparent: "transparent",
+        black: "000000",
+        white: "#FFFFFF",
+        mainBlue: "#6042ec",
+        secondaryBlue: "#40c0e0",
+        red: "#ff4060",
+        orange: "#ff8040",
+        yellow: "#ffc040",
+        purple: "#9b51e0",
+        
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
-        sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        none: "0",
+        sm: ".125rem",
+        DEFAULT: "0.1875rem",
+        md: ".25rem",
+        lg: ".5rem",
+        full: "9999px",
       },
       keyframes: {
         "accordion-down": {
@@ -72,5 +76,4 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
 }
