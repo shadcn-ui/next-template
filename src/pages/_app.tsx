@@ -3,6 +3,7 @@ import Meta from "@/components/meta"
 import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 import { useRouter } from "next/router"
+import { ChakraProvider } from "@chakra-ui/react"
 import {
   QueryCache,
   QueryClient,
@@ -28,8 +29,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         defaultTheme="system"
         disableTransitionOnChange
       >
-        <Meta />
-        <Component {...pageProps} />
+        <ChakraProvider>
+          <Meta />
+          <Component {...pageProps} />
+        </ChakraProvider>
         <ReactQueryDevtools />
       </ThemeProvider>
     </QueryClientProvider>

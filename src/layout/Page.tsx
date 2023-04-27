@@ -18,7 +18,7 @@ const Page: React.FC<pageComponentProps> = ({
     <div className="bg-[#232e3a]">
       {title ? (
         <Head>
-          <title>Project | {title}</title>
+          <title>{title} | Userback</title>
         </Head>
       ) : null}
       <MobileNav isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} />

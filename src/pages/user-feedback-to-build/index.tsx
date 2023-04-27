@@ -1,11 +1,11 @@
 import Page from "@/layout/Page"
 import { NextPage } from "next"
-import Home from '@/container/Home'
+import UserBuild from '@/container/UserBuild'
 
 const Index: NextPage = () => {
   return (
-    <Page title="Home" className="bg-[#F8F8F8]">
-      <Home />
+    <Page title="User Feedback to Build" className="bg-[#F8F8F8]">
+      <UserBuild />
     </Page>
   )
 }

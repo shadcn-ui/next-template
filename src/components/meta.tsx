@@ -29,8 +29,8 @@ const Meta = () => (
 			name='viewport'
 			content='width=device-width, initial-scale=1, user-scalable=0, viewport-fit=cover'
 		/> */}
-    <link rel="apple-touch-icon" href="/images/icon-512.png" />
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="apple-touch-icon" href="/images/favIcon-apple180x180.webp" />
+    <link rel="icon" type="image/png" href="/images/favicon-192x192.webp" />
     <link rel="manifest" href="/manifest.json" />
   </Head>
 )

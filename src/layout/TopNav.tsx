@@ -10,7 +10,7 @@ interface Props {
 
 const TopNav: React.FC<Props> = ({ setIsMenuOpen }) => {
   return (
-    <div className="bg-white">
+    <div className="bg-[#F8F8F8]">
       <div className="container flex items-center justify-between h-16 py-3 ">
         <div>
           <img

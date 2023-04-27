@@ -1,5 +1,8 @@
 /* eslint-disable tailwindcss/classnames-order */
+
 import React from "react"
+
+import ButtonComponent from "@/components/ButtonComponent"
 
 const HomeLanding = () => {
   return (
@@ -27,14 +30,17 @@ const HomeLanding = () => {
         </p>
         <div className="flex items-center justify-center gap-8 md:justify-start">
           <div className="flex flex-col items-center self-center gap-3 mt-10 md:self-start">
-            <p className="px-6 py-3 rounded-full bg-cyan-500">
-              Start collecting risk free
-            </p>
+            <ButtonComponent
+              text="Start collecting risk free"
+              style={{ backgroundColor: "rgb(6,182,212)" }}
+            />
             <p className="text-sm">No credit card required</p>
           </div>
-          <p className="hidden px-6 py-3 mt-[10px] border-2 rounded-full md:block">
-            Start collecting risk free
-          </p>
+          <ButtonComponent
+            text="Try the hands-on demo"
+            style={{ backgroundColor: "transparent" }}
+            className="hidden mt-[10px] border-2 md:block"
+          />
         </div>
       </div>
     </div>
