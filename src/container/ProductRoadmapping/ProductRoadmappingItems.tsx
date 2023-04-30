@@ -25,6 +25,21 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
+      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
+        <div className="flex flex-col items-start gap-4">
+          <h1 className="text-[32px] font-medium">
+            Do User Acceptance Testing like never before
+          </h1>
+          <p>
+            Recreate issues throughout the UAT process with complete clarity of
+            the contributing factors. If you’re relying on email and written
+            communication, maybe it’s time to discover how Userback’s annotated
+            screenshots, video recordings and full session replays (complete
+            with automatically captured browser and system information) can get
+            you to the heart of issues faster.
+          </p>
+        </div>
+      </RowComponent>
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
         <ListItem
           icon="/icons/back-and-forth.webp"
@@ -45,21 +60,6 @@ const FixItems = () => {
           hasLine
         />
       </div>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
-          <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
-          </p>
-        </div>
-      </RowComponent>
       <RowComponent imgUrl="/images/UAT_2.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
@@ -73,6 +73,16 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
+      <div className="flex flex-col items-center max-w-[700px] mx-auto my-16">
+        <h1 className="text-[32px] font-medium text-center tracking-tighter">
+          Bring Product Managers and Devs into alignment. No guesswork required
+        </h1>
+        <ButtonComponent
+          text="Starting validating ideas for your roadmap- Free for 14 days"
+          className="mt-8"
+          style={{ fontSize: 15 }}
+        />
+      </div>
     </div>
   )
 }

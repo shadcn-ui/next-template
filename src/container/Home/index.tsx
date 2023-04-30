@@ -1,11 +1,12 @@
 /* eslint-disable tailwindcss/classnames-order */
 
 import ButtonComponent from "@/components/ButtonComponent"
+import ContactUs from "@/components/ContactUs"
 import Header from "@/components/Header"
 import QuoteComponent from "@/components/QuoteComponent"
 import ShowCase from "@/components/ShowCase"
+import TitleAndButton from "@/components/TitleAndButton"
 
-import ContactUs from "@/components/ContactUs"
 import HomeItems from "./HomeItems"
 import HomeLanding from "./HomeLanding"
 
@@ -24,20 +25,16 @@ const index = () => {
             embed the feedback tools anywhere I work across multiple CMS
             systems. The reliability has been great as well."
         />
-        <div className="flex flex-col items-center mb-10">
-          <Header
-            text=" Bring Product Managers and Developers into alignment. No guesswork
+        <TitleAndButton
+          buttonText="Start your risk free trial - no credit card required"
+          className="mb-10"
+          text="Bring Product Managers and Developers into alignment. No guesswork
             required."
-            desktopSize={30}
-            mobileSize={22}
-            maxWidth={600}
-          />
-          <ButtonComponent
-            text="Start your risk free trial - no credit card required"
-            className="mt-8"
-          />
-        </div>
-       <ContactUs />
+          desktopSize={35}
+          maxWidth={24}
+          mobileSize={670}
+        />
+        <ContactUs />
       </div>
     </>
   )

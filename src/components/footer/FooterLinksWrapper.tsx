@@ -1,8 +1,14 @@
+import Link from "next/link"
 import React from "react"
+
+interface Links {
+  title : string
+  link : string
+}
 
 interface Props {
   header: string
-  links: string[]
+  links: Links[]
 }
 
 const FooterLinksWrapper: React.FC<Props> = ({ header, links }) => {
@@ -10,7 +16,7 @@ const FooterLinksWrapper: React.FC<Props> = ({ header, links }) => {
     <div className="flex flex-col gap-2">
       <h3 className="font-bold">{header}</h3>
       {links.map((link) => {
-        return <p>{link}</p>
+        return <Link href={link.link} key={link.title} >{link.title}</Link>
       })}
     </div>
   )

@@ -1,13 +1,23 @@
 /* eslint-disable tailwindcss/classnames-order */
-import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
-import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
+      <div className="flex flex-col items-center max-w-[900px] mx-auto gap-8">
+        <h1 className="text-[32px] font-medium text-center">
+          Cut out the guesswork
+        </h1>
+        <p className="text-center">
+          If your product is going to meet the needs of users, you have to know
+          what they want. The best people to tell you this are your users
+          themselves! Engage your customer base to get understand what features
+          they actually want so you can drive adoption, improve satisfaction and
+          reduce churn.
+        </p>
+      </div>
       <RowComponent imgUrl="/images/feedback-for-building_1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
@@ -25,26 +35,6 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
-        <ListItem
-          icon="/icons/back-and-forth.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-      </div>
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">

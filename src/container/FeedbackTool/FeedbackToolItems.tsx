@@ -60,19 +60,6 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
-          <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
-          </p>
-        </div>
-      </RowComponent>
     </div>
   )
 }

@@ -1,11 +1,9 @@
 /* eslint-disable tailwindcss/classnames-order */
-import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
-import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
 
-const FixItems = () => {
+const EnhanceItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/feedback-for-building_1.webp">
@@ -18,33 +16,8 @@ const FixItems = () => {
             website and collect the details and insights your teams need to
             action.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
         </div>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
-        <ListItem
-          icon="/icons/back-and-forth.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-      </div>
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
@@ -71,10 +44,15 @@ const FixItems = () => {
             supporting attachments, videos, screenshots and annotated insights —
             all easily searched and instantly actionable.
           </p>
+          <ButtonComponent
+            text="Discover product roadmapping with Userback"
+            style={{ fontSize: 12 }}
+            className="px-3 py-1"
+          />
         </div>
       </RowComponent>
     </div>
   )
 }
 
-export default FixItems
+export default EnhanceItems

@@ -4,6 +4,7 @@ import React from "react"
 import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
+import TitleAndButton from "@/components/TitleAndButton"
 
 const FixItems = () => {
   return (
@@ -25,26 +26,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
-        <ListItem
-          icon="/icons/back-and-forth.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
-      </div>
+
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
@@ -60,6 +42,34 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
+
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+          <ListItem
+            icon="/icons/back-and-forth.webp"
+            text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
+            title="Capture the details you need"
+            hasLine={false}
+          />
+          <ListItem
+            icon="/icons/Central.webp"
+            text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
+            title="Centralize it all in one place"
+            hasLine={false}
+          />
+          <ListItem
+            icon="/icons/Central.webp"
+            text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
+            title="Centralize it all in one place"
+            hasLine={false}
+          />
+        </div>
+        <ButtonComponent
+          text="Learn more about Session Replay"
+          style={{ fontSize: 12, paddingInline: 12, paddingBlock: 8 }}
+        />
+      </div>
+
       <RowComponent imgUrl="/images/UAT_2.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
@@ -73,6 +83,14 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
+      <TitleAndButton
+        buttonText="Start your free trial - No credit card required"
+        text="Get to the heart of feedback fast - No guesswork or extra communications required"
+        className="mb-32"
+        desktopSize={35}
+        maxWidth={910}
+        mobileSize={26}
+      />
     </div>
   )
 }

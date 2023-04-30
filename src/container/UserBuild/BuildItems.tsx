@@ -1,7 +1,7 @@
 import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
-import ListItem2 from "@/components/ListItem2"
+import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
 
 const BuildItems = () => {
@@ -25,15 +25,17 @@ const BuildItems = () => {
         </div>
       </RowComponent>
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
-        <ListItem2
+        <ListItem
           icon="/icons/back-and-forth.webp"
           text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
           title="Capture the details you need"
+          hasLine
         />
-        <ListItem2
+        <ListItem
           icon="/icons/Central.webp"
           text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
           title="Centralize it all in one place"
+          hasLine
         />
       </div>
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">

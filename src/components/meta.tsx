@@ -31,7 +31,6 @@ const Meta = () => (
 		/> */}
     <link rel="apple-touch-icon" href="/images/favIcon-apple180x180.webp" />
     <link rel="icon" type="image/png" href="/images/favicon-192x192.webp" />
-    <link rel="manifest" href="/manifest.json" />
   </Head>
 )
 

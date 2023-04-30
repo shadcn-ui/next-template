@@ -24,51 +24,67 @@ const Footer = () => {
             <FooterLinksWrapper
               header="USE CASE"
               links={[
-                "Bug Tracking",
-                "Website Feedback",
-                "Design Feedback",
-                "User Acceptance Testing",
-                "Software Feature Requests",
-                "Product Roadmapping",
+                { title: "Bug Tracking", link: "/bug-tracking" },
+                { title: "Website Feedback", link: "/website-feedback-tool" },
+                { title: "Design Feedback", link: "/design-feedback-tool" },
+                {
+                  title: "User Acceptance Testing",
+                  link: "/user-acceptance-testing",
+                },
+                {
+                  title: "Software Feature Requests",
+                  link: "/software-feature-requests",
+                },
+                { title: "Product Roadmapping", link: "/product-roadmapping" },
               ]}
             />
             <FooterLinksWrapper
               header="USERBACK FOR"
-              links={["Product Managers", "Developers", "Web Agencies"]}
+              links={[
+                { title: "Product Managers", link: "/userback-for-product-managers" },
+                { title: "Developers", link: "/userback-for-developers" },
+                { link: "/userback-for-web-agencies", title: "Web Agencies" },
+              ]}
             />
             <FooterLinksWrapper
               header="I’M LOOKING TO"
               links={[
-                "Fix Apps & Websites",
-                "Build Apps & Websites",
-                "Enhance Apps & Websites",
+                { link: "/user-feedback-to-fix", title: "Fix Apps & Websites" },
+                {
+                  link: "/user-feedback-to-build",
+                  title: "Build Apps & Websites",
+                },
+                {
+                  link: "/user-feedback-to-enhance",
+                  title: "Enhance Apps & Websites",
+                },
               ]}
             />
           </FooterCol>
           <FooterCol>
             <FooterLinksWrapper
               header="DEMO CENTER"
-              links={["Hands-on Demo"]}
+              links={[{ link: "", title: "Hands-on Demo" }]}
             />
             <FooterLinksWrapper
               header="PLATFORM"
               links={[
-                "In App Feedback",
-                "Screen Annotation",
-                "Video Recording",
-                "Session Replay",
-                "User Insights",
-                "Feedback Portal",
-                "Integrations",
+                { link: "", title: "In App Feedback" },
+                { link: "", title: "Screen Annotation" },
+                { link: "", title: "Video Recording" },
+                { link: "", title: "Session Replay" },
+                { link: "", title: "User Insights" },
+                { link: "", title: "Feedback Portal" },
+                { link: "", title: "Integrations" },
               ]}
             />
             <FooterLinksWrapper
               header="FEEDBACK LIFECYCLE"
               links={[
-                "Capture & Collect",
-                "Assess & Prioritize",
-                "Assign & Action",
-                "Follow up & Close",
+                { link: "", title: "Capture & Collect" },
+                { link: "", title: "Assess & Prioritize" },
+                { link: "", title: "Assign & Action" },
+                { link: "", title: "Follow up & Close" },
               ]}
             />
           </FooterCol>
@@ -76,34 +92,37 @@ const Footer = () => {
             <FooterLinksWrapper
               header="RESOURCES"
               links={[
-                "Blog",
-                "Integrations",
-                "Documentation",
-                "Support Articles",
-                "API Reference",
-                "Browser Extension",
+                { link: "", title: "Blog" },
+                { link: "", title: "Integrations" },
+                { link: "", title: "Documentation" },
+                { link: "", title: "Support Articles" },
+                { link: "", title: "API Reference" },
+                { link: "", title: "Browser Extension" },
               ]}
             />
-            <FooterLinksWrapper header="USERVERSITY" links={["Content Hub"]} />
+            <FooterLinksWrapper
+              header="USERVERSITY"
+              links={[{ link: "", title: "Content Hub" }]}
+            />
           </FooterCol>
           <FooterCol>
             <FooterLinksWrapper
               header="COMPANY"
               links={[
-                "About Us",
-                "Roadmap",
-                "Terms and Conditions",
-                "Privacy Policy",
-                "Security Overview",
-                "GDPR Commitment",
+                { link: "", title: "About Us" },
+                { link: "", title: "Roadmap" },
+                { link: "", title: "Terms and Conditions" },
+                { link: "", title: "Privacy Policy" },
+                { link: "", title: "Security Overview" },
+                { link: "", title: "GDPR Commitment" },
               ]}
             />
             <FooterLinksWrapper
               header="COMPARE"
               links={[
-                "Userback vs Marker.io",
-                "Userback vs Usersnap",
-                "Userback vs Bugherd",
+                { link: "", title: "Userback vs Marker.io" },
+                { link: "", title: "Userback vs Usersnap" },
+                { link: "", title: "Userback vs Bugherd" },
               ]}
             />
           </FooterCol>

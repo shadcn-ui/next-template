@@ -38,12 +38,6 @@ const FixItems = () => {
           title="Centralize it all in one place"
           hasLine
         />
-        <ListItem
-          icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
-          hasLine
-        />
       </div>
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
         <div className="flex flex-col items-start gap-4">

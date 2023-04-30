@@ -8,6 +8,7 @@ const HomeLanding = () => {
   return (
     <div
       style={{ background: "linear-gradient(45deg,#6042ec 0%,#ff4060 100%)" }}
+      className="mt-8"
     >
       <div className="container flex flex-col text-white lg:pl-[15%] py-[100px] px-[10%] lg:pr-0">
         <div>
