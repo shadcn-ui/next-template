@@ -6,7 +6,7 @@ import RowComponent from "@/components/RowComponent"
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
+      <RowComponent imgUrl="/images/UAT_1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Capture bug reports in-app
@@ -23,7 +23,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/UAT_2 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place

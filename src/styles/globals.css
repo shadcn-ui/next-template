@@ -2,3 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-underline-animation-blue {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation-blue::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #6042ec;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-blue:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-underline-animation-red {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation-red::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4060;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-red:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-underline-animation-yellow {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation-yellow::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffc040;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-yellow:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .hover-underline-animation-orange {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .hover-underline-animation-orange::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff8040;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation-orange:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}

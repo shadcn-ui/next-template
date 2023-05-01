@@ -1,8 +1,6 @@
 /* eslint-disable tailwindcss/classnames-order */
 
-import ButtonComponent from "@/components/ButtonComponent"
 import ContactUs from "@/components/ContactUs"
-import Header from "@/components/Header"
 import QuoteComponent from "@/components/QuoteComponent"
 import ShowCase from "@/components/ShowCase"
 import TitleAndButton from "@/components/TitleAndButton"
@@ -31,8 +29,8 @@ const index = () => {
           text="Bring Product Managers and Developers into alignment. No guesswork
             required."
           desktopSize={35}
-          maxWidth={24}
-          mobileSize={670}
+          maxWidth={670}
+          mobileSize={24}
         />
         <ContactUs />
       </div>

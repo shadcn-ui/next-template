@@ -8,7 +8,7 @@ import RowComponent from "@/components/RowComponent"
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
+      <RowComponent imgUrl="/images/roadmap_1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Capture bug reports in-app
@@ -25,7 +25,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
+      <RowComponent imgUrl="/images/roadmap_2.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Do User Acceptance Testing like never before
@@ -42,25 +42,25 @@ const FixItems = () => {
       </RowComponent>
       <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
         <ListItem
-          icon="/icons/back-and-forth.webp"
+          icon="/icons/connected-icons.webp"
           text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
           title="Capture the details you need"
-          hasLine
+          hasLine={false}
         />
         <ListItem
-          icon="/icons/Central.webp"
+          icon="/icons/build-icon.webp"
           text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
           title="Centralize it all in one place"
-          hasLine
+          hasLine={false}
         />
         <ListItem
-          icon="/icons/Central.webp"
+          icon="/icons/growth-icon.webp"
           text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
           title="Centralize it all in one place"
-          hasLine
+          hasLine={false}
         />
       </div>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/roadmap_3.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place

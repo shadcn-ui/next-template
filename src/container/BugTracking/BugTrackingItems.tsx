@@ -38,7 +38,7 @@ const FixItems = () => {
           automatically captured in the background.
         </p>
       </div>
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
+      <RowComponent imgUrl="/images/Bug-Tracking_1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Capture bug reports in-app
@@ -55,7 +55,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
+      <RowComponent imgUrl="/images/Bug-Tracking_2.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Do User Acceptance Testing like never before
@@ -76,26 +76,26 @@ const FixItems = () => {
         </h1>
         <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
           <ListItem
-            icon="/icons/back-and-forth.webp"
+            icon="/icons/Github-integration.webp"
             text="Automatically send visual bug reports to your GitHub repository."
             title="Capture the details you need"
             hasLine={false}
           />
           <ListItem
-            icon="/icons/Central.webp"
+            icon="/icons/Gitlab-integration.webp"
             text="Automatically send visual bug reports to your GitHub repository."
             title="Centralize it all in one place"
             hasLine={false}
           />
           <ListItem
-            icon="/icons/Central.webp"
+            icon="/icons/Jira-integration.webp"
             text="Automatically send visual bug reports to your GitHub repository."
             title="Centralize it all in one place"
             hasLine={false}
           />
         </div>
       </div>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/Bug-Tracking_3.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place

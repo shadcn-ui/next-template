@@ -18,7 +18,7 @@ const FixItems = () => {
           reduce churn.
         </p>
       </div>
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
+      <RowComponent imgUrl="/images/software-feature-request_1.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Capture bug reports in-app
@@ -35,7 +35,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
+      <RowComponent imgUrl="/images/software-feature-request_2.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Do User Acceptance Testing like never before
@@ -50,7 +50,7 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/Bug-Tracking_3 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place

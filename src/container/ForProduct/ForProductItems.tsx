@@ -8,7 +8,7 @@ import RowComponent from "@/components/RowComponent"
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
+      <RowComponent imgUrl="/images/user-feedback-for-product-managers_1 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Capture bug reports in-app
@@ -25,7 +25,7 @@ const FixItems = () => {
           />
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
+      <RowComponent imgUrl="/images/roadmap_3 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Do User Acceptance Testing like never before
@@ -41,7 +41,7 @@ const FixItems = () => {
         </div>
       </RowComponent>
       <p>card</p>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/user-feedback-for-product-managers_2a.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place
@@ -54,7 +54,7 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/user-feedback-for-product-managers_2a.webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place
@@ -67,7 +67,7 @@ const FixItems = () => {
           </p>
         </div>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
+      <RowComponent imgUrl="/images/software-feature-request_1 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">
             Manage user feedback in one place
