@@ -1,5 +1,6 @@
 import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
+import QuoteSlider from "@/components/QuoteSlider"
 
 import FeatureReqItems from "./FeatureReqItems"
 
@@ -13,7 +14,7 @@ const index = () => {
         text="Know what users need so you can build the features that add true value."
       />
       <FeatureReqItems />
-      <p>slider</p>
+      <QuoteSlider />
       <ContactUs />
     </div>
   )
