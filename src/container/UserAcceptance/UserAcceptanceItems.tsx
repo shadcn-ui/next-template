@@ -1,40 +1,27 @@
 /* eslint-disable tailwindcss/classnames-order */
 
-import ButtonComponent from "@/components/ButtonComponent"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/UAT_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+        <TextCol header="Validate, communicate and resolve">
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Userback works perfectly on local hosts, so you can easily collect
+            feedback before code goes live. Testers can give highly contextual
+            feedback directly from your website or inside your web app with
+            video and annotated screenshots.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/UAT_2 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+      <TextCol header="Keep everyone on the same page">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+          Save time and manage bug reports and UAT in the same place. Organize all your user feedback with tags, categories and instant notifications so you can action UAT insights fast – all with the clarity provided with visual feedback tools to give your developers the information they need (where they need it) to resolve issues faster.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
     </div>
   )

@@ -15,7 +15,7 @@ const ContactUs = () => {
         getting news and info.
       </p>
       <form className="flex flex-col self-stretch">
-        <label htmlFor="mail" className="text-sm">
+        <label htmlFor="mail" className="mb-1 text-sm">
           Email<span className="text-red">*</span>
         </label>
         <input

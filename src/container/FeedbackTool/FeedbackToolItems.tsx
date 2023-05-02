@@ -1,50 +1,52 @@
 /* eslint-disable tailwindcss/classnames-order */
-import React from "react"
 
-import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
+import ListItemWrapper from "@/components/ListItemWrapper"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/Website-Feedback_1-1 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+        <TextCol
+          header="Increase clarity with video"
+          items={[
+            "No more email back-and-forth",
+            "Get full context with supporting audio",
+            "Complete with user information",
+          ]}
+          button="Learn more about Screen Annotations"
+        >
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Take the guesswork out of reviewing and interpreting user feedback
+            and keep your developers focused on what counts! Streamline and
+            simplify the feedback process and empower your users to tell you
+            exactly what they want with video recording, supported by full
+            audio.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+      <ListItemWrapper>
         <ListItem
           icon="/icons/website-feedback-tool_1.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
+          text="Instantly collect actionable feedback from your website."
+          title="Get real-time feedback"
           hasLine={false}
         />
         <ListItem
           icon="/icons/website-feedback-tool_2.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
+          text="Give every piece of feedback context with on-screen annotations."
+          title="Add context"
           hasLine={false}
         />
         <ListItem
           icon="/icons/website-feedback-tool_3.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
+          text="Respond to feedback and resolve issues fast."
+          title="Accelerate development"
           hasLine={false}
         />
-      </div>
+      </ListItemWrapper>
       <RowComponent imgUrl="/images/UAT_1 (1).webp">
         <div className="flex flex-col items-start gap-4">
           <h1 className="text-[32px] font-medium">

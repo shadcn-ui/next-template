@@ -7,7 +7,7 @@ const index = () => {
   return (
     <div className="container">
       <PagesHeader
-        buttonText="Start your free trial and start fixing faster"
+        buttonText="Start using Userback free - No credit card required"
         h1="Website Feedback Tool"
         h2="Get visual feedback on-the-fly from any website"
         text="Allow your users to submit real-time bug reports, feature requests and general comments directly from your website with screenshots, notes, videos and even voice recordings."

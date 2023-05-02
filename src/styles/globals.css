@@ -7,9 +7,9 @@
     display: inline-block;
     position: relative;
   }
-  
+
   .hover-underline-animation::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -20,7 +20,7 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .hover-underline-animation:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -29,9 +29,9 @@
     display: inline-block;
     position: relative;
   }
-  
+
   .hover-underline-animation-blue::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -42,7 +42,7 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .hover-underline-animation-blue:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -51,9 +51,9 @@
     display: inline-block;
     position: relative;
   }
-  
+
   .hover-underline-animation-red::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -64,7 +64,7 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .hover-underline-animation-red:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -73,9 +73,9 @@
     display: inline-block;
     position: relative;
   }
-  
+
   .hover-underline-animation-yellow::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -86,7 +86,7 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .hover-underline-animation-yellow:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -95,9 +95,9 @@
     display: inline-block;
     position: relative;
   }
-  
+
   .hover-underline-animation-orange::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     transform: scaleX(0);
@@ -108,9 +108,33 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .hover-underline-animation-orange:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+}
+
+.swiper-wrapper {
+  @apply !h-[450px];
+}
+
+.swiper {
+  @apply !h-[550px];
+}
+
+.swiper-slide .quote-wrapper {
+  @apply flex items-start gap-4 p-20 pl-5 text-gray-400 transition-all bg-transparent rounded-xl;
+  animation-delay: 50ms;
+}
+
+.swiper-slide-active .quote-wrapper {
+  @apply !text-white !bg-mainBlue;
+}
+.swiper-slide > * {
+  @apply !opacity-75;
+}
+
+.swiper-slide-active > * {
+  @apply !opacity-100;
 }

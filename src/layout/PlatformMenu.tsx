@@ -41,25 +41,25 @@ const PlatformMenu: React.FC<{ setMenu: (value: boolean) => void }> = ({
             {
               link: "",
               title: "Capture & Collect",
-              color: "mainBlue",
+              color: "#6042ec",
               iconUrl: "/icons/Collect-icon.webp",
             },
             {
               link: "",
               title: "Assess & Prioritize",
-              color: "red",
+              color: "#ff4060",
               iconUrl: "/icons/Assess-icon.webp",
             },
             {
               link: "",
               title: "Assign & Action",
-              color: "orange",
+              color: "#ff8040",
               iconUrl: "/icons/Assign-icon.webp",
             },
             {
               link: "",
               title: "Follow up & Close",
-              color: "yellow",
+              color: "#ffc040",
               iconUrl: "/icons/Close-icon.webp",
             },
           ]}

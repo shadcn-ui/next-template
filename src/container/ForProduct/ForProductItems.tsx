@@ -1,8 +1,6 @@
 /* eslint-disable tailwindcss/classnames-order */
-import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
-import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
 
 const FixItems = () => {

@@ -2,6 +2,7 @@ import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
 
 import BugTrackingItems from "./BugTrackingItems"
+import QuoteSlider from "@/components/QuoteSlider"
 
 const index = () => {
   return (
@@ -13,7 +14,7 @@ const index = () => {
         text="StreaLet people report bugs in-app and give developers the session, system and user details they need to get things fixed faster."
       />
       <BugTrackingItems />
-      <p>slider</p>
+      <QuoteSlider />
       <ContactUs />
     </div>
   )

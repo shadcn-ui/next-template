@@ -2,6 +2,7 @@ import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
 import QuoteComponent from "@/components/QuoteComponent"
 import UserAcceptanceItems from "./UserAcceptanceItems"
+import VideosTabs from "@/components/VideosTabs"
 
 const index = () => {
   return (
@@ -12,7 +13,7 @@ const index = () => {
         h2="Nail your product flow like a pro with visual user feedback"
         text="ive your team the information and insights they need to launch a better product faster."
       />
-      <p>Video Tabs</p>
+      <VideosTabs type={1} />
       <UserAcceptanceItems />
       <QuoteComponent
         job="Assistant Engineering Manager"

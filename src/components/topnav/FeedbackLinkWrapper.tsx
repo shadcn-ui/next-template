@@ -16,16 +16,16 @@ interface Props {
 
 const setColor =(color : string)=>{
   switch (color) {
-    case "mainBlue":
+    case "#6042ec":
       return "hover-underline-animation-blue"
       break;
-    case "red":
+    case "#ff4060":
       return "hover-underline-animation-red"
       break;
-    case "yellow":
+    case "#ffc040":
       return "hover-underline-animation-yellow"
       break;
-    case "orange":
+    case "#ff8040":
       return "hover-underline-animation-orange"
       break;
   
@@ -44,7 +44,8 @@ const FeedbackLinkWrapper: React.FC<Props> = ({ header, links }) => {
           <Link
             href={link.link}
             key={link.title}
-            className={`flex gap-2 items-center  text-${link.color}`}
+            className={`flex gap-2 items-center`}
+            style={{color : link.color}}
           >
             <img
               src={link.iconUrl}
