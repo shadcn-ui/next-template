@@ -16,7 +16,7 @@ const QuoteComponent: React.FC<Props> = ({ job, name, text }) => {
       <p className="max-w-[990px] text-center text-xl font-medium text-gray-800">{text}</p>
       <div className="flex flex-col items-center">
         <p>{name}</p>
-        <p className="text-gray-500">{job}</p>
+        <p className="text-gray-500 text-[14px]">{job}</p>
       </div>
     </div>
   )

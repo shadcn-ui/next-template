@@ -2,6 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/Inter-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/Inter-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/fonts/Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s;
+}
+
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+*[data-focus] {
+  box-shadow: none !important;
+}
+
+html {
+  font-family: "Inter" !important;
+  /* direction: rtl; */
+}
+
 @layer components {
   .hover-underline-animation {
     display: inline-block;

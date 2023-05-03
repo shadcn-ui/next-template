@@ -1,6 +1,7 @@
 import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
 import QuoteComponent from "@/components/QuoteComponent"
+
 import FeedbackToolItems from "./FeedbackToolItems"
 
 const index = () => {
@@ -14,9 +15,9 @@ const index = () => {
       />
       <FeedbackToolItems />
       <QuoteComponent
-        job="Assistant Engineering Manager"
-        name="Naveen D."
-        text={`I love the software and the major selling point for us was that it natively integrated with Teamwork ( This is our project management tool which we use for 50+ employees ) The support is always amazing and had always had a positive reply. I had one requirement and they were able to implement it within a day which shows that they hear their customers.`}
+        job="Lead Developer"
+        name="Gustavo M."
+        text="We love how Userback helps our team to be on top of their game regarding client feedback and team communication. We love how easy it is to use and the range of integrations it has available."
       />
       <ContactUs />
     </div>

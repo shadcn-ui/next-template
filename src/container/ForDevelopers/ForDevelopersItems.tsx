@@ -4,84 +4,76 @@ import React from "react"
 import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 import TitleAndButton from "@/components/TitleAndButton"
+import ListItemWrapper from "@/components/ListItemWrapper"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+      <RowComponent imgUrl="/images/developer-feedback_1.webp">
+        <TextCol header="Deep browser and system insights">
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Get high-context video and annotated screenshots for feedback, not
+            just confusing emails. Take it to the next level and enrich user
+            feedback submissions with browser, system and existing customer
+            information from your current toolsets, so you know exactly who and
+            what’s happening.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
 
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+      <RowComponent imgUrl="/images/feedback-for-developers_3.webp">
+        <TextCol
+          header="Delivered to your (virtual) door"
+          button="Learn about Userback integrations"
+        >
           <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
+            Get approved feedback delivered directly into your existing
+            workflows for simplicity and wasting time searching. Move feedback
+            from Userback direct to your favorite tools for action – be it Jira,
+            GitLab, GitHub or another choice and have total freedom to work your
+            way.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
 
       <div className="flex flex-col items-center gap-4">
-        <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+        <ListItemWrapper>
           <ListItem
-            icon="/icons/back-and-forth.webp"
-            text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-            title="Capture the details you need"
+            icon="/icons/Bug-Fixes-1.webp"
+            text="Make ambiguity around bugs and issues a thing of the past with deep insight with every submission. Fix less and build more."
+            title="Fix bugs faster"
             hasLine={false}
           />
           <ListItem
-            icon="/icons/Central.webp"
-            text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-            title="Centralize it all in one place"
+            icon="/icons/session-replay.webp"
+            text="See the full experience leading to errors directly with video and get the guesswork out of developer expectations."
+            title="See it all with Session Replay"
             hasLine={false}
           />
           <ListItem
-            icon="/icons/Central.webp"
-            text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-            title="Centralize it all in one place"
+            icon="/icons/build-software-features.webp"
+            text="Spend less time building features that never get adopted and focus on building high-value features that users actually want."
+            title="Build what counts"
             hasLine={false}
           />
-        </div>
+        </ListItemWrapper>
         <ButtonComponent
           text="Learn more about Session Replay"
           style={{ fontSize: 12, paddingInline: 12, paddingBlock: 8 }}
         />
       </div>
 
-      <RowComponent imgUrl="/images/UAT_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+      <RowComponent imgUrl="/images/Capture-Feedback.webp">
+        <TextCol header="Eliminate inconsistent feedback">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Inconsistency is the enemy of quick bug fixes. Create regular,
+            consistent feedback and eliminate the noise so you can skip that
+            email, phone call or meeting. Fix fast, so you can focus more on
+            building.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <TitleAndButton
         buttonText="Start your free trial - No credit card required"

@@ -1,6 +1,7 @@
 import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
 import QuoteComponent from "@/components/QuoteComponent"
+
 import ForProductItems from "./ForProductItems"
 
 const index = () => {
@@ -14,9 +15,9 @@ const index = () => {
       />
       <ForProductItems />
       <QuoteComponent
-        job="Assistant Engineering Manager"
-        name="Naveen D."
-        text={`I love the software and the major selling point for us was that it natively integrated with Teamwork ( This is our project management tool which we use for 50+ employees ) The support is always amazing and had always had a positive reply. I had one requirement and they were able to implement it within a day which shows that they hear their customers.`}
+        job="Product Manager"
+        name="Lora K."
+        text={`It is really easy to set the Userback widget on your product, customize how it looks, and link it with whatever other tool you like. It is also extremely straightforward from the end user's perspective - even non tech-savvy users take advantage of it to report issues or make suggestions for our platform.`}
       />
       <ContactUs />
     </div>

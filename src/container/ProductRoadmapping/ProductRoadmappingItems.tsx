@@ -3,75 +3,66 @@ import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
+import ListItemWrapper from "@/components/ListItemWrapper"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/roadmap_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+        <TextCol header="Collect and validate ideas">
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Stack rank ideas, adopt ongoing user suggestions and build product
+            features that users will actually use. Remove internal noise and
+            guesswork around product decisions by using real data points to gain
+            insight into what the market really wants.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/roadmap_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+        <TextCol
+          header="Prioritize product roadmap decisions"
+          button="Learn about the Feedback Portal"
+        >
           <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
+            Track new feature requests, bug fixes and product improvements.
+            Allow stakeholders and users to upvote and comment on existing user
+            feedback so you can easily identify what matters most and skip
+            one-off requests. Find the perfect product fit by focusing on the
+            things that matter most, to the most users.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+      <ListItemWrapper>
         <ListItem
           icon="/icons/connected-icons.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
+          text="Keep in touch with users post-release and always understand what they really want."
+          title="Stay connected to users"
           hasLine={false}
         />
         <ListItem
           icon="/icons/build-icon.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
+          text="Have users screen and rank features and fixes and know you’re building products your users will love, guesswork free."
+          title="Prioritize what you build"
           hasLine={false}
         />
         <ListItem
           icon="/icons/growth-icon.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
+          text="Build a roadmap filled with features that the majority of users need to maximize fit, increase satisfaction, reduce churn and drive growth."
+          title="Maximize product fit"
           hasLine={false}
         />
-      </div>
+      </ListItemWrapper>
       <RowComponent imgUrl="/images/roadmap_3.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Have the data and evidence to defend your roadmap decisions">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Don’t just take direction from whoever has the loudest voice! Don’t
+            take chances on half-baked assumptions! Collect meaningful user
+            insights and directly centralize them within a single platform where
+            you can review, validate and prioritize requests.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <div className="flex flex-col items-center max-w-[700px] mx-auto my-16">
         <h1 className="text-[32px] font-medium text-center tracking-tighter">

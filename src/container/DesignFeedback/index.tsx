@@ -1,6 +1,7 @@
 import ContactUs from "@/components/ContactUs"
 import PagesHeader from "@/components/PagesHeader"
 import QuoteComponent from "@/components/QuoteComponent"
+
 import DesignFeedbackItems from "./DesignFeedbackItems"
 
 const index = () => {
@@ -14,9 +15,9 @@ const index = () => {
       />
       <DesignFeedbackItems />
       <QuoteComponent
-        job="Assistant Engineering Manager"
-        name="Naveen D."
-        text={`I love the software and the major selling point for us was that it natively integrated with Teamwork ( This is our project management tool which we use for 50+ employees ) The support is always amazing and had always had a positive reply. I had one requirement and they were able to implement it within a day which shows that they hear their customers.`}
+        job="CMO, Vision6"
+        name="Jess Pantalleresco"
+        text="Userback is so amazing! We used to rely on spreadsheets and emails for managing internal feedback on our website improvements. With Userback though it is so much easier. It has saved us hours of work with our website re-design project!"
       />
       <ContactUs />
     </div>

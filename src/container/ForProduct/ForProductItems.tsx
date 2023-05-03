@@ -2,83 +2,80 @@
 
 import ButtonComponent from "@/components/ButtonComponent"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
+
+import ProductCard from "./ProductCard"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/user-feedback-for-product-managers_1 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+        <TextCol
+          header="Improve user satisfaction"
+          items={[
+            "Addresses user pain points directly",
+            "Increase product relevancy",
+            "Enhance usability and your product’s UX",
+            "Build user trust",
+            "Encourage loyalty",
+          ]}
+        >
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Keep users happy and engaged by understanding what users like and
+            dislike about product, need and want. Then make the right changes
+            that to improve user satisfaction and reduce customer churn.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/roadmap_3 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+        <TextCol
+          header="Prioritize feature development"
+          button="Learn more about Roadmapping"
+        >
           <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
+            With limited resources, it’s important for Product Managers to
+            prioritize which features to develop next. User feedback help’
+            identify the features that are most important to your users,
+            allowing you to focus development efforts with confidence.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
-      <p>card</p>
+      <ProductCard />
       <RowComponent imgUrl="/images/user-feedback-for-product-managers_2a.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Increase user engagement">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Entice users back again and again, by delivering the features and
+            functionality they need every time with validated product ideas.
+            Build what they love and watch active users and session times
+            skyrocket!
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/user-feedback-for-product-managers_2a.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Nail that software accuracy KPI">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Find and fix more bugs faster through development, UAT, QA and
+            post-release product phases. Improve accuracy with visual bug
+            reports complete with system info and get straight to the heart of
+            the problem.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/software-feature-request_1 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Never deprioritize feedback again">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Feedback has been a time-consuming and manual process for the
+            longest time. Trying to continuously get user insights and feedback
+            is often the first thing to go in favor of more pressing needs. Now
+            you can maintain meaningful connections with your users with near
+            zero effort.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
-      <ButtonComponent text="Make product management simpler - Start your free trial today" className="self-center" />
+      <ButtonComponent
+        text="Make product management simpler - Start your free trial today"
+        className="self-center"
+      />
     </div>
   )
 }

@@ -2,14 +2,18 @@ import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
+import ListItemWrapper from "@/components/ListItemWrapper"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const BuildItems = () => {
   return (
     <div className="flex flex-col gap-32">
       <RowComponent imgUrl="/images/feedback-for-building_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">Get to market faster</h1>
+        <TextCol
+          header="Get to market faster"
+          button="Learn more about Screen Annotations"
+        >
           <p>
             Don’t get caught up with the back-and-forth emails, phone calls and
             additional meetings that slow down the product development
@@ -17,14 +21,9 @@ const BuildItems = () => {
             allowing users to submit annotated screenshots, videos and full
             session replays with Userback.
           </p>
-          <ButtonComponent
-            text="Learn more about Screen Annotations"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+      <ListItemWrapper>
         <ListItem
           icon="/icons/back-and-forth.webp"
           text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
@@ -37,12 +36,9 @@ const BuildItems = () => {
           title="Centralize it all in one place"
           hasLine
         />
-      </div>
+      </ListItemWrapper>
       <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+        <TextCol header="Do User Acceptance Testing like never before">
           <p>
             Recreate issues throughout the UAT process with complete clarity of
             the contributing factors. If you’re relying on email and written
@@ -51,20 +47,17 @@ const BuildItems = () => {
             with automatically captured browser and system information) can get
             you to the heart of issues faster.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/UAT_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Manage user feedback in one place">
           <p>
             With Userback you can centralize all your user feedback in one
             location for bug reports, feature requests and comments — along with
             supporting attachments, videos, screenshots and annotated insights —
             all easily searched and instantly actionable.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
     </div>
   )

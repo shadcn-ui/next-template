@@ -3,69 +3,59 @@ import React from "react"
 
 import ButtonComponent from "@/components/ButtonComponent"
 import ListItem from "@/components/ListItem"
+import ListItemWrapper from "@/components/ListItemWrapper"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const FixItems = () => {
   return (
     <div className="flex flex-col gap-32">
-      <RowComponent imgUrl="/images/feedback-for-building_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+      <RowComponent imgUrl="/images/Feedback-for-agencies_1.webp">
+        <TextCol
+          header="Collect real-time client feedback"
+          button="Learn more about Screen Annotations"
+        >
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            Get highly contextual feedback with video and annotated screenshots.
+            Stop relying on email and let customers directly tell you what they
+            want from your staging site build. With no guesswork or no
+            interpretation required, your business can run efficiently.
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+        </TextCol>
       </RowComponent>
-      <div className="flex flex-col gap-8 lg:flex-row lg:gap-12 children:flex-1">
+      <ListItemWrapper>
         <ListItem
           icon="/icons/back-and-forth.webp"
-          text="Userback automatically collects the user’s system and browser information in the background, so you don’t have to through back and forth trying to chase it."
-          title="Capture the details you need"
+          text="Attach client’s system and browser information to every piece of feedback, so you know all the detail without the extra email, phone call or meeting."
+          title="Skip the back-and-forth"
           hasLine
         />
         <ListItem
           icon="/icons/Central.webp"
-          text="Create separate projects in Userback, so you can securely store and manage every piece of feedback in one location for quick access, action and response."
-          title="Centralize it all in one place"
+          text="Create separate projects for every client in Userback, and securely house every piece of feedback in one location for quick access, action and response."
+          title="Centralize it all"
           hasLine
         />
-      </div>
-      <RowComponent imgUrl="/images/Website-Feedback_1-1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+      </ListItemWrapper>
+      <RowComponent imgUrl="/images/Feedback-for-agencies_2.webp">
+        <TextCol header="Invite clients to see their feedback">
           <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
+            Give clients access to view and comment on the feedback from their
+            web projects. Deliver it directly to your account manager and
+            developer teams for action or closure in an instant. No more chasing
+            up clients for revisions and approval!
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
-      <RowComponent imgUrl="/images/UAT_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+      <RowComponent imgUrl="/images/Feedback-for-agencies_3.webp">
+        <TextCol header="Chronology captured">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Centralize all feedback and approvals in one location with
+            timestamps and avoid that uncomfortable conversation as the
+            inevitable scope change occurs. Protect your business and bring
+            transparency to clients with minimal effort and zero fuss.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
     </div>
   )

@@ -18,7 +18,7 @@ const TextCol: React.FC<Props> = ({ children, header, button, items }) => {
       <h1 className="text-[34px] font-medium leading-9">{header}</h1>
       <div className="flex flex-col gap-3 text-gray-700">{children}</div>
       {items && (
-        <ul className="flex flex-col gap-2 text-gray-600">
+        <ul className="flex flex-col gap-1.5 text-gray-600">
           {items?.map((item) => {
             return (
               <li className="flex items-center gap-4">

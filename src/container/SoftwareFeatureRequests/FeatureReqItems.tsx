@@ -2,10 +2,11 @@
 
 import ButtonComponent from "@/components/ButtonComponent"
 import RowComponent from "@/components/RowComponent"
+import TextCol from "@/components/TextCol"
 
 const FixItems = () => {
   return (
-    <div className="flex flex-col gap-32">
+    <div className="flex flex-col gap-32 pb-32">
       <div className="flex flex-col items-center max-w-[900px] mx-auto gap-8">
         <h1 className="text-[32px] font-medium text-center">
           Cut out the guesswork
@@ -19,49 +20,44 @@ const FixItems = () => {
         </p>
       </div>
       <RowComponent imgUrl="/images/software-feature-request_1.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Capture bug reports in-app
-          </h1>
+        <TextCol header="Give every user a voice">
           <p>
-            Allow users to submit bug reports ‘on-the-fly’ in your app or
-            website and collect the details and insights your teams need to
-            action.
+            When you collect user feedback you often only hear from those people
+            who are highly passionate about your product — they really love it
+            or they’re really frustrated. But just because someone is ‘shouting’
+            louder than others doesn’t mean their feedback is more valid
+            (although you may need to manage them more carefully)!
           </p>
-          <ButtonComponent
-            text="Discover in-app feedback"
-            style={{ fontSize: 12 }}
-            className="px-3 py-1"
-          />
-        </div>
+          <p>
+            Collecting diverse 360° user feedback creates greater opportunity
+            for developing a Product Roadmap that meets the needs of a wider
+            range of people, while strengthening user community. The easier you
+            make it for users to provide feedback, the more comments and
+            suggestions you’ll get to validate product decisions. At the same
+            time these interactions will help to grow your user community.
+          </p>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/software-feature-request_2.webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Do User Acceptance Testing like never before
-          </h1>
+        <TextCol header="Put user feedback where it counts">
           <p>
-            Recreate issues throughout the UAT process with complete clarity of
-            the contributing factors. If you’re relying on email and written
-            communication, maybe it’s time to discover how Userback’s annotated
-            screenshots, video recordings and full session replays (complete
-            with automatically captured browser and system information) can get
-            you to the heart of issues faster.
+            Create effective feedback cycles by choosing a software feature tool
+            capable of centralizing feedback and managing it – from collection
+            to closure. Let users submit software feature feedback in seconds,
+            screen and prioritize it and have it delivered directly to where you
+            work through powerful integrations.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
       <RowComponent imgUrl="/images/Bug-Tracking_3 (1).webp">
-        <div className="flex flex-col items-start gap-4">
-          <h1 className="text-[32px] font-medium">
-            Manage user feedback in one place
-          </h1>
+        <TextCol header="Integrate with your favorite tools" button="Check out all the integrations">
           <p>
-            With Userback you can centralize all your user feedback in one
-            location for bug reports, feature requests and comments — along with
-            supporting attachments, videos, screenshots and annotated insights —
-            all easily searched and instantly actionable.
+            Userback can be easily integrated with the tools you already use and
+            love, putting user feedback right at the heart of your team’s
+            workflows and product development lifecycle. If you need to a
+            specific integration you can design custom workflows with webhooks.
           </p>
-        </div>
+        </TextCol>
       </RowComponent>
     </div>
   )

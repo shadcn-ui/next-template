@@ -98,7 +98,7 @@ const QuoteSlider = () => {
           </SwiperSlide>
         )
       })}
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex items-center justify-center gap-8 pt-8">
         <motion.div
           whileHover={{ scale: 1.16 }}
           className="p-4 bg-white rounded-full cursor-pointer"
