@@ -1,18 +1,25 @@
 import React from "react"
+import { Check } from "lucide-react"
 
 import { Children } from "@/types/general"
 
 import ButtonComponent from "./ButtonComponent"
-import { Check } from "lucide-react"
 
 interface Props {
   header: string
   children: Children
   button?: string
   items?: string[]
+  color?: string
 }
 
-const TextCol: React.FC<Props> = ({ children, header, button, items }) => {
+const TextCol: React.FC<Props> = ({
+  children,
+  header,
+  button,
+  items,
+  color,
+}) => {
   return (
     <div className="flex flex-col items-start gap-4">
       <h1 className="text-[34px] font-medium leading-9">{header}</h1>
@@ -22,7 +29,7 @@ const TextCol: React.FC<Props> = ({ children, header, button, items }) => {
           {items?.map((item) => {
             return (
               <li className="flex items-center gap-4">
-                <Check size={16} color="#6042ec" />
+                <Check size={16} color={color ? color : "#6042ec"} />
                 <p>{item}</p>
               </li>
             )
@@ -32,7 +39,7 @@ const TextCol: React.FC<Props> = ({ children, header, button, items }) => {
       {button && (
         <ButtonComponent
           text={button}
-          style={{ fontSize: 12 , paddingBlock : 10 , paddingInline : 15 }}
+          style={{ fontSize: 12, paddingBlock: 10, paddingInline: 15 , backgroundColor : color ? color : "" }}
         />
       )}
     </div>

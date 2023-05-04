@@ -1,6 +1,7 @@
 /* eslint-disable tailwindcss/classnames-order */
 import React from "react"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 interface Links {
   title: string
@@ -14,38 +15,38 @@ interface Props {
   links: Links[]
 }
 
-const setColor =(color : string)=>{
+const setColor = (color: string) => {
   switch (color) {
     case "#6042ec":
       return "hover-underline-animation-blue"
-      break;
+      break
     case "#ff4060":
       return "hover-underline-animation-red"
-      break;
+      break
     case "#ffc040":
       return "hover-underline-animation-yellow"
-      break;
+      break
     case "#ff8040":
       return "hover-underline-animation-orange"
-      break;
-  
+      break
+
     default:
-      break;
+      break
   }
 }
 
 const FeedbackLinkWrapper: React.FC<Props> = ({ header, links }) => {
+  const router = useRouter()
   return (
     <div className="flex flex-col items-start gap-2">
       <h3 className="font-bold">{header}</h3>
       {links.map((link) => {
-
         return (
           <Link
             href={link.link}
             key={link.title}
             className={`flex gap-2 items-center`}
-            style={{color : link.color}}
+            style={{ color: link.color, borderBottomColor: link.color }}
           >
             <img
               src={link.iconUrl}
@@ -53,7 +54,11 @@ const FeedbackLinkWrapper: React.FC<Props> = ({ header, links }) => {
               className="w-[16px] h-[16px]"
             />
             <p
-              className={`text-[16px] ${setColor(link.color)}`}
+              className={`text-[16px] ${
+                router.pathname === link.link
+                  ? "border-b"
+                  : setColor(link.color)
+              }`}
             >
               {link.title}
             </p>

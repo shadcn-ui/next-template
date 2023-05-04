@@ -25,13 +25,13 @@ const PlatformMenu: React.FC<{ setMenu: (value: boolean) => void }> = ({
         <FooterLinksWrapper
           header="PLATFORM"
           links={[
-            { link: "", title: "In App Feedback" },
-            { link: "", title: "Screen Annotation" },
-            { link: "", title: "Video Recording" },
-            { link: "", title: "Session Replay" },
-            { link: "", title: "User Insights" },
-            { link: "", title: "Feedback Portal" },
-            { link: "", title: "Integrations" },
+            { link: "/in-app-feedback", title: "In App Feedback" },
+            { link: "/screen-annotation", title: "Screen Annotation" },
+            { link: "/video-recording", title: "Video Recording" },
+            { link: "/session-replay", title: "Session Replay" },
+            { link: "/user-insights", title: "User Insights" },
+            { link: "/feedback-portal", title: "Feedback Portal" },
+            { link: "/integrations", title: "Integrations" },
           ]}
           isInTopNav
         />
@@ -39,25 +39,25 @@ const PlatformMenu: React.FC<{ setMenu: (value: boolean) => void }> = ({
           header="FEEDBACK LIFECYCLE"
           links={[
             {
-              link: "",
+              link: "/capture-collect",
               title: "Capture & Collect",
               color: "#6042ec",
               iconUrl: "/icons/Collect-icon.webp",
             },
             {
-              link: "",
+              link: "/assess-prioritize",
               title: "Assess & Prioritize",
               color: "#ff4060",
               iconUrl: "/icons/Assess-icon.webp",
             },
             {
-              link: "",
+              link: "/assign-action",
               title: "Assign & Action",
               color: "#ff8040",
               iconUrl: "/icons/Assign-icon.webp",
             },
             {
-              link: "",
+              link: "/follow-up-close",
               title: "Follow up & Close",
               color: "#ffc040",
               iconUrl: "/icons/Close-icon.webp",
