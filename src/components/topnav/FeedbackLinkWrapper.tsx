@@ -46,7 +46,7 @@ const FeedbackLinkWrapper: React.FC<Props> = ({ header, links }) => {
             href={link.link}
             key={link.title}
             className={`flex gap-2 items-center`}
-            style={{ color: link.color, borderBottomColor: link.color }}
+            style={{ color: link.color }}
           >
             <img
               src={link.iconUrl}
@@ -59,6 +59,7 @@ const FeedbackLinkWrapper: React.FC<Props> = ({ header, links }) => {
                   ? "border-b"
                   : setColor(link.color)
               }`}
+              style={{borderBottomColor: link.color}}
             >
               {link.title}
             </p>
