@@ -4,7 +4,7 @@ import BugTracking from '@/container/BugTracking'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Bug Tracking" className="bg-[#F8F8F8]">
       <BugTracking />
     </Page>
   )

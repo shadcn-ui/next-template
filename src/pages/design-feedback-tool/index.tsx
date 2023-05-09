@@ -4,7 +4,7 @@ import DesignFeedback from '@/container/DesignFeedback'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Design Feedback Tool" className="bg-[#F8F8F8]">
       <DesignFeedback />
     </Page>
   )

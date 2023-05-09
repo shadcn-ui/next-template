@@ -21,7 +21,7 @@ const PagesHeader: React.FC<Props> = ({ buttonText, h1, h2, text }) => {
       <p className="font-medium text-center max-w-[650px] text-[14px] lg:text-[18px]">
         {text}
       </p>
-      <ButtonComponent text={buttonText} />
+      {buttonText && <ButtonComponent text={buttonText} />}
     </div>
   )
 }

@@ -4,7 +4,7 @@ import FeedbackTool from '@/container/FeedbackTool'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Website Feedback Tool" className="bg-[#F8F8F8]">
       <FeedbackTool />
     </Page>
   )

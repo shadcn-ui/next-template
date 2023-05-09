@@ -41,7 +41,10 @@ const Footer = () => {
             <FooterLinksWrapper
               header="USERBACK FOR"
               links={[
-                { title: "Product Managers", link: "/userback-for-product-managers" },
+                {
+                  title: "Product Managers",
+                  link: "/userback-for-product-managers",
+                },
                 { title: "Developers", link: "/userback-for-developers" },
                 { link: "/userback-for-web-agencies", title: "Web Agencies" },
               ]}
@@ -64,27 +67,27 @@ const Footer = () => {
           <FooterCol>
             <FooterLinksWrapper
               header="DEMO CENTER"
-              links={[{ link: "", title: "Hands-on Demo" }]}
+              links={[{ link: "/demo", title: "Hands-on Demo" }]}
             />
             <FooterLinksWrapper
               header="PLATFORM"
               links={[
-                { link: "", title: "In App Feedback" },
-                { link: "", title: "Screen Annotation" },
-                { link: "", title: "Video Recording" },
-                { link: "", title: "Session Replay" },
-                { link: "", title: "User Insights" },
-                { link: "", title: "Feedback Portal" },
-                { link: "", title: "Integrations" },
+                { link: "/in-app-feedback", title: "In App Feedback" },
+                { link: "/screen-annotation", title: "Screen Annotation" },
+                { link: "/video-recording", title: "Video Recording" },
+                { link: "/session-replay", title: "Session Replay" },
+                { link: "/user-insights", title: "User Insights" },
+                { link: "/feedback-portal", title: "Feedback Portal" },
+                { link: "/integrations", title: "Integrations" },
               ]}
             />
             <FooterLinksWrapper
               header="FEEDBACK LIFECYCLE"
               links={[
-                { link: "", title: "Capture & Collect" },
-                { link: "", title: "Assess & Prioritize" },
-                { link: "", title: "Assign & Action" },
-                { link: "", title: "Follow up & Close" },
+                { link: "/capture-collect", title: "Capture & Collect" },
+                { link: "/assess-prioritize", title: "Assess & Prioritize" },
+                { link: "/assign-action", title: "Assign & Action" },
+                { link: "/follow-up-close", title: "Follow up & Close" },
               ]}
             />
           </FooterCol>
@@ -92,8 +95,8 @@ const Footer = () => {
             <FooterLinksWrapper
               header="RESOURCES"
               links={[
-                { link: "", title: "Blog" },
-                { link: "", title: "Integrations" },
+                { link: "/blog", title: "Blog" },
+                { link: "/integrations", title: "Integrations" },
                 { link: "", title: "Documentation" },
                 { link: "", title: "Support Articles" },
                 { link: "", title: "API Reference" },
@@ -109,20 +112,20 @@ const Footer = () => {
             <FooterLinksWrapper
               header="COMPANY"
               links={[
-                { link: "", title: "About Us" },
+                { link: "/about", title: "About Us" },
                 { link: "", title: "Roadmap" },
-                { link: "", title: "Terms and Conditions" },
-                { link: "", title: "Privacy Policy" },
-                { link: "", title: "Security Overview" },
-                { link: "", title: "GDPR Commitment" },
+                { link: "/terms", title: "Terms and Conditions" },
+                { link: "/privacy", title: "Privacy Policy" },
+                { link: "/security", title: "Security Overview" },
+                { link: "/gdpr-commitment", title: "GDPR Commitment" },
               ]}
             />
             <FooterLinksWrapper
               header="COMPARE"
               links={[
-                { link: "", title: "Userback vs Marker.io" },
-                { link: "", title: "Userback vs Usersnap" },
-                { link: "", title: "Userback vs Bugherd" },
+                { link: "/", title: "Userback vs Marker.io" },
+                { link: "/", title: "Userback vs Usersnap" },
+                { link: "/", title: "Userback vs Bugherd" },
               ]}
             />
           </FooterCol>

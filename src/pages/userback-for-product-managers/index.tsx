@@ -4,7 +4,7 @@ import ForProduct from '@/container/ForProduct'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Userback for Product" className="bg-[#F8F8F8]">
       <ForProduct />
     </Page>
   )

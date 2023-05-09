@@ -4,7 +4,7 @@ import UserEnhance from '@/container/UserEnhance'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="User Feedback to Enhance" className="bg-[#F8F8F8]">
       <UserEnhance />
     </Page>
   )

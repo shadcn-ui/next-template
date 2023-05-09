@@ -1,6 +1,6 @@
-import { useState } from "react"
-import Head from "next/head"
 import { motion } from "framer-motion"
+import Head from "next/head"
+import { useState } from "react"
 
 import { pageComponentProps } from "@/types/general"
 
@@ -14,6 +14,7 @@ const Page: React.FC<pageComponentProps> = ({
   className = "",
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <div className="bg-[#232e3a]">
       {title ? (
@@ -33,7 +34,7 @@ const Page: React.FC<pageComponentProps> = ({
         className={`z-10 mx-auto flex min-h-screen flex-col overflow-hidden px-safe`}
       >
         <TopNav setIsMenuOpen={setIsMenuOpen} />
-        <main className={`flex-1 ${className}`}>{children}</main>
+        <main className={`flex-1 ${className} pt-[80px]`}>{children}</main>
         <Footer />
       </motion.div>
     </div>

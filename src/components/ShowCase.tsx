@@ -1,13 +1,20 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable tailwindcss/classnames-order */
 import React from "react"
 
-const ShowCase = () => {
+interface Props {
+  hideText?: boolean
+}
+
+const ShowCase: React.FC<Props> = ({ hideText }) => {
   return (
     <div className="flex flex-col items-center mt-20">
-      <h2 className="max-w-[750px] text-[24px] leading-[1] md:text-[32px] text-center font-semibold">
-        20,000+ software teams use Userback to understand what users need and
-        create products that they love
-      </h2>
+      {!hideText && (
+        <h2 className="max-w-[780px] text-[24px] leading-[1] md:text-[32px] text-center font-semibold">
+          Helping 20,000+ software teams use Userback to understand what users need and
+          create products that they love
+        </h2>
+      )}
       <div className="grid items-center self-stretch grid-cols-2 gap-2 mt-10 sm:grid-cols-3 lg:grid-cols-6 lg:px-[10%]">
         <div className="flex items-center justify-center">
           <img

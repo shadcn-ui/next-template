@@ -4,7 +4,7 @@ import SoftwareFeatureRequests from '@/container/SoftwareFeatureRequests'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Software Feature Requests" className="bg-[#F8F8F8]">
       <SoftwareFeatureRequests />
     </Page>
   )

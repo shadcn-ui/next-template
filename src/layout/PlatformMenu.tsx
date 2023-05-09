@@ -19,7 +19,7 @@ const PlatformMenu: React.FC<{ setMenu: (value: boolean) => void }> = ({
       <div className="flex justify-between flex-1 py-6 children:flex-1">
         <FooterLinksWrapper
           header="DEMO CENTER"
-          links={[{ link: "", title: "Hands-on Demo" }]}
+          links={[{ link: "/demo", title: "Hands-on Demo" }]}
           isInTopNav
         />
         <FooterLinksWrapper

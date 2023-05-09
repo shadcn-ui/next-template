@@ -17,8 +17,8 @@ const ResourcesMenu: React.FC<{ setMenu: (value: boolean) => void }> = ({
         <FooterLinksWrapper
           header="Learn More"
           links={[
-            { link: "", title: "About Us" },
-            { link: "", title: "Blog" },
+            { link: "/about", title: "About Us" },
+            { link: "/blog", title: "Blog" },
             { link: "", title: "Help Center" },
           ]}
           isInTopNav

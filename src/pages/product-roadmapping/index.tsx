@@ -4,7 +4,7 @@ import ProductRoadmapping from '@/container/ProductRoadmapping'
 
 const Index: NextPage = () => {
   return (
-    <Page title="User Feedback to Fix" className="bg-[#F8F8F8]">
+    <Page title="Product Roadmapping" className="bg-[#F8F8F8]">
       <ProductRoadmapping />
     </Page>
   )
