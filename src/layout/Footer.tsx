@@ -123,9 +123,12 @@ const Footer = () => {
             <FooterLinksWrapper
               header="COMPARE"
               links={[
-                { link: "/", title: "Userback vs Marker.io" },
-                { link: "/", title: "Userback vs Usersnap" },
-                { link: "/", title: "Userback vs Bugherd" },
+                { link: "/marker-alternative", title: "Userback vs Marker.io" },
+                {
+                  link: "/usersnap-alternative",
+                  title: "Userback vs Usersnap",
+                },
+                { link: "/bugherd-alternative", title: "Userback vs Bugherd" },
               ]}
             />
           </FooterCol>

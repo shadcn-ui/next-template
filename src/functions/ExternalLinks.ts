@@ -1,3 +1,3 @@
 export const ExternalLink = () => {
-  alert("This is a external Link")
+  alert("This is an external Link")
 }
