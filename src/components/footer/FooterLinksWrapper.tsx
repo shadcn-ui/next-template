@@ -27,7 +27,7 @@ const FooterLinksWrapper: React.FC<Props> = ({ header, links, isInTopNav }) => {
               key={link.title}
               className={
                 isInTopNav && router.pathname === link.link
-                  ? "border-b"
+                  ? "border-b border-b-[#000]"
                   : isInTopNav
                   ? "hover-underline-animation"
                   : ""

@@ -3,10 +3,11 @@ import ContactUs from "@/components/ContactUs"
 import Header from "@/components/Header"
 import PagesHeader from "@/components/PagesHeader"
 import QuoteComponent from "@/components/QuoteComponent"
-import RecommendedReads from "@/components/RecommendedReads"
 import VideosTabs from "@/components/VideosTabs"
 
 import InAppFeedbackItems from "./InAppFeedbackItems"
+import BlogCard from "@/container/Blog/BlogCard"
+import { BlogData } from "@/container/Blog/BlogData"
 
 const index = () => {
   return (
@@ -39,7 +40,20 @@ const index = () => {
         text={`Userback has helped streamline our team's QA processes. We work with lots of clients and have many cross-team projects so it’s been a breath of fresh air having all QA in the one place. I particularly love how easy it is to check once feedback has been completed.`}
       />
       <InAppFeedbackItems />
-      <RecommendedReads />
+      <div className="flex flex-wrap px-[12%] justify-between gap-y-8">
+        {BlogData.slice(0,3).map((blog) => {
+          return (
+            <BlogCard
+              image={blog.image}
+              keyWords={blog.keyWords}
+              link={blog.link}
+              text={blog.text}
+              title={blog.title}
+              key={blog.title}
+            />
+          )
+        })}
+      </div>
       <ContactUs />
     </div>
   )
