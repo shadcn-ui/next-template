@@ -1,9 +1,16 @@
-import Motion from "@/components/motion"
+import Motion from '@/components/motion';
 
 export default function TestPage() {
   return (
     <section>
-      <Motion className="text-7xl">hello</Motion>
+      <Motion
+        asChild
+        initial="hidden"
+        animate="visible"
+        className="ml-20 text-7xl"
+      >
+        <p>hello</p>
+      </Motion>
     </section>
-  )
+  );
 }

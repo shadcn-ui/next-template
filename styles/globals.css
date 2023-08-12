@@ -94,7 +94,10 @@
 
 @layer base {
   * {
-    @apply border-border ring-border transition-all;
+    @apply border-border ring-border;
+  }
+  *:hover {
+    @apply transition-all;
   }
   html {
     --scroll-behavior: smooth !important;
@@ -102,6 +105,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }

@@ -1,4 +1,4 @@
-import { ThemeToggle } from "@/components/theme-toggle"
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export function SiteHeader() {
   return (
@@ -11,5 +11,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }

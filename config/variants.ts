@@ -1,6 +1,6 @@
-import { MotionProps, Variants } from "framer-motion"
+import { Variants } from 'framer-motion';
 
 export const defaultVariants: Variants = {
-  hidden: { x: -600 },
+  hidden: { x: -100 },
   visible: { x: 0 },
-}
+};
