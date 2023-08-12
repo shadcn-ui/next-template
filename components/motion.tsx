@@ -1,19 +1,20 @@
 'use client';
 
-import { HtmlHTMLAttributes, forwardRef } from 'react';
+import { ElementType, HtmlHTMLAttributes, forwardRef } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Variants, motion } from 'framer-motion';
 
 import { defaultVariants } from '@/config/variants';
 
 interface MotionProps extends HtmlHTMLAttributes<HTMLDivElement> {
+  as?: ElementType;
   asChild?: boolean;
   variants?: Variants;
 }
 
 const Component = forwardRef<HTMLDivElement, MotionProps>(
-  ({ variants, asChild, ...props }, ref) => {
-    const Comp = asChild ? Slot : 'div';
+  ({ variants, as, asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot : as || 'div';
     return <Comp ref={ref} {...props} />;
   }
 );
@@ -26,7 +27,13 @@ const withVariants =
   // @ts-ignore
   // eslint-disable-next-line react/display-name
   (props: any) =>
-    <Comp variants={defaultVariants} {...props} />;
+    (
+      <Comp
+        variants={defaultVariants}
+        animate={props.animate || 'visible'}
+        {...props}
+      />
+    );
 
 const Motion = withVariants(MotionComponent);
 
