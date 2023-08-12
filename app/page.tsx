@@ -8,7 +8,6 @@ export default function IndexPage() {
   useEffect(() => {
     fetchUser()
   }, [fetchUser])
-  console.log(users)
   return (
     <section className="container grid items-center">
       {users?.map((_) => (
