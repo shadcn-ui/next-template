@@ -31,6 +31,12 @@ const withVariants =
       <Comp
         variants={defaultVariants}
         animate={props.animate || 'visible'}
+        transition={{
+          delay: 0.1,
+          duration: 0.5,
+          type: 'spring',
+          ...props.transition,
+        }}
         {...props}
       />
     );
