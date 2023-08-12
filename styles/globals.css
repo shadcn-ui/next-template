@@ -68,14 +68,36 @@
 
     --radius: 0.5rem;
   }
+  input {
+    @apply bg-transparent;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border ring-border transition-all;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    @apply bg-primary;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/70;
+  }
+  html {
+    --scroll-behavior: smooth !important;
+    scroll-behavior: smooth !important;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply overflow-x-hidden bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
