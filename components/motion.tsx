@@ -1,6 +1,6 @@
 'use client';
 
-import { ElementType, HtmlHTMLAttributes, forwardRef } from 'react';
+import { ElementType, HtmlHTMLAttributes, forwardRef, useId } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Variants, motion } from 'framer-motion';
 
@@ -27,9 +27,11 @@ const withVariants =
   (Comp: typeof MotionComponent): typeof MotionComponent =>
   // @ts-ignore
   // eslint-disable-next-line react/display-name
-  (props: any) =>
-    (
+  (props: any) => {
+    const id = useId();
+    return (
       <Comp
+        key={props.key || id}
         variants={defaultVariants}
         whileInView={props.whileInView || 'visible'}
         viewport={{ once: !props.always }}
@@ -42,6 +44,7 @@ const withVariants =
         {...props}
       />
     );
+  };
 
 const Motion = withVariants(MotionComponent);
 
