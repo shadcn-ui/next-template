@@ -11,10 +11,12 @@ npx create-next-app -e https://github.com/sohanemon/next-template
 ## Features
 
 - Next.js 13 App Directory
+- Animated with `framer-motion`
 - Radix UI Primitives
 - Tailwind CSS
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode with `next-themes`
+- Zustand State Management
 - Tailwind CSS class sorting, merging and linting.
 
 ## License
