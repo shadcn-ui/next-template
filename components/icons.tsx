@@ -1,7 +1,9 @@
 import Image from 'next/image';
-import { AlignJustify, X } from 'lucide-react';
+import { AlignJustify, Moon, Sun, X } from 'lucide-react';
 
 export const Icons = {
+  sun: Sun,
+  moon: Moon,
   menu: AlignJustify,
   x: X,
   logo: (props: any) => (
