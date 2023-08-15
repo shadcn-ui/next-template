@@ -17,7 +17,7 @@ export default function TransitionProvider({
         initial={{ x: -1000, opacity: 0 }}
         animate="visible"
         transition={{ delay: 0, duration: 0.4 }}
-        exit={{ x: 1000, opacity: 0 }}
+        exit={{ x: 1000, overflow: 'hidden', opacity: 0 }}
         key={path}
       >
         {children}

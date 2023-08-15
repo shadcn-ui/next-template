@@ -9,7 +9,7 @@ export default function IndexPage() {
     fetchUser();
   }, [fetchUser]);
   return (
-    <section className="container grid items-center">
+    <section className="container grid min-h-screen items-center">
       {users?.map((_) => (
         <p key={_.name}>{_.name}</p>
       ))}

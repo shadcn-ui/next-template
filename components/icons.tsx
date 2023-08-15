@@ -1,17 +1,17 @@
-import Image from "next/image"
-import {
-  LucideProps,
-  Moon,
-  SunMedium,
-  type Icon as LucideIcon,
-} from "lucide-react"
-
-export type Icon = LucideIcon
+import Image from 'next/image';
+import { AlignJustify, X } from 'lucide-react';
 
 export const Icons = {
-  sun: SunMedium,
-  moon: Moon,
-  logo: (props: LucideProps) => (
-    <Image src={`/next.svg`} alt="logo" width={100} height={100} />
+  menu: AlignJustify,
+  x: X,
+  logo: (props: any) => (
+    <Image
+      {...props}
+      className="invert"
+      src={`/next.svg`}
+      alt="logo"
+      width={100}
+      height={100}
+    />
   ),
-}
+};

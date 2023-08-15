@@ -67,6 +67,7 @@
     @apply transition-all;
   }
   html {
+    overflow-x: hidden;
     --scroll-behavior: smooth !important;
     scroll-behavior: smooth !important;
   }

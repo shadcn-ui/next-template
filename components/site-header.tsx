@@ -1,15 +1,81 @@
-import { ThemeToggle } from '@/components/theme-toggle';
+'use client';
 
-export function SiteHeader() {
+import { useState } from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
+
+import Brand from './brand';
+import { Icons } from './icons';
+
+export default function SiteHeader() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const path = usePathname();
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background">
-      <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-        <div className="flex flex-1 items-center justify-end space-x-4">
-          <nav className="flex items-center space-x-1">
-            <ThemeToggle />
-          </nav>
-        </div>
-      </div>
-    </header>
+    <section
+      className={cn('', {
+        'sticky top-0 inset-x-0 bg-background z-40': path === '/',
+      })}
+    >
+      <nav className="container  flex items-center justify-between px-5 py-9">
+        <Brand />
+        <NavContent />
+        {!isMenuOpen ? (
+          <Icons.menu
+            onClick={() => setIsMenuOpen(true)}
+            size={36}
+            className="cursor-pointer text-foreground lg:hidden"
+          />
+        ) : (
+          <Icons.x
+            onClick={() => setIsMenuOpen(false)}
+            size={36}
+            className="cursor-pointer text-foreground lg:hidden"
+          />
+        )}
+      </nav>
+
+      {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
+    </section>
   );
 }
+
+const NavContent = () => {
+  const path = usePathname();
+  return (
+    <>
+      <ul className="ml-20 flex items-center gap-12 max-lg:hidden ">
+        {siteConfig.nav.map((_) => (
+          <li
+            key={_.title}
+            className={cn('', {
+              '': _.href === '/' ? path === '/' : path.includes(_.href),
+            })}
+          >
+            <h3 className="capitalize">
+              <Link href={_.href}>{_.title}</Link>
+            </h3>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
+
+const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
+  return (
+    <>
+      <ul className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-card p-5 shadow-xl lg:hidden">
+        {siteConfig.nav.map((_) => (
+          <li onClick={() => setIsMenuOpen(false)} key={_.title}>
+            <h3 className="capitalize hover:text-primary/50">
+              <Link href={_.href}>{_.title}</Link>
+            </h3>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+};
