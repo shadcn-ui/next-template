@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 
 import Brand from './brand';
 import { Icons } from './icons';
+import Motion from './motion';
 
 export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,8 +38,9 @@ export default function SiteHeader() {
           />
         )}
       </nav>
-
-      {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
+      <AnimatePresence>
+        {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
+      </AnimatePresence>
     </section>
   );
 }
@@ -66,16 +69,21 @@ const NavContent = () => {
 
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   return (
-    <>
-      <ul className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-card p-5 shadow-xl lg:hidden">
-        {siteConfig.nav.map((_) => (
-          <li onClick={() => setIsMenuOpen(false)} key={_.title}>
-            <h3 className="capitalize hover:text-primary/50">
-              <Link href={_.href}>{_.title}</Link>
-            </h3>
-          </li>
-        ))}
-      </ul>
-    </>
+    <Motion
+      key={'header'}
+      as={'ul'}
+      initial="up"
+      animate="visible"
+      exit={'left'}
+      className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-card p-5 shadow-xl lg:hidden"
+    >
+      {siteConfig.nav.map((_) => (
+        <li onClick={() => setIsMenuOpen(false)} key={_.title}>
+          <h3 className="capitalize hover:text-primary/50">
+            <Link href={_.href}>{_.title}</Link>
+          </h3>
+        </li>
+      ))}
+    </Motion>
   );
 };
