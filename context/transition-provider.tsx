@@ -12,7 +12,7 @@ export default function TransitionProvider({
 }) {
   const path = usePathname();
   return (
-    <AnimatePresence initial={false} mode="wait">
+    <AnimatePresence mode="wait">
       <Motion
         initial={{ x: -1000, opacity: 0 }}
         animate="visible"
