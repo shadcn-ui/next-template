@@ -12,16 +12,13 @@ export default function TransitionProvider({
 }) {
   const path = usePathname();
   return (
-    <AnimatePresence mode="wait">
-      <Motion
-        initial={{ x: -1000, opacity: 0 }}
-        animate="visible"
-        transition={{ delay: 0, duration: 0.4 }}
-        exit={{ x: 1000, overflow: 'hidden', opacity: 0 }}
-        key={path}
-      >
-        {children}
-      </Motion>
-    </AnimatePresence>
+    <Motion
+      initial="up"
+      animate="visible"
+      transition={{ duration: 0.4 }}
+      key={path}
+    >
+      {children}
+    </Motion>
   );
 }
