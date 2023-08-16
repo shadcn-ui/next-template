@@ -1,7 +1,6 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-import { AnimatePresence } from 'framer-motion';
 
 import Motion from '../components/motion';
 
