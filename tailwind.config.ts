@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss';
 import { fontFamily } from 'tailwindcss/defaultTheme';
 
+import { cssBasePlugin } from './lib/base-plugin';
+
 const config = {
   darkMode: ['class'],
   content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
@@ -73,7 +75,7 @@ const config = {
       },
     },
   },
-  plugins: [],
+  plugins: [cssBasePlugin],
 } satisfies Config;
 
 export default config;

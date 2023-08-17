@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/plugins.js"
+    "lib/base-plugin.ts"
   ],
   "exclude": ["node_modules"]
 }
