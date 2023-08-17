@@ -21,20 +21,20 @@ export default function SiteHeader() {
         'sticky top-0 inset-x-0 bg-background z-40': path === '/',
       })}
     >
-      <nav className="container  flex items-center justify-between px-5 py-9">
+      <nav className="container flex items-center justify-between px-5 py-9">
         <Brand />
         <NavContent />
         {!isMenuOpen ? (
           <Icons.menu
             onClick={() => setIsMenuOpen(true)}
             size={36}
-            className="cursor-pointer text-foreground lg:hidden"
+            className="text-foreground cursor-pointer lg:hidden"
           />
         ) : (
           <Icons.x
             onClick={() => setIsMenuOpen(false)}
             size={36}
-            className="cursor-pointer text-foreground lg:hidden"
+            className="text-foreground cursor-pointer lg:hidden"
           />
         )}
       </nav>
@@ -75,11 +75,11 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
       initial="up"
       animate="visible"
       exit={'left'}
-      className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-card p-5 shadow-xl lg:hidden"
+      className="bg-card absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
     >
       {siteConfig.nav.map((_) => (
         <li onClick={() => setIsMenuOpen(false)} key={_.title}>
-          <h3 className="capitalize hover:text-primary/50">
+          <h3 className="hover:text-primary/50 capitalize">
             <Link href={_.href}>{_.title}</Link>
           </h3>
         </li>

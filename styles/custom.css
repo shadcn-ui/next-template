@@ -28,12 +28,3 @@
   height: 100%;
   @apply bg-[#010412]/80;
 }
-
-.scrollbar-hidden::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-hidden {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
