@@ -12,6 +12,7 @@ export default function TransitionProvider({
   const path = usePathname();
   return (
     <Motion
+      className=""
       initial="up"
       animate="visible"
       transition={{ duration: 0.4 }}
