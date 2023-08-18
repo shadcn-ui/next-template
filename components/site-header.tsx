@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils';
 import Brand from './brand';
 import { Icons } from './icons';
 import Motion from './motion';
+import { ThemeToggle } from './theme-toggle';
 
 export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,10 @@ export default function SiteHeader() {
       })}
     >
       <nav className="container flex items-center justify-between px-5 py-9">
-        <Brand />
+        <div className="flex items-center gap-4">
+          <Brand />
+          <ThemeToggle />
+        </div>
         <NavContent />
         {!isMenuOpen ? (
           <Icons.menu

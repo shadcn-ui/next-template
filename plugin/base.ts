@@ -16,17 +16,24 @@ export const base = plugin(function ({ addBase }) {
     '*:hover': { '@apply transition-all': {} },
   });
   addBase({
-    html: {
-      overflowX: 'hidden',
-      '--scroll-behavior': 'smooth !important',
-      scrollBehavior: 'smooth !important',
+    'html:where(.dark)': { filter: 'invert(1) hue-rotate(180deg)' },
+    'html.dark picture,\nhtml.dark img,\nhtml.dark video': {
+      filter: 'invert(1) hue-rotate(180deg)',
     },
-    body: {
-      '@apply bg-background text-foreground overflow-x-hidden': {},
-      'font-feature-settings': `'rlig' 1, 'calt' 1`,
-    },
-    input: {
-      '@apply bg-transparent outline-none': {},
-    },
-  });
+    'html.dark.revert': { filter: 'invert(1) hue-rotate(180deg)' },
+  }),
+    addBase({
+      html: {
+        overflowX: 'hidden',
+        '--scroll-behavior': 'smooth !important',
+        scrollBehavior: 'smooth !important',
+      },
+      body: {
+        '@apply bg-background text-foreground overflow-x-hidden': {},
+        'font-feature-settings': `'rlig' 1, 'calt' 1`,
+      },
+      input: {
+        '@apply bg-transparent outline-none': {},
+      },
+    });
 });

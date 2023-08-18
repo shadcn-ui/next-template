@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@/context/theme-provider';
+import TransitionProvider from '@/context/transition-provider';
 
+import '@/styles/custom.css';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
-import TransitionProvider from '@/context/transition-provider';
 
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';

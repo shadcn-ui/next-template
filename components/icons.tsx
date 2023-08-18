@@ -9,8 +9,8 @@ export const Icons = {
   logo: (props: any) => (
     <Image
       {...props}
-      className="invert"
-      src={`/next.svg`}
+      className=""
+      src={`/cat.png`}
       alt="logo"
       width={100}
       height={100}
