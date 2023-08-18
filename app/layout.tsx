@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head className="revert" />
         <body
           className={cn(
             'min-h-screen bg-background font-sans antialiased',

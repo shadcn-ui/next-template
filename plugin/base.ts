@@ -20,7 +20,6 @@ export const base = plugin(function ({ addBase }) {
     'html.dark picture,\nhtml.dark img,\nhtml.dark video': {
       filter: 'invert(1) hue-rotate(180deg)',
     },
-    'html.dark.revert': { filter: 'invert(1) hue-rotate(180deg)' },
   }),
     addBase({
       html: {
