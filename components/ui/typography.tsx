@@ -7,16 +7,14 @@ const typographyVariants = cva('', {
   variants: {
     textColor: {
       default: 'text-foreground',
-
       primary: 'text-primary',
       secondary: 'text-secondary',
+      muted: 'text-muted',
     },
     variant: {
       default: '',
       heading: 'text-5xl md:text-[80px] uppercase ',
-      title:
-        'text-4xl font-bold uppercase leading-[45px] lg:text-[49px] lg:leading-[65px]',
-      muted: 'text-muted leading-relaxed',
+      title: 'text-4xl font-bold uppercase',
     },
     size: {
       sm: 'text-sm md:text-base',
