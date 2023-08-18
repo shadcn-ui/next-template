@@ -34,7 +34,7 @@ export default function GoToTop() {
         title="Go To Top"
         className="fixed bottom-10 right-10 z-50 hidden h-10 w-10 "
       >
-        <button className="grid h-full w-full place-content-center rounded-full bg-primary/80 text-foreground shadow-md hover:bg-primary">
+        <button className="bg-primary/80 text-foreground hover:bg-primary grid h-full w-full place-content-center rounded-full shadow-md">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
