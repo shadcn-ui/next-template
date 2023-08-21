@@ -13,7 +13,7 @@ export default function TransitionProvider({
   return (
     <Motion
       className=""
-      initial="down"
+      initial="hidden"
       transition={{ duration: 0.4 }}
       key={path}
     >
