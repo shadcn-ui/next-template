@@ -12,5 +12,14 @@ export default function TransitionProvider({
   initial: string;
 }) {
   const path = usePathname();
-  return children;
+  return (
+    <Motion
+      className=""
+      initial={initial}
+      transition={{ duration: 0.4 }}
+      key={path}
+    >
+      {children}
+    </Motion>
+  );
 }
