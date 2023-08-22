@@ -14,13 +14,15 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
   },
   "dependencies": {
+    "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "framer-motion": "^10.16.0",
     "lucide-react": "0.105.0-alpha.4",
-    "next": "^13.4.18",
+    "next": "latest",
     "next-themes": "^0.2.1",
+    "plaiceholder": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.31.3",

@@ -5,6 +5,7 @@ export const siteConfig = {
   description: 'Structured Next.js Template',
   nav: [
     { title: 'home', href: '/' },
+    { title: 'images', href: '/images' },
     { title: 'blog', href: '/blog' },
     { title: 'contact', href: '/#contact' },
     { title: 'about', href: '/about' },

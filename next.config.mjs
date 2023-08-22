@@ -1,3 +1,6 @@
+// @ts-check
+import withPlaiceholder from '@plaiceholder/next';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -7,8 +10,16 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'www.figma.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 };
 
-export default nextConfig;
+export default withPlaiceholder(nextConfig);
