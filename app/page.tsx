@@ -3,8 +3,6 @@
 import { useEffect } from 'react';
 import useUser from '@/store/user';
 
-import Img from '@/components/img';
-
 export default function IndexPage() {
   const [fetchUser, users] = useUser((s) => [s.fetchUser, s.users]);
   useEffect(() => {

@@ -23,8 +23,8 @@
     "next": "latest",
     "next-themes": "^0.2.1",
     "plaiceholder": "^3.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "latest",
+    "react-dom": "latest",
     "sharp": "^0.31.3",
     "swiper": "^10.2.0",
     "tailwind-merge": "^1.14.0",
@@ -45,6 +45,6 @@
     "postcss": "^8.4.28",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.3",
-    "typescript": "^4.9.5"
+    "typescript": "latest"
   }
 }

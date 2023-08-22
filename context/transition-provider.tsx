@@ -9,7 +9,7 @@ export default function TransitionProvider({
   initial = 'hidden',
 }: {
   children: React.ReactNode;
-  initial: string;
+  initial?: string;
 }) {
   const path = usePathname();
   return (
