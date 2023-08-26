@@ -31,7 +31,7 @@ const withVariants =
     const id = useId();
     return (
       <Comp
-        key={props.key || id}
+        key={id}
         variants={defaultVariants}
         whileInView={props.whileInView || 'visible'}
         viewport={{ once: !props.always }}
