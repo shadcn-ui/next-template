@@ -5,16 +5,16 @@ A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 ## Usage
 
 ```bash
-npx sohanemon next
-#or
-npx sohanemon next --yarn
-#or
-npx sohanemon next --pnpm
+npx sohanemon next my-app-name
+```
+```bash
+npx sohanemon next my-app-name --yarn
+```
+```bash
+npx sohanemon next my-app-name --pnpm
 ```
 
-```bash
-npx sohanemon next my-new-app
-```
+
 
 ## Features
 
