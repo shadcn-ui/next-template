@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Img from './img';
+import Img from './ui/img';
 
 export const Images = {
   vercel: (props: any) => (

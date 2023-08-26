@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 
 export const textVariants = cva([], {
   variants: {
-    textColor: {
+    color: {
       default: 'text-foreground',
       primary: 'text-primary',
       secondary: 'text-secondary',
@@ -25,7 +25,7 @@ export const textVariants = cva([], {
     },
   },
   defaultVariants: {
-    textColor: 'default',
+    color: 'default',
     size: 'default',
     weight: 'default',
   },
