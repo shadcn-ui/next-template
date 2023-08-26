@@ -5,7 +5,7 @@ import { Text } from '@/components/ui/text';
 export default function ImagesPage() {
   return (
     <>
-      <Text variant="lg/bold/muted" className="container">
+      <Text as={'h4'} variant="lg/bold/muted" className="container">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore quos
         voluptate autem, exercitationem aliquam repellat perspiciatis facere non
         tenetur laborum quaerat id architecto corrupti ipsa minima beatae fugit
