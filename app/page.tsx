@@ -1,18 +1,13 @@
-'use client';
-
-import { useEffect } from 'react';
-import useUser from '@/store/user';
-
 import { Text } from '@/components/ui/text';
 
-export default function IndexPage() {
-  const [fetchUser, users] = useUser((s) => [s.fetchUser, s.users]);
-  useEffect(() => {
-    fetchUser();
-  }, [fetchUser]);
+export default async function IndexPage() {
+  const users = await fetch('https://jsonplaceholder.typicode.com/users').then(
+    (res) => res.json()
+  );
+
   return (
     <section className="container grid min-h-screen items-center">
-      {users?.map((_) => (
+      {users?.map((_: Awaited<typeof users>[0]) => (
         <Text key={_.name}>{_.name}</Text>
       ))}
     </section>

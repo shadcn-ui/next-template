@@ -7,14 +7,14 @@ A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
 ```bash
 npx sohanemon next my-app-name
 ```
+
 ```bash
 npx sohanemon next my-app-name --yarn
 ```
+
 ```bash
 npx sohanemon next my-app-name --pnpm
 ```
-
-
 
 ## Features
 
@@ -25,6 +25,7 @@ npx sohanemon next my-app-name --pnpm
 - Icons from [Lucide](https://lucide.dev)
 - Dark mode with `next-themes`
 - Zustand State Management
+- Prettier
 - Tailwind CSS class sorting, merging and linting.
 
 ## License

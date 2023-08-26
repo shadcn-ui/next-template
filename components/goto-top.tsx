@@ -1,29 +1,29 @@
-"use client"
+'use client';
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from 'react';
 
 export default function GoToTop() {
-  const goToTopRef = useRef<HTMLDivElement>(null)
+  const goToTopRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     window.onscroll = function () {
       if (
         document.body.scrollTop > 700 ||
         document.documentElement.scrollTop > 700
       ) {
-        goToTopRef.current?.classList.remove("hidden")
+        goToTopRef.current?.classList.remove('hidden');
       } else {
-        goToTopRef.current?.classList.add("hidden")
+        goToTopRef.current?.classList.add('hidden');
       }
-    }
+    };
 
-    return () => {}
-  }, [goToTopRef])
+    return () => {};
+  }, [goToTopRef]);
 
   function goToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    })
+      behavior: 'smooth',
+    });
   }
 
   return (
@@ -47,5 +47,5 @@ export default function GoToTop() {
         <span className="sr-only">Go to top</span>
       </div>
     </>
-  )
+  );
 }

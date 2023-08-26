@@ -21,7 +21,14 @@ export interface ButtonProps
 }
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { className, variant = 'default/default', asChild = false, href, ...props },
+    {
+      className,
+      variant = 'default/default',
+      asChild = false,
+      target,
+      href,
+      ...props
+    },
     ref
   ) => {
     const [size, intent] = variant?.split('/') as [
@@ -30,8 +37,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ];
     const Comp = asChild ? Slot : 'button';
     const LinkComp = href ? Link : Fragment;
+    const anchorProps = href ? { href, target } : {};
     return (
-      <LinkComp href={href!} target={props.target}>
+      // @ts-ignore
+      <LinkComp {...anchorProps}>
         <Comp
           className={cn(buttonVariants({ intent, size, className }))}
           ref={ref}
