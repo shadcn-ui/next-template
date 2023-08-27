@@ -24,9 +24,4 @@ export const textVariants = cva([], {
       bold: 'font-bold',
     },
   },
-  defaultVariants: {
-    color: 'default',
-    size: 'default',
-    weight: 'default',
-  },
 });

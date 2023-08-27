@@ -1,7 +1,7 @@
 import { useId } from 'react';
 import { useController, useForm } from 'react-hook-form';
 
-import { InputProps } from '@/types/input';
+import { InputProps } from '@/types/input.types';
 import { cn } from '@/lib/utils';
 
 const Input = ({

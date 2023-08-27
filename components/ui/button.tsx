@@ -2,10 +2,10 @@ import { Fragment, forwardRef } from 'react';
 import Link from 'next/link';
 import { Slot } from '@radix-ui/react-slot';
 
-import { ButtonProps, ButtonVariantsType } from '@/types/button';
+import { ButtonProps, ButtonVariantsType } from '@/types/button.types';
 import { cn } from '@/lib/utils';
 
-import { buttonVariants } from './variants/button-variants';
+import { buttonVariants } from './variants/button.variants';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
