@@ -6,22 +6,17 @@ import { usePathname } from 'next/navigation';
 import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
+import { cn, isNavActive } from '@/lib/utils';
 
 import Brand from './brand';
 import { Icons } from './icons';
 import Motion from './motion';
 import { ThemeToggle } from './theme-toggle';
 
-export default function SiteHeader() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const path = usePathname();
   return (
-    <section
-      className={cn('', {
-        'sticky top-0 inset-x-0 bg-background z-40': path === '/',
-      })}
-    >
+    <section className="bg-background sticky inset-x-0 top-0 z-40">
       <nav className="container flex items-center justify-between px-5 py-9">
         <div className="flex items-center gap-4">
           <Brand />
@@ -57,13 +52,19 @@ const NavContent = () => {
         {siteConfig.nav.map((_) => (
           <li
             key={_.title}
-            className={cn('', {
-              '': _.href === '/' ? path === '/' : path.includes(_.href),
+            className={cn('relative', {
+              'text-primary': isNavActive(_.href, path),
             })}
           >
-            <h3 className="capitalize">
+            <h3 className="px-3 capitalize">
               <Link href={_.href}>{_.title}</Link>
             </h3>
+            {isNavActive(_.href, path) && (
+              <Motion
+                layoutId="nav-bg"
+                className="bg-primary/10 absolute inset-0 -z-10 rounded-md "
+              />
+            )}
           </li>
         ))}
       </ul>

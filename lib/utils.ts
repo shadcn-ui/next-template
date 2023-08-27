@@ -5,6 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function isNavActive(href: string, path: string) {
+  return href === '/' ? path === '/' : path.includes(href);
+}
+
 export function extractHSLValues(input: string) {
   const matches = input.match(
     /hsla?\((\d+),\s*([\d.]+)%,\s*([\d.]+)%(?:,\s*[\d.]+)?\)/
