@@ -1,7 +1,7 @@
 import { fontFamily } from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
-import colors from '../config/colors';
+import colors from '../../config/colors';
 
 export const theme = plugin(
   ({ addBase }) => {

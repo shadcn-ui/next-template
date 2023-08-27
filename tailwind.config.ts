@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss';
 
-import themePreset from './plugins/preset';
+import themePreset from './styles/plugins/preset';
 
 const config = {
   content: ['app/**/*.{ts,tsx}', 'components/**/*.{ts,tsx}'],
