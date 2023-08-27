@@ -7,7 +7,7 @@ export const siteConfig = {
     { title: 'home', href: '/' },
     { title: 'images', href: '/images' },
     { title: 'blog', href: '/blog' },
-    { title: 'contact', href: '/#contact' },
+    { title: 'contact', href: '/contact' },
     { title: 'about', href: '/about' },
   ],
 };

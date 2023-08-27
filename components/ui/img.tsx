@@ -1,31 +1,11 @@
 import { readFile } from 'fs/promises';
 import { HTMLAttributes } from 'react';
 import Image from 'next/image';
-import { VariantProps, cva } from 'class-variance-authority';
 import { getPlaiceholder } from 'plaiceholder';
 
 import { cn } from '@/lib/utils';
 
-export const imgVariants = cva(
-  [' relative aspect-square w-full overflow-hidden'],
-  {
-    variants: {
-      rounded: {
-        sm: 'rounded-sm',
-        md: 'rounded-md',
-        lg: 'rounded-lg',
-        xl: 'rounded-xl',
-        '2xl': 'rounded-2xl',
-        custom: 'rounded-[40px]',
-        full: 'rounded-full',
-      },
-    },
-  }
-);
-
-export interface ImgProps
-  extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof imgVariants> {
+export interface ImgProps extends HTMLAttributes<HTMLDivElement> {
   src: string;
   alt?: string;
   imageClassName?: string;
@@ -34,7 +14,6 @@ export interface ImgProps
 
 export default async function Img({
   className,
-  rounded,
   imageClassName,
   ...props
 }: ImgProps) {
@@ -52,7 +31,10 @@ export default async function Img({
   const { base64 } = await getPlaiceholder(Buffer.from(buffer));
 
   return (
-    <div className={cn(imgVariants({ rounded, className }))} {...props}>
+    <div
+      className={cn('relative aspect-square w-full overflow-hidden', className)}
+      {...props}
+    >
       <Image
         src={src!}
         placeholder="blur"
