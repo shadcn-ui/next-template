@@ -17,7 +17,6 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(
           TextVariantsType['weight'],
           TextVariantsType['color']
         ]);
-    console.log(size, weight, color);
     const Comp = as || 'p';
     return (
       <Comp
