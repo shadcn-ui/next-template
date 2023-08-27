@@ -31,7 +31,7 @@ export const base = plugin(function ({ addBase }) {
         '@apply bg-background text-foreground overflow-x-hidden': {},
         'font-feature-settings': `'rlig' 1, 'calt' 1`,
       },
-      input: {
+      'input,textarea': {
         '@apply bg-transparent outline-none': {},
       },
     });

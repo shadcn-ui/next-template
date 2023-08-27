@@ -1,24 +1,12 @@
-import { Fragment, HTMLAttributes, forwardRef } from 'react';
+import { Fragment, forwardRef } from 'react';
 import Link from 'next/link';
 import { Slot } from '@radix-ui/react-slot';
-import { type VariantProps } from 'class-variance-authority';
 
+import { ButtonProps, ButtonVariantsType } from '@/types/button';
 import { cn } from '@/lib/utils';
 
 import { buttonVariants } from './variants/button-variants';
 
-type ButtonVariantsType = VariantProps<typeof buttonVariants>;
-
-export interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement>,
-    Omit<ButtonVariantsType, 'size' | 'intent'> {
-  asChild?: boolean;
-  href?: string;
-  target?: '_blank';
-  variant?: `${NonNullable<ButtonVariantsType['size']>}/${NonNullable<
-    ButtonVariantsType['intent']
-  >}`;
-}
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
@@ -42,7 +30,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       // @ts-ignore
       <LinkComp {...anchorProps}>
         <Comp
-          className={cn(buttonVariants({ intent, size, className }))}
+          className={cn(buttonVariants({ intent, size, className }), {
+            'w-full': props.full,
+          })}
           ref={ref}
           {...props}
         />

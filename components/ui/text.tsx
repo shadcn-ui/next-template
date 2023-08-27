@@ -1,20 +1,9 @@
-import { ElementType, HTMLAttributes, forwardRef } from 'react';
-import { type VariantProps } from 'class-variance-authority';
+import { forwardRef } from 'react';
 
+import { TextProps, TextVariantsType } from '@/types/text';
 import { cn } from '@/lib/utils';
 
 import { textVariants } from './variants/text-variants';
-
-type TextVariantsType = VariantProps<typeof textVariants>;
-
-export interface TextProps
-  extends HTMLAttributes<HTMLParagraphElement>,
-    Omit<TextVariantsType, 'size' | 'weight' | 'color'> {
-  as?: ElementType;
-  variant?: `${NonNullable<TextVariantsType['size']>}/${NonNullable<
-    TextVariantsType['weight']
-  >}/${NonNullable<TextVariantsType['color']>}`;
-}
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(
   ({ className, as, variant = 'default/default', intent, ...props }, ref) => {
