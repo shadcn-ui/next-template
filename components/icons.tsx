@@ -9,6 +9,7 @@ export const Icons = {
   logo: (props: any) => (
     <Image
       {...props}
+      priority
       className=""
       src={`/cat.png`}
       alt="logo"

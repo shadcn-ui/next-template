@@ -59,6 +59,7 @@ export default async function Img({
         className={cn('object-cover', imageClassName)}
         alt={props.alt || ''}
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         loading={props.loading}
         blurDataURL={base64}
       />
