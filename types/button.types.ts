@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { ComponentPropsWithRef } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
 import { buttonVariants } from '@/components/ui/button';
@@ -6,7 +6,7 @@ import { buttonVariants } from '@/components/ui/button';
 export type ButtonVariantsType = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
-  extends HTMLAttributes<HTMLButtonElement>,
+  extends ComponentPropsWithRef<'button'>,
     Omit<ButtonVariantsType, 'size' | 'intent'> {
   asChild?: boolean;
   href?: string;
