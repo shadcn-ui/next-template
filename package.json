@@ -1,6 +1,6 @@
 {
-  "name": "next-template",
-  "version": "0.0.2",
+  "name": "sohanemon-next",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "dev": "next dev",

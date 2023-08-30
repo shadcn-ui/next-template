@@ -11,7 +11,7 @@ export default function ScrollProvider({
   const { scrollY } = useScroll();
 
   const _y = useTransform(scrollY, [0, containerSize], [0, -containerSize]);
-  const y = useSpring(_y, { stiffness: 10, mass: 0.1 });
+  const y = useSpring(_y, { stiffness: 50 });
 
   useLayoutEffect(() => {
     const container = containerRef.current;

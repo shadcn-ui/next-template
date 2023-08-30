@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function isNavActive(href: string, path: string) {
-  return href === '/' ? path === '/' : path.includes(href);
+  return href === '/' ? path === '/' : path?.includes(href);
 }
 
 export function extractHSLValues(input: string) {

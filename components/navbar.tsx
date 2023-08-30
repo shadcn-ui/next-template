@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, useScroll } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
 import { cn, isNavActive } from '@/lib/utils';
@@ -15,9 +15,28 @@ import { ThemeToggle } from './theme-toggle';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+
+  const update = useCallback(() => {
+    if (scrollY.get() > scrollY.getPrevious()) {
+      setHidden(true);
+    } else if (scrollY.get() < scrollY.getPrevious()) {
+      setHidden(false);
+    }
+  }, [scrollY]);
+
+  useEffect(() => {
+    scrollY.on('change', update);
+  }, [scrollY, update]);
+
   return (
-    <section className="bg-background sticky inset-x-0 top-0 z-40">
-      <nav className="container flex items-center justify-between px-5 py-9">
+    <section
+      className={cn('bg-background fixed inset-x-0 top-0 z-40', {
+        hidden: hidden,
+      })}
+    >
+      <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">
           <Brand />
           <ThemeToggle />
@@ -61,6 +80,7 @@ const NavContent = () => {
             </h3>
             {isNavActive(_.href, path) && (
               <Motion
+                as="span"
                 layoutId="nav-bg"
                 className="bg-primary/10 absolute inset-0 -z-10 rounded-md "
               />
@@ -84,9 +104,9 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
     >
       {siteConfig.nav.map((_) => (
         <li onClick={() => setIsMenuOpen(false)} key={_.title}>
-          <h3 className="hover:text-primary/50 capitalize">
+          <span className="hover:text-primary/50 capitalize">
             <Link href={_.href}>{_.title}</Link>
-          </h3>
+          </span>
         </li>
       ))}
     </Motion>

@@ -28,7 +28,8 @@ export const base = plugin(function ({ addBase }) {
         scrollBehavior: 'smooth !important',
       },
       body: {
-        '@apply bg-background text-foreground overflow-x-hidden': {},
+        '@apply bg-background text-foreground min-h-screen antialiased overflow-x-hidden selection:text-white selection:bg-primary':
+          {},
         'font-feature-settings': `'rlig' 1, 'calt' 1`,
       },
       'input,textarea': {
