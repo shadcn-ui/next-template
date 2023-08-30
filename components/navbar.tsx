@@ -31,10 +31,15 @@ export default function Navbar() {
   }, [scrollY, update]);
 
   return (
-    <section
-      className={cn('bg-background fixed inset-x-0 top-0 z-40', {
-        hidden: hidden,
-      })}
+    <Motion
+      initial={{ y: -200, opacity: 0 }}
+      animate={
+        hidden
+          ? { y: -200, opacity: 0, scale: 0.7 }
+          : { y: 0, opacity: 1, scale: 1 }
+      }
+      whileInView={{}}
+      className={cn('bg-background fixed inset-x-0 top-0 z-40', {})}
     >
       <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">
@@ -59,7 +64,7 @@ export default function Navbar() {
       <AnimatePresence>
         {isMenuOpen && <NavContentMob setIsMenuOpen={setIsMenuOpen} />}
       </AnimatePresence>
-    </section>
+    </Motion>
   );
 }
 
