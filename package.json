@@ -16,7 +16,7 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
-    "@sohanemon/next-image": "^1.0.6",
+    "@sohanemon/next-image": "^1.0.21",
     "@sohanemon/utils": "^1.0.1",
     "class-variance-authority": "^0.4.0",
     "framer-motion": "^10.16.1",
