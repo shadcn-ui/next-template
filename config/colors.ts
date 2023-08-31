@@ -1,15 +1,15 @@
-import { cssColorVariable } from '../lib/utils';
+import { cssColorVariable } from '@sohanemon/utils';
 
 const colors = {
   background: '#FBE791',
-  foreground: '#ffffff',
-  muted: 'hsla(226.15, 20.63%, 87.65%, 1)',
+  foreground: '#000000',
+  muted: '#FFFFFF',
   mutedForeground: 'hsla(225, 7%, 36%, 1)',
   primary: '#00494F',
   primaryForeground: 'hsla(0, 0%, 100%, 1)',
   secondary: '#fbe791',
   secondaryForeground: '#00494f',
-  accent: '#ffc00d',
+  accent: '#FFAC0D',
   accentForeground: '#000000 ',
   destructive: 'hsla(240, 4.8%, 95.9%, 1)',
   destructiveForeground: 'hsla(240, 3.8%, 46.1%, 1)',

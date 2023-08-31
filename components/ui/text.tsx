@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
+import { cn } from '@sohanemon/utils';
 
 import { TextProps, TextVariantsType } from '@/types/text.types';
-import { cn } from '@/lib/utils';
 
 import { textVariants } from './variants/text.variants';
 

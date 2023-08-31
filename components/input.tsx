@@ -1,8 +1,8 @@
 import { useId } from 'react';
+import { cn } from '@sohanemon/utils';
 import { useController, useForm } from 'react-hook-form';
 
 import { InputProps } from '@/types/input.types';
-import { cn } from '@/lib/utils';
 
 const Input = ({
   className,

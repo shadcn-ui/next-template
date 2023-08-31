@@ -1,12 +1,8 @@
-import Image from 'next/image';
-
-import Img from './ui/img';
+import { Img } from '@sohanemon/next-image';
+import { ImgProps } from '@sohanemon/next-image/dist/types/img.type';
 
 export const Images = {
-  vercel: (props: any) => (
-    <Image {...props} src={`/vercel.svg`} alt="    " width={600} height={300} />
-  ),
-  cat1: (props: any) => (
+  cat1: (props: ImgProps) => (
     <Img {...props} src="/public/assets/images/Clipboard-1.png" />
   ),
 };

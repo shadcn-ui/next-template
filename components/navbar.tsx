@@ -3,10 +3,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { cn, isNavActive } from '@sohanemon/utils';
 import { AnimatePresence, useScroll } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
-import { cn, isNavActive } from '@/lib/utils';
 
 import Brand from './brand';
 import { Icons } from './icons';
