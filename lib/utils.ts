@@ -9,53 +9,35 @@ export function isNavActive(href: string, path: string) {
   return href === '/' ? path === '/' : path?.includes(href);
 }
 
-function hexToHSL(hex: string): string {
-  const hexMatches = hex.match(/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i);
-
-  if (!hexMatches) {
-    throw new Error('Invalid HEX color format.');
-  }
-
-  const [, r, g, b] = hexMatches.map((c) => parseInt(c, 16) / 255);
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  const l = (max + min) / 2;
-  const d = max - min;
-  const s =
-    l === 1
-      ? 0
-      : l === 0
-      ? 0
-      : max === min
-      ? 0
-      : l > 0.5
-      ? d / (2 - max - min)
-      : d / (max + min);
-  const h = d
-    ? (max === r
-        ? (g - b) / d + (g < b ? 6 : 0)
-        : max === g
-        ? (b - r) / d + 2
-        : (r - g) / d + 4) / 6
-    : 0;
-  return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(
-    l * 100
-  )}%)`;
+function hexToHSLFormatted(hexColor: string): string {
+  const [r, g, b] = hexColor.match(/\w\w/g)?.map((c) => parseInt(c, 16) / 255)!;
+  const maxVal = Math.max(r, g, b),
+    minVal = Math.min(r, g, b);
+  const lightness = (maxVal + minVal) / 2;
+  const delta = maxVal - minVal;
+  const saturation =
+    delta === 0 ? 0 : delta / (1 - Math.abs(2 * lightness - 1));
+  let hue =
+    delta !== 0
+      ? maxVal === r
+        ? ((g - b) / delta + (g < b ? 6 : 0)) * 60
+        : maxVal === g
+        ? ((b - r) / delta + 2) * 60
+        : ((r - g) / delta + 4) * 60
+      : 0;
+  if (hue < 0) hue += 360;
+  return `${Math.round(hue)} ${Math.round(saturation * 100)}% ${Math.round(
+    lightness * 100
+  )}%`;
 }
 
-function HSLtoString(input: string) {
+function extractHSLValues(input: string): string {
+  if (input.includes('#')) return hexToHSLFormatted(input);
   const matches = input.match(
-    /hsla?\((\d+),\s*([\d.]+)%,\s*([\d.]+)%(?:,\s*[\d.]+)?\)/
+    /hsla?\(([\d.]+),\s*([\d.]+)%,\s*([\d.]+)%(?:,\s*[\d.]+)?\)/
   );
-  const hslValues = `${matches?.[1]} ${matches?.[2]}% ${matches?.[3]}%`;
-  return hslValues;
-}
-
-export function extractHSLValues(input: string): string {
-  if (input.startsWith('#')) {
-    return HSLtoString(hexToHSL(input));
-  }
-  return HSLtoString(input);
+  if (!matches) throw new Error(`Invalid HSL format: ${input}`);
+  return `${matches[1]} ${matches[2]}% ${matches[3]}%`;
 }
 
 export function kebabCase(camelCase: string) {
