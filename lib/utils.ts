@@ -47,11 +47,10 @@ export function kebabCase(camelCase: string) {
   );
 }
 
-export function cssColorVariable(colors: any) {
-  const temp = {};
+export function cssColorVariable(colors: Record<string, string>) {
+  const temp: Record<string, string> = {};
   Object.keys(colors).map((key: string) => {
-    // @ts-ignore
-    temp[('--' + kebabCase(key)) as any] = extractHSLValues(colors[key]);
+    temp[`--${kebabCase(key)}`] = extractHSLValues(colors[key]);
   });
   return temp;
 }
