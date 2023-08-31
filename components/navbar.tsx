@@ -38,6 +38,7 @@ export default function Navbar() {
           ? { y: -200, opacity: 0, scale: 0.7 }
           : { y: 0, opacity: 1, scale: 1 }
       }
+      transition={{ delay: 0.1, duration: 0.5 }}
       whileInView={{}}
       className={cn('bg-background fixed inset-x-0 top-0 z-40', {})}
     >
