@@ -1,11 +1,11 @@
 import { cssColorVariable } from '../lib/utils';
 
 const colors = {
-  background: 'hsla(225, 28.57%, 97.25%, 1)',
+  background: '#ffffff',
   foreground: 'hsla(225, 8%, 10%, 1)',
   muted: 'hsla(226.15, 20.63%, 87.65%, 1)',
   mutedForeground: 'hsla(225, 7%, 36%, 1)',
-  primary: 'hsla(163, 83%, 33%, 1)',
+  primary: 'hsl(185, 100%, 15%)',
   primaryForeground: 'hsla(0, 0%, 100%, 1)',
   secondary: 'hsla(346.8, 77.2% 49.8%, 1)',
   secondaryForeground: 'hsla(355.7, 100%, 97.3%, 1)',
