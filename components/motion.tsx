@@ -41,7 +41,7 @@ const withVariants =
         key={id}
         ref={ref}
         variants={defaultVariants}
-        whileInView={whileInView || 'visible'}
+        whileInView={!props.animate && (whileInView || 'visible')}
         viewport={{ once: !always }}
         transition={{
           delay: 0.1,
