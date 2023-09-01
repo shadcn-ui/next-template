@@ -3,14 +3,17 @@
 import { useCallback, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Motion, {
+  AnimatePresence,
+  useMotionValueEvent,
+  useScroll,
+} from '@sohanemon/motion';
 import { cn, isNavActive } from '@sohanemon/utils';
-import { AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
 
 import Brand from './brand';
 import { Icons } from './icons';
-import Motion from './motion';
 import { ThemeToggle } from './theme-toggle';
 
 export default function Navbar() {

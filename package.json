@@ -16,10 +16,10 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
+    "@sohanemon/motion": "latest",
     "@sohanemon/next-image": "latest",
     "@sohanemon/utils": "latest",
     "class-variance-authority": "^0.4.0",
-    "framer-motion": "^10.16.1",
     "lucide-react": "0.105.0-alpha.4",
     "next": "latest",
     "next-themes": "^0.2.1",

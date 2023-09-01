@@ -1,7 +1,7 @@
 'use client';
 
 import { HTMLAttributes, useLayoutEffect, useRef, useState } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from '@sohanemon/motion';
 
 export default function ScrollProvider({
   ...props

@@ -1,8 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-
-import Motion from '../components/motion';
+import Motion from '@sohanemon/motion';
 
 export default function TransitionProvider({
   children,
