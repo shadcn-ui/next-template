@@ -1,4 +1,4 @@
-import { Img } from '@sohanemon/next-image';
+import Img from '@sohanemon/next-image';
 
 import { Button } from '@/components/ui/button';
 import { Text } from '@/components/ui/text';

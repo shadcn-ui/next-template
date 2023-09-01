@@ -1,6 +1,6 @@
 'use client';
 
-import { Img } from '@sohanemon/next-image';
+import Img from '@sohanemon/next-image';
 import { ImgProps } from '@sohanemon/next-image/dist/types/img.type';
 
 export const Images = {

@@ -1,4 +1,4 @@
-import { Img } from '@sohanemon/next-image';
+import Img from '@sohanemon/next-image';
 import { IconProps } from '@sohanemon/next-image/dist/types/img.type';
 import { cn } from '@sohanemon/utils';
 import { AlignJustify, Moon, Sun, X } from 'lucide-react';
