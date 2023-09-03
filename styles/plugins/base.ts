@@ -23,12 +23,12 @@ export const base = plugin(function ({ addBase }) {
   }),
     addBase({
       html: {
-        overflowX: 'hidden',
+        overflowX: 'clip',
         '--scroll-behavior': 'smooth !important',
         scrollBehavior: 'smooth !important',
       },
       body: {
-        '@apply bg-background text-foreground min-h-screen antialiased overflow-x-hidden selection:text-white selection:bg-primary':
+        '@apply bg-background text-foreground min-h-screen antialiased overflow-x-clip selection:text-white selection:bg-primary':
           {},
         'font-feature-settings': `'rlig' 1, 'calt' 1`,
       },
