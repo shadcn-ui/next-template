@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head className="revert" />
-        <body className={cn('pt-32 font-sans', fontSans.variable)}>
+        <body className={cn('font-sans', fontSans.variable)}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <Navbar />
             <TransitionProvider>{children}</TransitionProvider>

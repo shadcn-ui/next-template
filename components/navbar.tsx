@@ -34,7 +34,7 @@ export default function Navbar() {
     <Motion
       animate={hidden ? 'top' : 'visible'}
       transition={{ delay: 0.1, duration: 0.5 }}
-      className={cn('bg-background fixed inset-x-0 top-0 z-40')}
+      className={cn('bg-background sticky inset-x-0 top-0 z-40')}
     >
       <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">

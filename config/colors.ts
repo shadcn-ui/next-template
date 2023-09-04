@@ -1,4 +1,4 @@
-import { cssColorVariable } from '@sohanemon/utils';
+import { cssColorVariable, tailwindColorObject } from '@sohanemon/utils';
 
 const colors = {
   background: '#FBE791',
@@ -22,4 +22,6 @@ const colors = {
   ring: 'hsla(346.8, 77.2%, 49.8%, 1)',
 };
 
-export default cssColorVariable(colors);
+export const colorVariables = cssColorVariable(colors);
+
+export default tailwindColorObject(colors);
