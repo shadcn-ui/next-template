@@ -16,9 +16,7 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
-    "@sohanemon/motion": "latest",
-    "@sohanemon/next-image": "latest",
-    "@sohanemon/utils": "latest",
+
     "class-variance-authority": "^0.4.0",
     "lucide-react": "0.105.0-alpha.4",
     "next": "latest",
@@ -33,6 +31,9 @@
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",
     "@types/node": "^17.0.45",
     "@types/react": "^18.2.21",
+    "@sohanemon/motion": "^2.1.0",
+    "@sohanemon/next-image": "^2.1.0",
+    "@sohanemon/utils": "^1.0.2",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/parser": "^5.62.0",
     "autoprefixer": "^10.4.15",
