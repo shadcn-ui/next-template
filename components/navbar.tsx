@@ -14,7 +14,6 @@ import { siteConfig } from '@/config/site';
 
 import Brand from './brand';
 import { Icons } from './icons';
-import { ThemeToggle } from './theme-toggle';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,19 +38,16 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">
           <Brand />
-          <ThemeToggle />
         </div>
         <NavContent />
         {!isMenuOpen ? (
           <Icons.menu
             onClick={() => setIsMenuOpen(true)}
-            size={36}
             className="text-foreground cursor-pointer lg:hidden"
           />
         ) : (
           <Icons.x
             onClick={() => setIsMenuOpen(false)}
-            size={36}
             className="text-foreground cursor-pointer lg:hidden"
           />
         )}

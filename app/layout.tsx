@@ -1,4 +1,3 @@
-import { ThemeProvider } from '@/context/theme-provider';
 import TransitionProvider from '@/context/transition-provider';
 
 import '@/styles/custom.css';
@@ -41,12 +40,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html lang="en" suppressHydrationWarning>
         <head className="revert" />
         <body className={cn('font-sans', fontSans.variable)}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <Navbar />
-            <TransitionProvider>{children}</TransitionProvider>
-            <TailwindIndicator />
-            <GoToTop />
-          </ThemeProvider>
+          <Navbar />
+          <TransitionProvider>{children}</TransitionProvider>
+          <TailwindIndicator />
+          <GoToTop />
         </body>
       </html>
     </>

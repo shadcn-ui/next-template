@@ -16,11 +16,8 @@
   "dependencies": {
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
-
     "class-variance-authority": "^0.4.0",
-    "lucide-react": "0.105.0-alpha.4",
     "next": "latest",
-    "next-themes": "^0.2.1",
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.46.0",
