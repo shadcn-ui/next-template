@@ -5,7 +5,11 @@ export const base = plugin(function ({ addBase }) {
     '::-webkit-scrollbar': { width: '5px', height: '5px' },
     '::-webkit-scrollbar-thumb': {
       borderRadius: '10px',
-      '@apply bg-primary': {},
+      '@apply bg-primary invisible': {},
+    },
+    'body:hover::-webkit-scrollbar-thumb': {
+      borderRadius: '10px',
+      '@apply visible': {},
     },
     '::-webkit-scrollbar-thumb:hover': { '@apply bg-primary/70': {} },
     '::-webkit-scrollbar-track': {
@@ -13,7 +17,6 @@ export const base = plugin(function ({ addBase }) {
       '@apply bg-primary/20': {},
     },
     '*': { '@apply border-border ring-ring': {} },
-    '*:hover': { '@apply transition-all': {} },
   });
   addBase({
     'html:where(.dark)': { filter: 'invert(1) hue-rotate(180deg)' },
@@ -26,6 +29,7 @@ export const base = plugin(function ({ addBase }) {
         overflowX: 'clip',
         '--scroll-behavior': 'smooth !important',
         scrollBehavior: 'smooth !important',
+        'scrollbar-gutter': 'stable',
       },
       body: {
         '@apply bg-background text-foreground min-h-screen antialiased overflow-x-clip selection:text-white selection:bg-primary':
