@@ -7,11 +7,15 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-foreground hover:bg-primary/90',
+        default: 'bg-primary text-foreground hover:bg-primary/80',
       },
       size: {
         default: 'h-10 py-2 px-4',
       },
+    },
+    defaultVariants: {
+      size: 'default',
+      variant: 'default',
     },
   }
 );

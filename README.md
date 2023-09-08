@@ -22,11 +22,10 @@ npx sohanemon next my-app-name --pnpm
 - Animated with `framer-motion`
 - Radix UI Primitives
 - Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Zustand State Management
 - Prettier
 - Tailwind CSS class sorting, merging and linting.
+
+> More more feature choose the `feature-full` branch. Including `Zustand`,`React-hook-form`,``
 
 ## License
 

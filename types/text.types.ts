@@ -1,7 +1,7 @@
 import { ComponentPropsWithRef, ElementType } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
-import { textVariants } from '@/components/ui/text';
+import { textVariants } from '@/config/variants/text-variants';
 
 export type TextVariantsType = VariantProps<typeof textVariants>;
 

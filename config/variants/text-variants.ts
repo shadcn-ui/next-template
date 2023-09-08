@@ -9,4 +9,7 @@ export const textVariants = cva([], {
       default: 'text-base',
     },
   },
+  defaultVariants: {
+    size: 'default',
+  },
 });
