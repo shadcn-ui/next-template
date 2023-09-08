@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Plaiceholder"]
+  "cSpell.words": ["Plaiceholder"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

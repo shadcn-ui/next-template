@@ -16,28 +16,22 @@ export const base = plugin(function ({ addBase }) {
       borderRadius: '10px',
       '@apply bg-primary/20': {},
     },
-    '*': { '@apply border-border ring-ring': {} },
+    '*': { '@apply border-border': {} },
   });
   addBase({
-    'html:where(.dark)': { filter: 'invert(1) hue-rotate(180deg)' },
-    'html.dark picture,\nhtml.dark img,\nhtml.dark video': {
-      filter: 'invert(1) hue-rotate(180deg)',
+    html: {
+      overflowX: 'clip',
+      '--scroll-behavior': 'smooth !important',
+      scrollBehavior: 'smooth !important',
+      'scrollbar-gutter': 'stable',
     },
-  }),
-    addBase({
-      html: {
-        overflowX: 'clip',
-        '--scroll-behavior': 'smooth !important',
-        scrollBehavior: 'smooth !important',
-        'scrollbar-gutter': 'stable',
-      },
-      body: {
-        '@apply bg-background text-foreground min-h-screen antialiased overflow-x-clip selection:text-white selection:bg-primary':
-          {},
-        'font-feature-settings': `'rlig' 1, 'calt' 1`,
-      },
-      'input,textarea': {
-        '@apply bg-transparent outline-none': {},
-      },
-    });
+    body: {
+      '@apply bg-background text-foreground min-h-screen antialiased overflow-x-clip selection:text-white selection:bg-primary':
+        {},
+      'font-feature-settings': `'rlig' 1, 'calt' 1`,
+    },
+    'input,textarea': {
+      '@apply bg-transparent outline-none': {},
+    },
+  });
 });
