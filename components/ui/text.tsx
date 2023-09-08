@@ -1,26 +1,15 @@
 import { forwardRef } from 'react';
 import { cn } from '@sohanemon/utils';
 
-import { TextProps, TextVariantsType } from '@/types/text.types';
-
-import { textVariants } from './variants/text.variants';
+import { TextProps } from '@/types/text.types';
+import { textVariants } from '@/config/variants/text-variants';
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  (
-    { className, as, variant = 'default/default/default', intent, ...props },
-    ref
-  ) => {
-    const [size, weight, color] = intent
-      ? []
-      : (variant?.split('/') as [
-          TextVariantsType['size'],
-          TextVariantsType['weight'],
-          TextVariantsType['color']
-        ]);
+  ({ className, as, size, intent, ...props }, ref) => {
     const Comp = as || 'p';
     return (
       <Comp
-        className={cn(textVariants({ color, size, weight, intent, className }))}
+        className={cn(textVariants({ size, intent, className }))}
         ref={ref}
         {...props}
       />
@@ -29,4 +18,4 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(
 );
 Text.displayName = 'Text';
 
-export { Text, textVariants };
+export { Text };

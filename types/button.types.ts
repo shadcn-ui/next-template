@@ -7,12 +7,9 @@ export type ButtonVariantsType = VariantProps<typeof buttonVariants>;
 
 export interface ButtonProps
   extends ComponentPropsWithRef<'button'>,
-    Omit<ButtonVariantsType, 'size' | 'intent'> {
+    ButtonVariantsType {
   asChild?: boolean;
   href?: string;
   target?: '_blank';
   full?: boolean;
-  variant?: `${NonNullable<ButtonVariantsType['size']>}/${NonNullable<
-    ButtonVariantsType['intent']
-  >}`;
 }
