@@ -1,3 +1,4 @@
+import containerQueries from '@tailwindcss/container-queries';
 import type { Config } from 'tailwindcss';
 
 import { base } from './base';
@@ -6,7 +7,7 @@ import { utilities } from './utilities';
 
 const themePreset = {
   content: [],
-  plugins: [theme, base, utilities],
+  plugins: [theme, base, utilities, containerQueries],
 } satisfies Config;
 
 export default themePreset;

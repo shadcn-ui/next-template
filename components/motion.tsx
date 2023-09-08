@@ -5,7 +5,7 @@ import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Variants, motion } from 'framer-motion';
 
-import { defaultVariants } from '../constants/variants';
+import { defaultVariants } from '@/lib/motion-variants';
 
 interface MotionProps extends ComponentPropsWithRef<'div'> {
   as?: ElementType;
@@ -41,12 +41,11 @@ const withVariants =
       <Comp
         key={id}
         ref={ref}
-        variants={variants || defaultVariants}
+        variants={{ ...defaultVariants, ...variants }}
         whileInView={!props.animate && (whileInView || 'visible')}
         viewport={{ once: !always }}
         transition={{
           duration: 0.3,
-          type: 'tween',
           ...transition,
         }}
         {...props}

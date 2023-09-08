@@ -1,7 +1,4 @@
 import { ComponentProps } from 'react';
-import Img from '@sohanemon/next-image';
-import { IconProps } from '@sohanemon/next-image/dist/types/img.type';
-import { cn } from '@sohanemon/utils';
 
 export const Icons = {
   menu: (props: ComponentProps<'svg'>) => (
@@ -38,13 +35,5 @@ export const Icons = {
       <path d="M18 6 6 18" />
       <path d="m6 6 12 12" />
     </svg>
-  ),
-  logo: ({ className, ...props }: IconProps) => (
-    <Img
-      {...props}
-      className={cn('w-20', className)}
-      src={`/public/cat.png`}
-      alt="logo"
-    />
   ),
 };

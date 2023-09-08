@@ -23,7 +23,6 @@ export const theme = plugin(
         colors,
         fontFamily: {
           sans: ['var(--font-sans)', ...fontFamily.sans],
-          mono: ['var(--font-mono)', ...fontFamily.mono],
         },
         keyframes: {
           slideDown: {

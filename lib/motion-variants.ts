@@ -17,8 +17,4 @@ export const defaultVariants: Variants = {
       staggerChildren: 0.3,
     },
   },
-  scale1: { opacity: 1, scale: 1 },
-  scale0: { opacity: 0, scale: 0.1 },
-  height0: { height: 0 },
-  height1: { height: '100%' },
 };
