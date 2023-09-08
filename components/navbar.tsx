@@ -93,10 +93,10 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
     <Motion
       key={'header'}
       as={'ul'}
-      initial="up"
+      initial="top"
       animate="visible"
       exit={'left'}
-      className="bg-card absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
+      className="bg-background absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
     >
       {siteConfig.nav.map((_) => (
         <li onClick={() => setIsMenuOpen(false)} key={_.title}>

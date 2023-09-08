@@ -1,6 +1,5 @@
 import TransitionProvider from '@/context/transition-provider';
 
-import '@/styles/custom.css';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -39,12 +38,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head className="revert" />
-        <body className={cn('font-sans', fontSans.variable)}>
-          <Navbar />
-          <TransitionProvider>{children}</TransitionProvider>
-          <TailwindIndicator />
-          <GoToTop />
-        </body>
+        <TransitionProvider>
+          <body className={cn('font-sans', fontSans.variable)}>
+            <Navbar />
+            {children}
+            <TailwindIndicator />
+            <GoToTop />
+          </body>
+        </TransitionProvider>
       </html>
     </>
   );
