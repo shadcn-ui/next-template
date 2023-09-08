@@ -17,13 +17,12 @@ interface MotionProps extends ComponentPropsWithRef<'div'> {
 const Component = forwardRef<HTMLDivElement, MotionProps>(
   ({ variants, as, asChild, ...props }, ref) => {
     const Comp = asChild ? Slot : as || 'div';
-    return <Comp ref={ref} {...props} />;
+    return <Comp {...props} ref={ref} />;
   }
 );
 
 Component.displayName = 'Motion';
 const MotionComponent = motion(Component);
-MotionComponent.displayName = 'MotionComponent';
 
 const withVariants =
   (Comp: typeof Component): typeof MotionComponent =>

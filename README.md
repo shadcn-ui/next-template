@@ -1,6 +1,6 @@
 # next-template
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+A Next.js 13 template for building apps Tailwind CSS and Framer Motion
 
 ## Usage
 
@@ -25,7 +25,7 @@ npx sohanemon next my-app-name --pnpm
 - Prettier
 - Tailwind CSS class sorting, merging and linting.
 
-> More more feature choose the `feature-full` branch. Including `Zustand`,`React-hook-form`,``
+> More more feature choose the `feature-full` branch. Including `Zustand`,`React-hook-form`,`next-themes`,`lucide-react` and many more
 
 ## License
 

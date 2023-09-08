@@ -7,6 +7,7 @@ import { cn, isNavActive } from '@sohanemon/utils';
 import { AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
+import useClickOutside from '@/hooks/click-outside';
 import Motion from '@/components/motion';
 
 import Brand from './brand';
@@ -86,8 +87,10 @@ const NavContent = () => {
 };
 
 const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
+  const ref = useClickOutside(() => setIsMenuOpen(false));
   return (
     <Motion
+      ref={ref}
       key={'header'}
       as={'ul'}
       initial="top"
