@@ -1,7 +1,7 @@
 import { ComponentPropsWithRef } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
-import { buttonVariants } from '@/components/ui/button';
+import { buttonVariants } from '@/config/variants/button-variants';
 
 export type ButtonVariantsType = VariantProps<typeof buttonVariants>;
 
