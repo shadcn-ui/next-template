@@ -10,6 +10,6 @@ export interface ButtonProps
     ButtonVariantsType {
   asChild?: boolean;
   href?: string;
-  target?: '_blank';
+  target?: '_blank' | '_parent' | '_self' | '_top';
   full?: boolean;
 }
