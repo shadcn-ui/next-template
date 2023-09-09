@@ -16,6 +16,10 @@ npx sohanemon next my-app-name --yarn
 npx sohanemon next my-app-name --pnpm
 ```
 
+```bash
+npx sohanemon next my-app-name --bun
+```
+
 ## Features
 
 - Next.js 13 App Directory
