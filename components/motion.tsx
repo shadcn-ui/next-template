@@ -1,4 +1,3 @@
-// @ts-nocheck
 'use client';
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
@@ -17,7 +16,7 @@ interface MotionProps extends ComponentPropsWithRef<'div'> {
 const Component = forwardRef<HTMLDivElement, MotionProps>(
   ({ variants, as, asChild, ...props }, ref) => {
     const Comp = asChild ? Slot : as || 'div';
-    return <Comp {...props} ref={ref} />;
+    return <Comp ref={ref} {...props} />;
   }
 );
 
@@ -25,7 +24,8 @@ Component.displayName = 'Motion';
 const MotionComponent = motion(Component);
 
 const withVariants =
-  (Comp: typeof Component): typeof MotionComponent =>
+  (Comp: typeof MotionComponent): typeof MotionComponent =>
+  // @ts-ignore
   // eslint-disable-next-line react/display-name
   ({
     ref,
@@ -41,7 +41,7 @@ const withVariants =
         key={id}
         ref={ref}
         variants={{ ...defaultVariants, ...variants }}
-        whileInView={!props.animate && (whileInView || 'visible')}
+        whileInView={props.animate ? undefined : whileInView || 'visible'}
         viewport={{ once: !always }}
         transition={{
           duration: 0.3,
