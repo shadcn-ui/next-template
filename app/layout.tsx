@@ -4,10 +4,10 @@ import '@/styles/globals.css';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { cn } from '@sohanemon/utils';
+import { TailwindIndicator } from '@sohanemon/utils/components';
 
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
-import { TailwindIndicator } from '@/components/tailwind-indicator';
 
 const GoToTop = dynamic(() => import('@/components/goto-top'));
 const Navbar = dynamic(() => import('@/components/navbar'));
