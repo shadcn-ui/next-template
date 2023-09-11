@@ -2,14 +2,10 @@ import plugin from 'tailwindcss/plugin';
 
 export const base = plugin(function ({ addBase }) {
   addBase({
-    '::-webkit-scrollbar': { width: '5px', height: '5px' },
+    '::-webkit-scrollbar': { width: '8px', height: '8px' },
     '::-webkit-scrollbar-thumb': {
       borderRadius: '10px',
-      '@apply bg-primary invisible': {},
-    },
-    'body:hover::-webkit-scrollbar-thumb': {
-      borderRadius: '10px',
-      '@apply visible': {},
+      '@apply bg-primary': {},
     },
     '::-webkit-scrollbar-thumb:hover': { '@apply bg-primary/70': {} },
     '::-webkit-scrollbar-track': {
