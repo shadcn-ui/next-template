@@ -9,7 +9,7 @@ export default async function IndexPage() {
         explicabo optio, possimus quia quidem debitis eum delectus ut dolore
         sed, sit cum adipisci ex dolorum praesentium sequi placeat quis commodi!
       </P>
-      <Button>Click Me</Button>
+      <Button query={{ text: 'something' }}>Click Me</Button>
     </main>
   );
 }

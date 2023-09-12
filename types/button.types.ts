@@ -9,7 +9,7 @@ export interface ButtonProps
   extends ComponentPropsWithRef<'button'>,
     ButtonVariantsType {
   asChild?: boolean;
+  query?: Record<any, any>;
   href?: string;
   target?: '_blank' | '_parent' | '_self' | '_top';
-  full?: boolean;
 }
