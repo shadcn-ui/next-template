@@ -8,7 +8,7 @@ import { theme } from './theme';
 import { utilities } from './utilities';
 
 const themePreset = {
-  content: [],
+  content: ['./node_modules/@sohanemon/utils/dist/**/*.{js,ts,jsx,tsx}'],
   plugins: [theme, base, utilities, createThemes(colors), containerQueries],
 } satisfies Config;
 
