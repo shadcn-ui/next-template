@@ -14,8 +14,8 @@ interface MotionProps extends ComponentPropsWithRef<'div'> {
 }
 
 const Component = forwardRef<HTMLDivElement, MotionProps>(
-  ({ variants, as, asChild, ...props }, ref) => {
-    const Comp = asChild ? Slot : as || 'div';
+  ({ variants, as = 'div', asChild, ...props }, ref) => {
+    const Comp = asChild ? Slot : as;
     return <Comp ref={ref} {...props} />;
   }
 );
@@ -42,7 +42,7 @@ const withVariants =
         ref={ref}
         variants={{ ...defaultVariants, ...variants }}
         whileInView={props.animate ? undefined : whileInView || 'visible'}
-        viewport={{ once: !always }}
+        viewport={{ once: typeof always === 'undefined' ? true : false }}
         transition={{
           duration: 0.3,
           ...transition,
