@@ -7,6 +7,7 @@ const config = {
     'app/**/*.{ts,tsx}',
     'components/**/*.{ts,tsx}',
     'config/variants/*.{ts,tsx}',
+    './node_modules/@sohanemon/utils/dist/**/*.{js,ts,jsx,tsx}',
   ],
   presets: [themePreset],
 } satisfies Config;
