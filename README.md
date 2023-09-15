@@ -1,8 +1,22 @@
 # next-template
 
-A Next.js 13 template for building apps Tailwind CSS and Framer Motion
+A Next.js 13 app built with Tailwind CSS.
 
-## Usage
+## Usage (run locally)
+
+Go to the `root` folder where `package.json` exists.
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+> required `nodejs` installed
+
+## Bootstrap (new app)
 
 ```bash
 npx sohanemon next my-app-name
@@ -14,10 +28,6 @@ npx sohanemon next my-app-name --yarn
 
 ```bash
 npx sohanemon next my-app-name --pnpm
-```
-
-```bash
-npx sohanemon next my-app-name --bun
 ```
 
 ## Features
@@ -33,4 +43,4 @@ npx sohanemon next my-app-name --bun
 
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/sohanemon/ui-init/blob/main/LICENSE).

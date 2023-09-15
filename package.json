@@ -17,7 +17,7 @@
     "@plaiceholder/next": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@tailwindcss/container-queries": "^0.1.1",
-    "class-variance-authority": "^0.4.0",
+    "class-variance-authority": "^0.7.0",
     "framer-motion": "^10.16.4",
     "next": "^13.4.0",
     "react": "^18.0.0",
