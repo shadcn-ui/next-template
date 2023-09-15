@@ -50,7 +50,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <Navbar />
-          <TransitionProvider>{children}</TransitionProvider>
+          <TransitionProvider as={'main'} className="flex-1" initial="hidden">
+            {children}
+          </TransitionProvider>
           <TailwindIndicator />
           <GoToTop />
         </body>

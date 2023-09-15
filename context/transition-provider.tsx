@@ -1,26 +1,16 @@
 'use client';
 
+import { ElementType } from 'react';
 import { usePathname } from 'next/navigation';
 
 import Motion from '@/components/motion';
 
-export default function TransitionProvider({
-  children,
-  initial = 'hidden',
-}: {
+export default function TransitionProvider(props: {
   children: React.ReactNode;
+  className?: string;
   initial?: string;
+  as?: ElementType;
 }) {
   const path = usePathname();
-  return (
-    <Motion
-      as={'main'}
-      className="flex-1"
-      initial={initial}
-      transition={{ duration: 0.4 }}
-      key={path}
-    >
-      {children}
-    </Motion>
-  );
+  return <Motion {...props} transition={{ duration: 0.4 }} key={path} />;
 }
