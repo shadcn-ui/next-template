@@ -4,12 +4,23 @@
   "extends": [
     "next/core-web-vitals",
     "prettier",
+    "plugin:react/recommended",
     "plugin:tailwindcss/recommended"
   ],
   "plugins": ["tailwindcss"],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-sort-props": [
+      1,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "multiline": "last",
+        "reservedFirst": true
+      }
+    ],
     "tailwindcss/no-custom-classname": "off"
   },
   "settings": {

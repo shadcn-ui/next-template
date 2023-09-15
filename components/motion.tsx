@@ -41,8 +41,8 @@ const withVariants =
         key={id}
         ref={ref}
         variants={{ ...defaultVariants, ...variants }}
-        whileInView={props.animate ? undefined : whileInView || 'visible'}
         viewport={{ once: typeof always === 'undefined' ? true : false }}
+        whileInView={props.animate ? undefined : whileInView || 'visible'}
         transition={{
           duration: 0.3,
           ...transition,

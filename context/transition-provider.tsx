@@ -12,5 +12,5 @@ export default function TransitionProvider(props: {
   as?: ElementType;
 }) {
   const path = usePathname();
-  return <Motion {...props} transition={{ duration: 0.4 }} key={path} />;
+  return <Motion key={path} transition={{ duration: 0.4 }} {...props} />;
 }

@@ -18,10 +18,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       // @ts-ignore
       <LinkComp {...anchorProps}>
         <Comp
+          ref={ref}
           className={cn(buttonVariants({ variant, size, className }), {
             'w-full': full,
           })}
-          ref={ref}
           {...props}
         />
       </LinkComp>

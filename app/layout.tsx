@@ -37,10 +37,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html
-        lang="en"
-        data-theme="light"
-        className="scroll-pt-16"
         suppressHydrationWarning
+        className="scroll-pt-16"
+        data-theme="light"
+        lang="en"
       >
         <head />
         <body

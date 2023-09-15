@@ -30,8 +30,8 @@ export default function Navbar() {
   return (
     <Motion
       animate={hidden ? 'top' : 'visible'}
-      transition={{ delay: 0.1, duration: 0.5 }}
       className={cn('bg-background sticky inset-x-0 top-0 z-40')}
+      transition={{ delay: 0.1, duration: 0.5 }}
     >
       <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">
@@ -40,13 +40,13 @@ export default function Navbar() {
         <NavContent />
         {!isMenuOpen ? (
           <Icons.menu
-            onClick={() => setIsMenuOpen(true)}
             className="text-foreground cursor-pointer lg:hidden"
+            onClick={() => setIsMenuOpen(true)}
           />
         ) : (
           <Icons.x
-            onClick={() => setIsMenuOpen(false)}
             className="text-foreground cursor-pointer lg:hidden"
+            onClick={() => setIsMenuOpen(false)}
           />
         )}
       </nav>
@@ -75,8 +75,8 @@ const NavContent = () => {
             {isNavActive(_.href, path) && (
               <Motion
                 as="span"
-                layoutId="nav-bg"
                 className="bg-primary/10 absolute inset-0 -z-10 rounded-md "
+                layoutId="nav-bg"
               />
             )}
           </li>
@@ -90,16 +90,16 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
   const ref = useClickOutside(() => setIsMenuOpen(false));
   return (
     <Motion
-      ref={ref}
       key={'header'}
-      as={'ul'}
-      initial="top"
+      ref={ref}
       animate="visible"
-      exit={'left'}
+      as={'ul'}
       className="bg-background absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
+      exit={'left'}
+      initial="top"
     >
       {siteConfig.nav.map((_) => (
-        <li onClick={() => setIsMenuOpen(false)} key={_.title}>
+        <li key={_.title} onClick={() => setIsMenuOpen(false)}>
           <span className="hover:text-primary/50 capitalize">
             <Link href={_.href}>{_.title}</Link>
           </span>

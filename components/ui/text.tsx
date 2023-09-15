@@ -9,11 +9,11 @@ const Text = forwardRef<HTMLParagraphElement, TextProps>(
     const Comp = as || 'p';
     return (
       <Comp
+        ref={ref}
         className={cn(
           { 'text-center mx-auto ': center },
           textVariants({ size, intent, className })
         )}
-        ref={ref}
         {...props}
       />
     );
