@@ -15,6 +15,7 @@ export default function TransitionProvider({
   return (
     <Motion
       as={'main'}
+      className="flex-1"
       initial={initial}
       transition={{ duration: 0.4 }}
       key={path}

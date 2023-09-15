@@ -36,16 +36,24 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" data-theme="light" suppressHydrationWarning>
+      <html
+        lang="en"
+        data-theme="light"
+        className="scroll-pt-16"
+        suppressHydrationWarning
+      >
         <head />
-        <TransitionProvider>
-          <body className={cn('font-sans', fontSans.variable)}>
-            <Navbar />
-            {children}
-            <TailwindIndicator />
-            <GoToTop />
-          </body>
-        </TransitionProvider>
+        <body
+          className={cn(
+            'flex min-h-screen flex-col font-sans',
+            fontSans.variable
+          )}
+        >
+          <Navbar />
+          <TransitionProvider>{children}</TransitionProvider>
+          <TailwindIndicator />
+          <GoToTop />
+        </body>
       </html>
     </>
   );

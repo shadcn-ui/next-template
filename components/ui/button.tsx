@@ -8,34 +8,19 @@ import { buttonVariants } from '@/config/variants/button-variants';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    {
-      className,
-      variant,
-      size,
-      asChild = false,
-      target,
-      href,
-      query,
-      ...props
-    },
+    { className, variant, size, full, asChild = false, target, href, ...props },
     ref
   ) => {
     const Comp = asChild ? Slot : 'button';
-    const LinkComp = href || query ? Link : Fragment;
-    const anchorProps =
-      href || query
-        ? {
-            href: `${href || ''}${
-              query ? '?' + new URLSearchParams(query) : ''
-            }`,
-            target,
-          }
-        : {};
+    const LinkComp = href ? Link : Fragment;
+    const anchorProps = href ? { href, target } : {};
     return (
       // @ts-ignore
       <LinkComp {...anchorProps}>
         <Comp
-          className={cn(buttonVariants({ variant, size, className }))}
+          className={cn(buttonVariants({ variant, size, className }), {
+            'w-full': full,
+          })}
           ref={ref}
           {...props}
         />

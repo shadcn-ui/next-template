@@ -19,9 +19,9 @@
     "@tailwindcss/container-queries": "^0.1.1",
     "class-variance-authority": "^0.4.0",
     "framer-motion": "^10.16.4",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest"
+    "next": "^13.4.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.2",

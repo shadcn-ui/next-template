@@ -3,13 +3,13 @@ import { P } from '@/components/ui/text';
 
 export default async function IndexPage() {
   return (
-    <main>
+    <section>
       <P className="text-primary/80">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
         explicabo optio, possimus quia quidem debitis eum delectus ut dolore
         sed, sit cum adipisci ex dolorum praesentium sequi placeat quis commodi!
       </P>
-      <Button query={{ text: 'something' }}>Click Me</Button>
-    </main>
+      <Button>Click Me</Button>
+    </section>
   );
 }

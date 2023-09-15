@@ -9,4 +9,5 @@ export interface TextProps
   extends ComponentPropsWithRef<'h4'>,
     TextVariantsType {
   as?: ElementType;
+  center?: boolean;
 }
