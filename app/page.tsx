@@ -1,15 +1,11 @@
-import { Button } from '@/components/ui/button';
 import { P } from '@/components/ui/text';
 
 export default async function IndexPage() {
   return (
     <section>
-      <P className="text-primary/80">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        explicabo optio, possimus quia quidem debitis eum delectus ut dolore
-        sed, sit cum adipisci ex dolorum praesentium sequi placeat quis commodi!
+      <P center className="mt-20 text-7xl text-primary/80">
+        Update Readme and package.json
       </P>
-      <Button>Click Me</Button>
     </section>
   );
 }
