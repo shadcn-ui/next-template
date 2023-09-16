@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 import { cn } from '@sohanemon/utils';
 
 import { TextProps } from '@/types/text.types';
-import { textVariants } from '@/config/variants/text-variants';
+import { textVariants } from '@/config/variants/typography';
 
 const Text = forwardRef<HTMLParagraphElement, TextProps>(
   ({ className, as, size, intent, center, ...props }, ref) => {

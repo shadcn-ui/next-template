@@ -6,10 +6,7 @@ export const textVariants = cva([], {
       heading: 'text-5xl',
     },
     size: {
-      default: 'text-base',
+      sm: 'text-sm',
     },
-  },
-  defaultVariants: {
-    size: 'default',
   },
 });

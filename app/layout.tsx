@@ -39,7 +39,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <html
         suppressHydrationWarning
         className="scroll-pt-16"
-        data-theme="light"
+        data-theme="default"
         lang="en"
       >
         <head />
