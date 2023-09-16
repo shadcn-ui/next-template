@@ -4,7 +4,7 @@ import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { Variants, motion } from 'framer-motion';
 
-import { defaultVariants } from '@/config/variants/motion-variants';
+import { defaultVariants } from '@/config/variants/motion.variant';
 
 interface MotionProps extends ComponentPropsWithRef<'div'> {
   as?: ElementType;
