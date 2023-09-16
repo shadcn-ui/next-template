@@ -8,5 +8,5 @@
     "css": "styles/globals.css",
     "cssVariables": true
   },
-  "aliases": { "components": "@/components", "utils": "@/sohanemon/utils" }
+  "aliases": { "components": "@/components", "utils": "@sohanemon/utils" }
 }
