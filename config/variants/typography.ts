@@ -5,8 +5,6 @@ export const textVariants = cva([], {
     intent: {
       heading: 'text-5xl',
     },
-    size: {
-      sm: 'text-sm',
-    },
+    size: {},
   },
 });
