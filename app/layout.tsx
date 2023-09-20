@@ -1,5 +1,6 @@
 import TransitionProvider from '@/context/transition-provider';
 
+import '@/styles/custom.css';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 import { cn } from '@sohanemon/utils';
