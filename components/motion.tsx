@@ -52,6 +52,4 @@ const withVariants =
     );
   };
 
-const Motion = withVariants(MotionComponent);
-
-export default Motion;
+export const Motion = withVariants(MotionComponent);

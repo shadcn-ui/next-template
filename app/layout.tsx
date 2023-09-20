@@ -2,15 +2,13 @@ import TransitionProvider from '@/context/transition-provider';
 
 import '@/styles/globals.css';
 import { Metadata } from 'next';
-import dynamic from 'next/dynamic';
 import { cn } from '@sohanemon/utils';
 import { TailwindIndicator } from '@sohanemon/utils/components';
 
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
-
-const GoToTop = dynamic(() => import('@/components/goto-top'));
-const Navbar = dynamic(() => import('@/components/navbar'));
+import { GoToTop } from '@/components/goto-top';
+import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
   title: {

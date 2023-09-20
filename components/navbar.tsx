@@ -9,12 +9,12 @@ import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
 import useNavToggle from '@/hooks/nav-toggle';
-import Motion from '@/components/motion';
 
-import Brand from './brand';
+import { Brand } from './brand';
 import { Icons } from './icons';
+import { Motion } from './motion';
 
-export default function Navbar() {
+export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { hidden, leaved } = useNavToggle();
 

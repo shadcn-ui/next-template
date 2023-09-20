@@ -4,7 +4,7 @@ import { cn } from '@sohanemon/utils';
 
 interface CompType {}
 
-export default function Brand({
+export function Brand({
   className,
   ...props
 }: HtmlHTMLAttributes<HTMLAnchorElement> & CompType) {

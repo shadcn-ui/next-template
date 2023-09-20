@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export default function GoToTop() {
+export function GoToTop() {
   const goToTopRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     window.onscroll = function () {
