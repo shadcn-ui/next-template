@@ -1,13 +1,14 @@
 'use client';
 
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn, isNavActive } from '@sohanemon/utils';
 import { useClickOutside } from '@sohanemon/utils/hooks';
-import { AnimatePresence, useMotionValueEvent, useScroll } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 import { siteConfig } from '@/config/site';
+import useNavToggle from '@/hooks/nav-toggle';
 import Motion from '@/components/motion';
 
 import Brand from './brand';
@@ -15,23 +16,15 @@ import { Icons } from './icons';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
-
-  const update = useCallback(() => {
-    if (scrollY.get() > scrollY.getPrevious() && scrollY.get() > 500) {
-      return setHidden(true);
-    }
-    setHidden(false);
-  }, [scrollY]);
-
-  useMotionValueEvent(scrollY, 'change', update);
+  const { hidden, leaved } = useNavToggle();
 
   return (
     <Motion
       animate={hidden ? 'top' : 'visible'}
-      className={cn('bg-background sticky inset-x-0 top-0 z-40')}
       transition={{ delay: 0.1, duration: 0.5 }}
+      className={cn('sticky inset-x-0 top-0 z-40 bg-background', {
+        'shadow-lg shadow-foreground/10': leaved,
+      })}
     >
       <nav className="container flex items-center justify-between px-5 ">
         <div className="flex items-center gap-4">
@@ -40,12 +33,12 @@ export default function Navbar() {
         <NavContent />
         {!isMenuOpen ? (
           <Icons.menu
-            className="text-foreground cursor-pointer lg:hidden"
+            className="cursor-pointer text-foreground lg:hidden"
             onClick={() => setIsMenuOpen(true)}
           />
         ) : (
           <Icons.x
-            className="text-foreground cursor-pointer lg:hidden"
+            className="cursor-pointer text-foreground lg:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
@@ -75,7 +68,7 @@ const NavContent = () => {
             {isNavActive(_.href, path) && (
               <Motion
                 as="span"
-                className="bg-primary/10 absolute inset-0 -z-10 rounded-md "
+                className="absolute inset-0 -z-10 rounded-md bg-primary/10 "
                 layoutId="nav-bg"
               />
             )}
@@ -94,13 +87,13 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
       ref={ref}
       animate="visible"
       as={'ul'}
-      className="bg-background absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl p-5 shadow-xl lg:hidden"
+      className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-background p-5 shadow-xl lg:hidden"
       exit={'left'}
       initial="top"
     >
       {siteConfig.nav.map((_) => (
         <li key={_.title} onClick={() => setIsMenuOpen(false)}>
-          <span className="hover:text-primary/50 capitalize">
+          <span className="capitalize hover:text-primary/50">
             <Link href={_.href}>{_.title}</Link>
           </span>
         </li>

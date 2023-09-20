@@ -34,7 +34,7 @@ export default function GoToTop() {
         title="Go To Top"
         onClick={goToTop}
       >
-        <button className="bg-primary/80 text-foreground hover:bg-primary grid h-full w-full place-content-center rounded-full shadow-md">
+        <button className="grid h-full w-full place-content-center rounded-full bg-primary/80 text-foreground shadow-md hover:bg-primary">
           <svg
             className="h-4 w-4 md:h-6 md:w-6"
             fill="currentColor"
