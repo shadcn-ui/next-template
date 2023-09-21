@@ -1,5 +1,6 @@
 import containerQueries from '@tailwindcss/container-queries';
 import type { Config } from 'tailwindcss';
+import animations from 'tailwindcss-animate';
 import { createThemes } from 'tw-colors';
 
 import { colors } from '../../config/colors';
@@ -8,8 +9,15 @@ import { theme } from './theme';
 import { utilities } from './utilities';
 
 const themePreset = {
-  content: ['./node_modules/@sohanemon/utils/dist/**/*.{js,ts,jsx,tsx}'],
-  plugins: [theme, base, utilities, createThemes(colors), containerQueries],
+  content: [],
+  plugins: [
+    theme,
+    base,
+    utilities,
+    containerQueries,
+    animations,
+    createThemes(colors),
+  ],
 } satisfies Config;
 
 export default themePreset;

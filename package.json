@@ -41,6 +41,7 @@
     "postcss": "^8.4.29",
     "prettier": "^2.8.8",
     "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7",
     "tw-colors": "^3.0.3",
     "typescript": "^5.2.2"
   }
