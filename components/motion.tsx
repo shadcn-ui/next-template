@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client';
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
@@ -25,7 +26,6 @@ const MotionComponent = motion(Component);
 
 const withVariants =
   (Comp: typeof MotionComponent): typeof MotionComponent =>
-  // @ts-ignore
   // eslint-disable-next-line react/display-name
   ({
     ref,
@@ -53,3 +53,5 @@ const withVariants =
   };
 
 export const Motion = withVariants(MotionComponent);
+
+export const M = motion.div;

@@ -1,5 +1,3 @@
-import TransitionProvider from '@/context/transition-provider';
-
 import '@/styles/custom.css';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
@@ -8,8 +6,6 @@ import { TailwindIndicator } from '@sohanemon/utils/components';
 
 import { siteConfig } from '@/config/site';
 import { fontSans } from '@/lib/fonts';
-import { GoToTop } from '@/components/goto-top';
-import { Navbar } from '@/components/navbar';
 
 export const metadata: Metadata = {
   title: {
@@ -17,14 +13,11 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  themeColor: siteConfig.theme,
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: siteConfig.icon,
+    shortcut: siteConfig.icon,
+    apple: siteConfig.icon,
   },
 };
 
@@ -48,12 +41,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <Navbar />
-          <TransitionProvider as={'main'} className="flex-1" initial="hidden">
-            {children}
-          </TransitionProvider>
+          {children}
           <TailwindIndicator />
-          <GoToTop />
         </body>
       </html>
     </>
