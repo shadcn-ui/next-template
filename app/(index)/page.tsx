@@ -4,7 +4,7 @@ export default async function IndexPage() {
   return (
     <section>
       <P center className="mt-20 text-7xl text-primary/80">
-        Update Readme and package.json
+        Update Readme, Site.ts and package.json
       </P>
     </section>
   );
