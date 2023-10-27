@@ -13,7 +13,6 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: siteConfig.theme,
   icons: {
     icon: siteConfig.icon,
     shortcut: siteConfig.icon,
