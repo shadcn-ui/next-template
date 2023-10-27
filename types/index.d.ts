@@ -3,6 +3,8 @@ export type PageProps = Readonly<{
   searchParams: { [key: string]: string | string[] | undefined };
 }>;
 
+export type NavType = { title: string; href: `/${string}` };
+
 export interface ElementEvent<T> {
   target: T;
 }
