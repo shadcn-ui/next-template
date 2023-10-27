@@ -1,6 +1,6 @@
 # next-template
 
-A Next.js 13 app built with Tailwind CSS.
+A Next.js 14 app built with Tailwind CSS.
 
 ## Usage (run locally)
 

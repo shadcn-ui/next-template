@@ -8,8 +8,6 @@ export const siteConfig = {
   nav: [
     { title: 'home', href: '/' },
     { title: 'images', href: '/images' },
-    { title: 'blog', href: '/blog' },
-    { title: 'contact', href: '/contact' },
-    { title: 'about', href: '/about' },
   ],
+  underConstruction: [{ title: 'about', href: '/about' }],
 };
