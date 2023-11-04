@@ -16,6 +16,7 @@ export const siteConfig: {
       default: 'Next.JS',
       template: `%s - Next`,
     },
+
     description: 'Minimal Next.js Template',
     icons: {
       icon: favicon,
