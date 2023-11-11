@@ -1,6 +1,7 @@
 import plugin from 'tailwindcss/plugin';
 
-export const base = plugin(function ({ addBase }) {
+export const base = plugin(function ({ addBase, addVariant }) {
+  const states = { selected: true, state: 'open' };
   addBase({
     '::-webkit-scrollbar': { width: '8px', height: '8px' },
     '::-webkit-scrollbar-thumb': {
@@ -30,4 +31,10 @@ export const base = plugin(function ({ addBase }) {
       '@apply bg-transparent outline-none': {},
     },
   });
+  Object.keys(states).forEach((state) =>
+    addVariant(
+      state,
+      `&[data-${state}="${states[state as keyof typeof states]}"]`
+    )
+  );
 });
