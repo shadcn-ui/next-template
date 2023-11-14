@@ -1,6 +1,6 @@
 import plugin from 'tailwindcss/plugin';
 
-export const base = plugin(function ({ addBase, addVariant }) {
+export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
   const states = { selected: true, state: 'open' };
   addBase({
     '::-webkit-scrollbar': { width: '8px', height: '8px' },
@@ -37,4 +37,7 @@ export const base = plugin(function ({ addBase, addVariant }) {
       `&[data-${state}="${states[state as keyof typeof states]}"]`
     )
   );
+  matchVariant('nth', (value) => {
+    return `&:nth-child(${value})`;
+  });
 });
