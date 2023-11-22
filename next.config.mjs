@@ -2,15 +2,17 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  compiler: { removeConsole: true },
+  experimental: { ppr: true },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'www.figma.com',
+        hostname: 'images.unsplash.com',
       },
     ],
   },
+  reactStrictMode: true,
 };
 
 export default nextConfig;
