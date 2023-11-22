@@ -1,5 +1,3 @@
-import TransitionProvider from '@/context/transition-provider';
-
 import { GoToTop } from '@/components/goto-top';
 import { Navbar } from '@/components/navbar';
 
@@ -11,9 +9,9 @@ export default function IndexLayout({ children }: IndexLayoutProps) {
   return (
     <>
       <Navbar />
-      <TransitionProvider as={'main'} className="flex-1" initial="hidden">
-        {children}
-      </TransitionProvider>
+      {/* <TransitionProvider as={'main'} className="flex-1" initial="top"> */}
+      {children}
+      {/* </TransitionProvider> */}
       <GoToTop />
     </>
   );
