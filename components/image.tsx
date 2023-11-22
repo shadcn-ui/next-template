@@ -43,5 +43,7 @@ export const Img = ({ placeholder, ...props }: ImgProps) => {
       />
     ),
   };
-  return imgComp[placeholder!] || <Image {...props} />;
+  return (
+    imgComp[placeholder!] || <Image placeholder={placeholder} {...props} />
+  );
 };
