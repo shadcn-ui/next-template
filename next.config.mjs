@@ -2,7 +2,6 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // compiler: { removeConsole: true },
   experimental: { ppr: true },
   images: {
     remotePatterns: [
@@ -13,6 +12,8 @@ const nextConfig = {
     ],
   },
   reactStrictMode: true,
+  // compiler: { removeConsole: true },
+  // typescript: { ignoreBuildErrors: true },
 };
 
 export default nextConfig;

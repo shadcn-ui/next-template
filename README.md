@@ -41,6 +41,8 @@ npx sohanemon next my-app-name --pnpm
 
 > More more feature choose the `feature-full` branch. Including `Zustand`,`React-hook-form`,`next-themes`,`lucide-react` and many more
 
+### [Conventions](./CONVENTION.md)
+
 ## License
 
 Licensed under the [MIT license](https://github.com/sohanemon/ui-init/blob/main/LICENSE).

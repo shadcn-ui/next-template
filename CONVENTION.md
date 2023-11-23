@@ -49,24 +49,68 @@ Example:
 Suppose there is a post page now. This page consists of Sections 1 to 3.
 
 ```
-./
-├─ app
-│   ├─ post                           <-- /post (Feature level)
-│   │   ├─ _components                <-- Private folder
-│   │   │   ├─ Section1.tsx
-│   │   │   ├─ Section2.tsx
-│   │   │   └─ section3
-│   │   │       ├─ SubSection3-1.tsx
-│   │   │       └─ SubSection3-2.tsx
-│   │   ├─ _lib                       <-- Private folder
-│   │   │    ├─ tool1.ts
-│   │   │    └─ tool2.ts
-│   │   ├─ layout.tsx
-│   │   └─ page.tsx
-│   ├─ layout.tsx
-│   └─ page.tsx
-├─ components
-├─ lib
+.
+├── actions
+│   └── write-file.ts
+├── app
+│   ├── api
+│   │   └── route.ts
+│   ├── (index)
+│   │   ├── [catch]
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   ├── _lib
+│   │   ├── _components
+│   ├── layout.tsx
+│   └── loading.tsx
+├── components
+│   ├── brand.tsx
+│   ├── goto-top.tsx
+│   ├── icons.tsx
+│   ├── image.tsx
+│   ├── motion.tsx
+│   ├── navbar.tsx
+│   └── ui
+│       └── text.tsx
+├── components.json
+├── config
+│   ├── colors.ts
+│   ├── site.ts
+│   └── variants
+│       ├── motion.variant.ts
+│       └── typography.ts
+├── context
+│   └── transition-provider.tsx
+├── CONVENTION.md
+├── hooks
+│   └── nav-toggle.tsx
+├── lib
+│   ├── fonts.ts
+│   └── utils.ts
+├── next.config.mjs
+├── next-env.d.ts
+├── package.json
+├── postcss.config.js
+├── prettier.config.js
+├── public
+│   └── data.json
+├── README.md
+├── styles
+│   ├── custom.css
+│   ├── globals.css
+│   └── plugins
+│       ├── base.ts
+│       ├── preset.ts
+│       ├── theme.ts
+│       └── utilities.ts
+├── tailwind.config.ts
+├── tsconfig.json
+├── tsconfig.tsbuildinfo
+└── types
+    ├── image.types.ts
+    ├── index.types.ts
+    └── text.types.ts
 ...
 ```
 
