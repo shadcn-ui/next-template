@@ -87,17 +87,16 @@ const NavContentMob = ({ setIsMenuOpen }: { setIsMenuOpen: Function }) => {
       key={'header'}
       ref={ref}
       animate="visible"
-      as={'ul'}
       className="absolute inset-x-0 mx-2 flex flex-col items-start gap-4 rounded-xl bg-background p-5 shadow-xl lg:hidden"
       exit={'left'}
       initial="top"
     >
       {siteConfig.nav.map((_) => (
-        <li key={_.title} onClick={() => setIsMenuOpen(false)}>
+        <button key={_.title} onClick={() => setIsMenuOpen(false)}>
           <span className="capitalize hover:text-primary/50">
             <Link href={_.href}>{_.title}</Link>
           </span>
-        </li>
+        </button>
       ))}
     </Motion>
   );

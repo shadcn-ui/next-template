@@ -1,10 +1,8 @@
-import Image from 'next/image';
-
-import { P } from '@/components/ui/text';
+import { Text as P } from '@/components/ui/text';
 import { Img } from '@/components/image';
 
 export const metadata = {
-  title: '',
+  title: 'Home',
 };
 export default async function IndexPage() {
   return (

@@ -26,7 +26,14 @@
     "react-refresh/only-export-components": [
       "warn",
       {
-        "allowExportNames": ["metadata", "revalidate", "dynamic"]
+        "allowExportNames": [
+          "metadata",
+          "viewport",
+          "revalidate",
+          "dynamic",
+          "generateStaticParams",
+          "generateImageMetadata"
+        ]
       }
     ]
   },

@@ -54,4 +54,4 @@ const withVariants =
 
 export const Motion = withVariants(MotionComponent);
 
-export const M = motion.div;
+export const Md = motion.div;
