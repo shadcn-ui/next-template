@@ -3,12 +3,11 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { siteConfig } from '@/src/config/site';
+import useNavToggle from '@/src/hooks/nav-toggle';
 import { cn, isNavActive } from '@sohanemon/utils';
 import { useClickOutside } from '@sohanemon/utils/hooks';
 import { AnimatePresence } from 'framer-motion';
-
-import { siteConfig } from '@/config/site';
-import useNavToggle from '@/hooks/nav-toggle';
 
 import { Brand } from './brand';
 import { Icons } from './icons';

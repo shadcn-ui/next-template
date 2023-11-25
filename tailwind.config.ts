@@ -1,11 +1,10 @@
 import type { Config } from 'tailwindcss';
 
-import themePreset from './styles/plugins/preset';
+import themePreset from './src/styles/plugins/preset';
 
 const config = {
   content: [
-    'app/**/*.{ts,tsx}',
-    'components/**/*.{ts,tsx}',
+    'src/**/*.{ts,tsx}',
     'config/variants/*.{ts,tsx}',
     './node_modules/@sohanemon/utils/dist/**/*.{js,ts,jsx,tsx}',
   ],

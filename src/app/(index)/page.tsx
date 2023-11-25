@@ -1,5 +1,5 @@
-import { Text as P } from '@/components/ui/text';
-import { Img } from '@/components/image';
+import { Img } from '@/src/components/image';
+import { Text as P } from '@/src/components/ui/text';
 
 export const metadata = {
   title: 'Home',

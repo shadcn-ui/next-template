@@ -1,10 +1,9 @@
 import '@/styles/custom.css';
 import '@/styles/globals.css';
+import { siteConfig } from '@/src/config/site';
+import { fontSans } from '@/src/lib/fonts';
 import { cn } from '@sohanemon/utils';
 import { TailwindIndicator } from '@sohanemon/utils/components';
-
-import { siteConfig } from '@/config/site';
-import { fontSans } from '@/lib/fonts';
 
 export const metadata = siteConfig.metadata;
 export const viewport = siteConfig.viewport;

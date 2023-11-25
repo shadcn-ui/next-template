@@ -2,8 +2,7 @@
 
 import { ElementType } from 'react';
 import { usePathname } from 'next/navigation';
-
-import { Motion } from '@/components/motion';
+import { Motion } from '@/src/components/motion';
 
 export default function TransitionProvider(props: {
   children: React.ReactNode;
