@@ -1,5 +1,6 @@
 import { Metadata, Viewport } from 'next';
-import { NavType } from '@/src/types/index.types';
+
+import { NavType } from '@/types/index.types';
 
 export type SiteConfig = typeof siteConfig;
 

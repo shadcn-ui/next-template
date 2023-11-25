@@ -2,9 +2,10 @@
 
 import React from 'react';
 import NextImageComponent from 'next/image';
-import { shimmer, svgToBase64 } from '@/src/lib/utils';
-import { ImgProps } from '@/src/types/image.types';
 import { cleanSrc } from '@sohanemon/utils';
+
+import { ImgProps } from '@/types/image.types';
+import { shimmer, svgToBase64 } from '@/lib/utils';
 
 function Image({
   src,

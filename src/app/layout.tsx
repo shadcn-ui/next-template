@@ -1,7 +1,8 @@
+import { siteConfig } from '@/config/site';
+import { fontSans } from '@/lib/fonts';
+
 import '@/styles/custom.css';
 import '@/styles/globals.css';
-import { siteConfig } from '@/src/config/site';
-import { fontSans } from '@/src/lib/fonts';
 import { cn } from '@sohanemon/utils';
 import { TailwindIndicator } from '@sohanemon/utils/components';
 

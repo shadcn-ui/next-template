@@ -1,5 +1,5 @@
-import { GoToTop } from '@/src/components/goto-top';
-import { Navbar } from '@/src/components/navbar';
+import { GoToTop } from '@/components/goto-top';
+import { Navbar } from '@/components/navbar';
 
 interface IndexLayoutProps {
   children: React.ReactNode;

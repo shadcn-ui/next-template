@@ -1,4 +1,4 @@
-import { siteConfig } from '@/src/config/site';
+import { siteConfig } from '@/config/site';
 
 export async function generateStaticParams() {
   return [...siteConfig.nav, ...siteConfig.underConstruction].map((el) => ({
