@@ -32,7 +32,7 @@ export const siteConfig: {
     ],
   },
   nav: [
-    { title: 'home', href: '/' },
+    { title: 'home', href: '/home' },
     { title: 'images', href: '/images' },
   ],
   underConstruction: [{ title: 'about', href: '/about' }],

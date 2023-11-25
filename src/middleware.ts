@@ -1,11 +1,6 @@
-import { NextResponse, type NextRequest } from 'next/server';
+import { stackMiddlewares } from './middlewares';
+import { withHomeRedirect } from './middlewares/with-home-redirect';
 
-export async function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-  if (pathname.startsWith('/home'))
-    return NextResponse.redirect(new URL('/', request.url));
-}
+const middlewares = [withHomeRedirect];
 
-export const config = {
-  matcher: ['/home'],
-};
+export default stackMiddlewares(middlewares);
