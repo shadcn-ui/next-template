@@ -32,7 +32,8 @@
           "revalidate",
           "dynamic",
           "generateStaticParams",
-          "generateImageMetadata"
+          "generateImageMetadata",
+          "generateMetadata"
         ]
       }
     ]
