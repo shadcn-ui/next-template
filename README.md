@@ -16,6 +16,14 @@ npm run dev
 
 > required `nodejs` installed
 
+## Commit/Push
+
+Prepare Husky
+
+```bash
+npm run prepare
+```
+
 ## Bootstrap (new app)
 
 ```bash

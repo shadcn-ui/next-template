@@ -15,4 +15,4 @@ export function stackMiddlewares(
 }
 
 export const match = (matcher: string[], request: NextRequest) =>
-  matcher?.some((path) => request.nextUrl.pathname.startsWith(path));
+  matcher?.some((path) => request.nextUrl.pathname === path);

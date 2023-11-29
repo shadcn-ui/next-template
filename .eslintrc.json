@@ -27,13 +27,18 @@
       "warn",
       {
         "allowExportNames": [
+          "runtime",
           "metadata",
           "viewport",
           "revalidate",
           "dynamic",
+          "dynamicParams",
+          "maxDuration",
+          "fetchCache",
           "generateStaticParams",
           "generateImageMetadata",
-          "generateMetadata"
+          "generateMetadata",
+          "preferredRegion"
         ]
       }
     ]
