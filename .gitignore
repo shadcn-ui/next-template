@@ -39,5 +39,3 @@ yarn-error.log*
 .vscode
 .vercel
 
-# other files
-tsconfig.tsbuildinfo
