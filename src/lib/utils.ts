@@ -1,4 +1,5 @@
-import { NextRequest } from 'next/server';
+export const sleep = (time: number = 1000) =>
+  new Promise((resolve) => setTimeout(resolve, time));
 
 export const svgToBase64 = (str: string) =>
   typeof window === 'undefined'
