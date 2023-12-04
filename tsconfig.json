@@ -3,7 +3,7 @@
     /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
+    "target": "ES5",
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
@@ -14,12 +14,12 @@
     "noUncheckedIndexedAccess": true,
 
     /* If transpiling with TypeScript: */
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext",
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
     "sourceMap": true,
 
     /* If your code runs in the DOM: */
-    "lib": ["es2022", "dom", "dom.iterable"],
+    "lib": ["ESNext", "dom", "dom.iterable"],
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -40,7 +40,8 @@
     "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/plugin/base.ts"
   ],
   "exclude": ["node_modules"]
 }
