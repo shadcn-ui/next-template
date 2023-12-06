@@ -13,7 +13,7 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
 
-    /* If transpiling with TypeScript: */
+    /* If transpiling with Meta Framework: */
     "moduleResolution": "Bundler",
     "module": "ESNext",
     "sourceMap": true,

@@ -40,7 +40,7 @@ npx sohanemon next my-app-name --pnpm
 
 ## Features
 
-- Next.js 13 App Directory
+- Next.js 14 App Directory
 - Animated with `framer-motion`
 - Radix UI Primitives
 - Tailwind CSS
