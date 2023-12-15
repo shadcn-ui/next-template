@@ -1,5 +1,3 @@
-import { env } from '@/env';
-
 import { Text as P } from '@/components/ui/text';
 import { Img } from '@/components/image';
 
@@ -18,8 +16,8 @@ export default async function IndexPage() {
         src={'https://images.unsplash.com/photo-1695653420624-4a23b2ffc77c'}
         width={700}
       />
-      <center>{env.BASE_URL}</center>
-      <center>{env.NEXT_PUBLIC_PUBLISHABLE_KEY}</center>
+      <center>{process.env.BASE_URL}</center>
+      <center>{process.env.NEXT_PUBLIC_PUBLISHABLE_KEY}</center>
     </section>
   );
 }
