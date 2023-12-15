@@ -15,10 +15,14 @@ export const theme = plugin(() => {}, {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+      height: {
+        screen: '100dvh',
+      },
+      minHeight: {
+        screen: '100dvh',
+      },
+      maxHeight: {
+        screen: '100dvh',
       },
       keyframes: {
         'accordion-down': {

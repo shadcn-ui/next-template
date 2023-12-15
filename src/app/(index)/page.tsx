@@ -7,7 +7,7 @@ export const metadata = {
 export default async function IndexPage() {
   return (
     <section>
-      <P center className="mt-20 text-7xl text-primary/80">
+      <P center className="mt-20 h-screen text-7xl text-primary/80">
         Update Readme, Site.ts and package.json
       </P>
       <Img

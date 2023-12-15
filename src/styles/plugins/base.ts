@@ -18,7 +18,6 @@ export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
   addBase({
     html: {
       overflowX: 'clip',
-      height: '100vh',
       '--scroll-behavior': 'smooth !important',
       scrollBehavior: 'smooth !important',
     },
