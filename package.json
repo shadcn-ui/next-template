@@ -22,6 +22,7 @@
     "class-variance-authority": "^0.7.0",
     "framer-motion": "^10.16.5",
     "next": "14.0.4-canary.9",
+    "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6"
