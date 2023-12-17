@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+
 import { Text as P } from '@/components/ui/text';
 import { Img } from '@/components/image';
 
@@ -20,7 +22,9 @@ export default async function IndexPage() {
       />
       <center>{process.env.BASE_URL}</center>
       <center>{process.env.NEXT_PUBLIC_PUBLISHABLE_KEY}</center>
-      <ThemeToggle />
+      <Suspense fallback={<center>Loading ...</center>}>
+        <ThemeToggle />
+      </Suspense>
     </section>
   );
 }
