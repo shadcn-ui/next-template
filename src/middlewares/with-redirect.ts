@@ -4,7 +4,7 @@ import { MiddlewareFactory } from '@/types/middleware.types';
 
 import { match } from '.';
 
-export const withHomeRedirect: MiddlewareFactory = (next) => {
+export const withRedirect: MiddlewareFactory = (next) => {
   return async (request: NextRequest, _next: NextFetchEvent) => {
     if (match(['/home'], request)) {
       return NextResponse.redirect(new URL('/', request.url));

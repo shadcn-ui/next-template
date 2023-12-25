@@ -1,6 +1,6 @@
 import { stackMiddlewares } from './middlewares';
-import { withHomeRedirect } from './middlewares/with-home-redirect';
+import { withRedirect } from './middlewares/with-redirect';
 
-const middlewares = [withHomeRedirect];
+const middlewares = [withRedirect];
 
 export default stackMiddlewares(middlewares);
