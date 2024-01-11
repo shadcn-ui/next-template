@@ -17,7 +17,7 @@ export default async function IndexPage() {
       <Img
         className="my-5 aspect-video rounded-md object-cover center-x"
         placeholder="shimmer"
-        src={'https://images.unsplash.com/photo-1695653420624-4a23b2ffc77c'}
+        src={'https://images.unsplash.com/photo-1704722105454-2625cbecde68'}
         width={700}
       />
       <center>{process.env.BASE_URL}</center>

@@ -13,7 +13,7 @@ export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
       borderRadius: '10px',
       '@apply bg-primary/20': {},
     },
-    '*': { '@apply border-border': {} },
+    '*': { '@apply border-border min-w-0': {} },
   });
   addBase({
     html: {
