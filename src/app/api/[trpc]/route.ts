@@ -5,7 +5,7 @@ const handler = async (req: Request) =>
   fetchRequestHandler({
     endpoint: '/api',
     req,
-    router: await appRouter,
+    router: appRouter,
     createContext: () => ({}),
   });
 export { handler as GET, handler as POST };
