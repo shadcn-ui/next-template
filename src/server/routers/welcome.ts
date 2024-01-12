@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 import { procedure, router } from '../trpc';
 
-export const welcomeRouter = router({
+const welcomeRouter = router({
   welcome: procedure
     .input(z.object({ name: z.string() }))
     .query(({ input }) => {
@@ -10,4 +10,13 @@ export const welcomeRouter = router({
         greeting: `Hello ${input.name}`,
       };
     }),
+  mutate: procedure
+    .input(z.object({ name: z.string(), roll: z.number() }))
+    .mutation(({ input }) => {
+      return {
+        name: input.name,
+        roll: input.roll,
+      };
+    }),
 });
+export default welcomeRouter;
