@@ -11,7 +11,7 @@
     "lint:fix": "next lint --fix",
     "preview": "next build && next start",
     "typecheck": "tsc --noEmit",
-    "shadcn": "pnpm dlx shadcn-ui@latest add",
+    "shadcn": "npx shadcn-ui@latest add",
     "format:write": "prettier --write \"src/**/*.{ts,tsx,mdx}\" --cache",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,mdx}\" --cache",
     "prepare": "husky install"
@@ -19,6 +19,8 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
     "@tailwindcss/container-queries": "^0.1.1",
+    "@trpc/client": "^10.45.0",
+    "@trpc/server": "^10.45.0",
     "class-variance-authority": "^0.7.0",
     "framer-motion": "^10.18.0",
     "next": "14.0.4-canary.9",

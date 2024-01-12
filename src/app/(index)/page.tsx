@@ -3,12 +3,16 @@ import { Suspense } from 'react';
 import { Text as P } from '@/components/ui/text';
 import { Img } from '@/components/image';
 
+import { trpc } from '../api/[trpc]/trpc';
 import { ThemeToggle } from './_components/theme-toggle';
 
 export const metadata = {
   title: 'Home',
 };
 export default async function IndexPage() {
+  const data = await trpc.greeting.query();
+  console.log('🛑 ~ IndexPage ~ data:', data);
+
   return (
     <section>
       <P center className="mt-20 text-7xl">
