@@ -1,4 +1,4 @@
-import { AppRouter } from '@/server';
+import type { AppRouter } from '@/server';
 import { createTRPCProxyClient, httpBatchLink } from '@trpc/client';
 
 import { getBaseUrl } from '@/lib/helper';

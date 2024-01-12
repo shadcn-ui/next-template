@@ -10,11 +10,11 @@ export const metadata = {
   title: 'Home',
 };
 export default async function IndexPage() {
-  const data = await trpc.greeting.query();
-  console.log('🛑 ~ IndexPage ~ data:', data);
+  const msg = await trpc.welcome.query({ name: '`sohanemon`' });
 
   return (
     <section>
+      <center>{msg.greeting}</center>
       <P center className="mt-20 text-7xl">
         Update Readme, Site.ts and package.json
       </P>

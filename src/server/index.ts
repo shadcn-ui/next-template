@@ -1,6 +1,6 @@
-import { procedure, router } from './trpc';
+import { welcomeRouter } from './routers/welcome';
+import { mergeRouters } from './trpc';
 
-export const appRouter = router({
-  greeting: procedure.query(() => 'hello tRPC v10!'),
-});
+export const appRouter = mergeRouters(welcomeRouter);
+
 export type AppRouter = typeof appRouter;
