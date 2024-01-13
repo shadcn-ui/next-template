@@ -7,7 +7,10 @@ interface RootTemplateProps {
 export default function RootTemplate({ children }: RootTemplateProps) {
   return (
     <>
-      <Motion initial="bottom" transition={{ duration: 0.4 }}>
+      <Motion
+        initial="top-full"
+        transition={{ duration: 0.4, ease: 'easeInOut' }}
+      >
         {children}
       </Motion>
     </>

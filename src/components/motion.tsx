@@ -3,15 +3,21 @@
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { Variants, motion } from 'framer-motion';
+import { VariantLabels, Variants, motion } from 'framer-motion';
 
-import { defaultVariants } from '@/config/variants/motion.variant';
+import {
+  MotionVariantsType,
+  motionVariants,
+} from '@/config/variants/motion.variant';
 
 interface MotionProps extends ComponentPropsWithRef<'div'> {
   as?: ElementType;
   asChild?: boolean;
   variants?: Variants;
   always?: boolean;
+  initial?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
+  animate?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
+  exit?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
 }
 
 const Component = forwardRef<HTMLDivElement, MotionProps>(
@@ -32,7 +38,6 @@ const withVariants =
     transition,
     always,
     whileInView,
-    variants,
     ...props
   }: ComponentPropsWithRef<typeof MotionComponent>) => {
     const id = useId();
@@ -40,7 +45,7 @@ const withVariants =
       <Comp
         key={id}
         ref={ref}
-        variants={{ ...defaultVariants, ...variants }}
+        variants={motionVariants}
         viewport={{ once: typeof always === 'undefined' ? true : false }}
         whileInView={props.animate ? undefined : whileInView || 'visible'}
         transition={{
@@ -54,4 +59,4 @@ const withVariants =
 
 export const Motion = withVariants(MotionComponent);
 
-export const Md = motion.div;
+export const MotionDiv = motion.div;
