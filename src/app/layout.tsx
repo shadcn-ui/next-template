@@ -1,7 +1,7 @@
 import { Providers } from '@/context/providers';
 
 import { siteConfig } from '@/config/site';
-import { fontSans } from '@/lib/fonts';
+import { fonts } from '@/lib/fonts';
 
 import '@/styles/custom.css';
 import '@/styles/globals.css';
@@ -19,12 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html suppressHydrationWarning className="scroll-pt-16" lang="en">
         <head />
-        <body
-          className={cn(
-            'flex min-h-screen flex-col font-sans',
-            fontSans.variable
-          )}
-        >
+        <body className={cn('flex min-h-screen flex-col font-sans', fonts)}>
           <Providers>{children}</Providers>
         </body>
       </html>

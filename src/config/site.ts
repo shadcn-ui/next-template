@@ -2,9 +2,11 @@ import { Metadata, Viewport } from 'next';
 
 import { NavType } from '@/types/index.types';
 
+import packageJson from '../../package.json';
+
 export type SiteConfig = typeof siteConfig;
 
-const favicon = '/favicon.ico';
+const favicon = packageJson.icon;
 
 export const siteConfig: {
   metadata: Metadata;
@@ -14,11 +16,11 @@ export const siteConfig: {
 } = {
   metadata: {
     title: {
-      default: 'Next.JS',
-      template: `%s - Next`,
+      default: packageJson.name.toUpperCase(),
+      template: `%s - ${packageJson.name.toUpperCase()}`,
     },
 
-    description: 'Minimal Next.js Template',
+    description: packageJson.description,
     icons: {
       icon: favicon,
       shortcut: favicon,

@@ -14,6 +14,7 @@ export const theme = plugin(() => {}, {
     extend: {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
+        mono: ['var(--font-mono)', ...fontFamily.mono],
       },
       height: {
         screen: '100dvh',
