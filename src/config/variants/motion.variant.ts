@@ -1,4 +1,4 @@
-import { Variants } from 'framer-motion';
+import { VariantLabels, Variants } from 'framer-motion';
 
 const defaultVariants = {
   left: { x: -300, opacity: 0 },
@@ -23,4 +23,6 @@ export const motionVariants = {
   ...fullPosition,
 } as const satisfies Variants;
 
-export type MotionVariantsType = keyof typeof motionVariants;
+export type MotionVariantsType =
+  | keyof typeof motionVariants
+  | Omit<VariantLabels, keyof (keyof typeof motionVariants)>;

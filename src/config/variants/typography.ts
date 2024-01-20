@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 
 export const textVariants = cva([], {
   variants: {
-    intent: {
+    variant: {
       heading: 'text-5xl',
     },
     size: {},

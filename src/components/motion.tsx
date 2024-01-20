@@ -15,9 +15,9 @@ interface MotionProps extends ComponentPropsWithRef<'div'> {
   asChild?: boolean;
   variants?: Variants;
   always?: boolean;
-  initial?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
-  animate?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
-  exit?: MotionVariantsType | Omit<VariantLabels, keyof MotionVariantsType>;
+  initial?: MotionVariantsType | MotionVariantsType[];
+  animate?: MotionVariantsType | MotionVariantsType[];
+  exit?: MotionVariantsType | MotionVariantsType[];
 }
 
 const Component = forwardRef<HTMLDivElement, MotionProps>(
