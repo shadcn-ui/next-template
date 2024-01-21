@@ -9,6 +9,7 @@ const defaultVariants = {
   collapsed: { scaleY: 0, transformOrigin: 'top' },
   hidden: { opacity: 0 },
   visible: { x: 0, y: 0, opacity: 1, scale: 1, scaleX: 1, scaleY: 1 },
+  dot: { scale: 0, opacity: 0 },
 } satisfies Variants;
 
 const fullPosition = {

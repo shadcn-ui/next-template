@@ -1,30 +1,22 @@
-import { Suspense } from 'react';
-
-import { Text as P } from '@/components/ui/text';
 import { Img } from '@/components/image';
-
-import { ThemeToggle } from './_components/theme-toggle';
+import { Motion } from '@/components/motion';
 
 export const metadata = {
   title: 'Home',
 };
 export default async function IndexPage() {
   return (
-    <section>
-      <P center className="mt-20 text-7xl">
-        Update Readme, Site.ts and package.json
-      </P>
+    <Motion initial={'dot'} transition={{ delay: 0.5 }}>
       <Img
-        className="my-5 aspect-video rounded-md object-cover center-x"
+        className="my-5 object-contain transition-all duration-300 center-x [--img-outline-color:transparent] hover:[--img-outline-color:white]"
         placeholder="shimmer"
-        src={'https://images.unsplash.com/photo-1704722105454-2625cbecde68'}
-        width={700}
+        src={'/public/castle.png'}
+        width={400}
+        style={{
+          filter:
+            'drop-shadow(2.5px 0px 1px var(--img-outline-color)) drop-shadow(-2.5px 0px 1px var(--img-outline-color)) drop-shadow(0px 2.5px 1px var(--img-outline-color)) drop-shadow(0px -2.5px 1px var(--img-outline-color))',
+        }}
       />
-      <center>{process.env.BASE_URL}</center>
-      <center>{process.env.NEXT_PUBLIC_PUBLISHABLE_KEY}</center>
-      <Suspense fallback={<center>Loading ...</center>}>
-        <ThemeToggle />
-      </Suspense>
-    </section>
+    </Motion>
   );
 }
