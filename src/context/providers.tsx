@@ -8,7 +8,7 @@ import { Cursor } from '@/components/cursor';
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ThemeProvider defaultTheme="system">
+      <ThemeProvider defaultTheme="dark">
         {children}
         <TailwindIndicator />
         <Cursor />
