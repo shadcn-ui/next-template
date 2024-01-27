@@ -15,8 +15,8 @@
     "preview": "next build && next start",
     "typecheck": "tsc --noEmit",
     "shadcn": "npx shadcn-ui@latest add",
-    "format:write": "prettier --write \"src/**/*.{ts,tsx,mdx}\" --cache",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,mdx}\" --cache",
+    "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
     "prepare": "husky install"
   },
   "dependencies": {

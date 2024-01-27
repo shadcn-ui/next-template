@@ -2,7 +2,7 @@ import { Metadata, Viewport } from 'next';
 
 import { NavType } from '@/types/index.types';
 
-import packageJson from '../../package.json';
+import packageJson from '../package.json';
 
 export type SiteConfig = typeof siteConfig;
 

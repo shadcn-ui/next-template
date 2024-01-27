@@ -1,0 +1,12 @@
+:root {
+  --radius: 0.5rem;
+}
+
+/* note: fixed layout shift of select box */
+body[style] {
+  margin-right: 0 !important;
+}
+
+a {
+  cursor: pointer;
+}
