@@ -7,13 +7,17 @@ export const theme = plugin(() => {}, {
     container: {
       center: true,
       padding: {
-        DEFAULT: '0.25rem',
-        sm: '0.5rem',
-        lg: '1rem',
-        '2xl': '2rem',
+        DEFAULT: '1rem',
+        lg: '2rem',
+        xl: '3rem',
+        '2xl': '4rem',
       },
       screens: {
-        '2xl': '1400px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        '2xl': '1320px',
       },
     },
     extend: {

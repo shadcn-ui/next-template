@@ -9,7 +9,7 @@ export default function IndexLayout({ children }: IndexLayoutProps) {
   return (
     <>
       <Navbar />
-      {children}
+      <main className="flex-1">{children}</main>
       <GoToTop />
     </>
   );

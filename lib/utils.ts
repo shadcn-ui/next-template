@@ -1,3 +1,5 @@
+export const isSSR = typeof window === 'undefined';
+
 export const svgToBase64 = (str: string) =>
   typeof window === 'undefined'
     ? Buffer.from(str).toString('base64')

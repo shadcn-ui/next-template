@@ -27,7 +27,7 @@ export function Navbar() {
           leaved,
       })}
     >
-      <nav className="container flex items-center justify-between px-5 py-4">
+      <nav className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-4">
           <Brand />
         </div>
