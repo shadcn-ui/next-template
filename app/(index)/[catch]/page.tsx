@@ -8,6 +8,7 @@ export async function generateStaticParams() {
     catch: el.href.split('/').slice(-1)[0],
   }));
 }
+
 export default function CatchPage({ params }: { params: { catch: string } }) {
   return (
     <section className="fixed inset-0 flex min-h-full flex-col items-center justify-center">

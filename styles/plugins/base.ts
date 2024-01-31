@@ -17,12 +17,12 @@ export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
   });
   addBase({
     html: {
-      overflowX: 'clip',
+      overflow: 'clip',
       '--scroll-behavior': 'smooth !important',
       scrollBehavior: 'smooth !important',
     },
     body: {
-      '@apply bg-background text-foreground min-h-screen antialiased overflow-x-clip selection:text-white selection:bg-primary':
+      '@apply bg-background text-foreground min-h-screen antialiased overflow-clip selection:text-white selection:bg-primary':
         {},
       'font-feature-settings': `'rlig' 1, 'calt' 1`,
     },

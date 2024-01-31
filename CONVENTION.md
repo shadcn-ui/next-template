@@ -48,7 +48,7 @@ Example:
 
 Suppose there is a post page now. This page consists of Sections 1 to 3.
 
-```
+```sh
 .
 ├── actions
 │   └── write-file.ts
@@ -127,7 +127,8 @@ Suppose there is a post page now. This page consists of Sections 1 to 3.
 ### Components
 
 - Use Pascal Case as react component naming convention. e.g: UserProfile.tsx
-- When directory name is multiple words, use dash(-) as separator. e.g: user-profile
+- Use camel Case for functions and utilities. e.g: getData.ts
+- When directory name is multiple words, use dash(-) as separator. e.g: user-data
 - Each component file should only contains one exported component.
 
 ### State management
@@ -142,13 +143,11 @@ Suppose there is a post page now. This page consists of Sections 1 to 3.
 
 ### Icons
 
-Currently, `Remix Icon` is recommended as icon library.
-
-<https://remixicon.com/>
+Currently, `Lucide Icons` is recommended as icon library.
 
 The package size of `react-icons`` is too large. So, we should not use it.
 
-# Reference
+## Reference
 
 <https://i18nexus.com/tutorials/nextjs/react-i18next>
 
