@@ -16,7 +16,6 @@ build
 # misc
 .DS_Store
 *.pem
-pnpm-lock.yaml
 
 # debug
 npm-debug.log*
@@ -41,4 +40,5 @@ yarn-error.log*
 
 # other file
 tsconfig.tsbuildinfo
+pnpm-lock.yaml
 bun.lockb

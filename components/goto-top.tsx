@@ -30,13 +30,13 @@ export function GoToTop() {
     <>
       <button
         ref={goToTopRef}
-        className="fixed bottom-6 right-6 z-50 hidden h-6 w-6 md:bottom-10 md:right-10 md:h-10 md:w-10"
+        className="fixed bottom-6 right-6 z-50 hidden size-6 md:bottom-10 md:right-10 md:size-10"
         title="Go To Top"
         onClick={goToTop}
       >
-        <div className="grid h-full w-full place-content-center rounded-full bg-primary/80 text-foreground shadow-md hover:bg-primary">
+        <div className="grid size-full place-content-center rounded-full bg-primary/80 text-foreground shadow-md hover:bg-primary">
           <svg
-            className="h-4 w-4 md:h-6 md:w-6"
+            className="size-4 md:size-6"
             fill="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
