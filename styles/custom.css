@@ -1,6 +1,3 @@
-:root {
-  --radius: 0.5rem;
-}
 /* done: fixed layout shift of select box */
 body[style] {
   margin-right: 0 !important;
