@@ -6,6 +6,7 @@ import { createThemes } from 'tw-colors';
 import { colors } from '../../config/colors';
 import { base } from './base';
 import { theme } from './theme';
+import { typography } from './typography';
 import { utilities } from './utilities';
 
 const themePreset = {
@@ -14,6 +15,7 @@ const themePreset = {
     theme,
     base,
     utilities,
+    typography,
     containerQueries,
     animations,
     createThemes(colors),

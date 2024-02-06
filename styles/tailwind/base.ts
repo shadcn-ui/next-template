@@ -1,6 +1,11 @@
 import plugin from 'tailwindcss/plugin';
 
-export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
+export const base = plugin(function ({
+  addBase,
+  addVariant,
+  matchVariant,
+  corePlugins,
+}) {
   const states = { selected: true, state: 'open' };
   addBase({
     '::-webkit-scrollbar': { width: '8px', height: '8px' },
