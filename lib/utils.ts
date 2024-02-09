@@ -21,3 +21,13 @@ export const shimmer = (w: number | `${number}`, h: number | `${number}`) => {
   <animate xlink:href="#r" attributeName="x" from="-${w}" to="${w}" dur="1s" repeatCount="indefinite"  />
 </svg>`;
 };
+
+export function convertToNormalCase(inputString: string) {
+  const splittedString = inputString.split('.').pop();
+  const string = splittedString || inputString;
+  const words = string.replace(/([a-z])([A-Z])/g, '$1 $2').split(/_|\s+/);
+  const capitalizedWords = words.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  );
+  return capitalizedWords.join(' ');
+}
