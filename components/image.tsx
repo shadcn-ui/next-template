@@ -4,7 +4,7 @@ import React from 'react';
 import NextImageComponent from 'next/image';
 import { cleanSrc } from '@sohanemon/utils';
 
-import { ImgProps } from '@/types/image.types';
+import { ImgProps } from '@/types/comp.types';
 import { shimmer, svgToBase64 } from '@/lib/utils';
 
 function Image({

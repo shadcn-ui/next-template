@@ -1,6 +1,6 @@
 import { NextFetchEvent, NextRequest, NextResponse } from 'next/server';
 
-import { MiddlewareFactory } from '@/types/middleware.types';
+import type { MiddlewareFactory } from '@/types/index.types';
 
 import { match } from '.';
 

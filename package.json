@@ -51,7 +51,6 @@
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
     "tw-colors": "^3.3.1",
-    "typescript": "^5.3.3",
-    "zod": "^3.22.4"
+    "typescript": "^5.3.3"
   }
 }

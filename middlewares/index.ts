@@ -1,6 +1,6 @@
 import { NextMiddleware, NextRequest, NextResponse } from 'next/server';
 
-import { MiddlewareFactory } from '@/types/middleware.types';
+import type { MiddlewareFactory } from '@/types/index.types';
 
 export function stackMiddlewares(
   functions: MiddlewareFactory[] = [],

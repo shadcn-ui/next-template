@@ -20,15 +20,6 @@ export const theme = plugin(() => {}, {
       },
     },
     extend: {
-      height: {
-        screen: '100dvh',
-      },
-      minHeight: {
-        screen: '100dvh',
-      },
-      maxHeight: {
-        screen: '100dvh',
-      },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
