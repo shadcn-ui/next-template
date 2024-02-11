@@ -15,7 +15,7 @@ const fullPosition = {
   'left-full': { x: '-99%', opacity: 0 },
   'right-full': { x: '99%', opacity: 0 },
   'top-full': { y: '-99%', opacity: 0 },
-  'bottom-full': { y: '-99%', opacity: 0 },
+  'bottom-full': { y: '99%', opacity: 0 },
 } satisfies Variants;
 
 export const motionVariants = {
