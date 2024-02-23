@@ -8,7 +8,7 @@ export default function RootTemplate({ children }: RootTemplateProps) {
   return (
     <>
       <Motion
-        initial="top-full"
+        initial="hidden"
         transition={{ duration: 0.4, ease: 'easeInOut' }}
       >
         {children}

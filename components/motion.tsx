@@ -3,7 +3,7 @@
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { VariantLabels, Variants, motion } from 'framer-motion';
+import { Variants, motion } from 'framer-motion';
 
 import {
   MotionVariantsType,
@@ -46,7 +46,7 @@ const withVariants =
         key={id}
         ref={ref}
         variants={motionVariants}
-        viewport={{ once: typeof always === 'undefined' ? true : false }}
+        viewport={{ once: !always }}
         whileInView={props.animate ? undefined : whileInView || 'visible'}
         transition={{
           duration: 0.3,
