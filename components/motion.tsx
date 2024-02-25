@@ -2,7 +2,6 @@
 'use client';
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
-import { Slot } from '@radix-ui/react-slot';
 import { Variants, motion } from 'framer-motion';
 
 import {
@@ -12,7 +11,6 @@ import {
 
 interface MotionProps extends ComponentPropsWithRef<'div'> {
   as?: ElementType;
-  asChild?: boolean;
   variants?: Variants;
   always?: boolean;
   initial?: MotionVariantsType | MotionVariantsType[];
@@ -21,8 +19,8 @@ interface MotionProps extends ComponentPropsWithRef<'div'> {
 }
 
 const Component = forwardRef<HTMLDivElement, MotionProps>(
-  ({ variants, as = 'div', asChild, ...props }, ref) => {
-    const Comp = asChild ? Slot : as;
+  ({ variants, as = 'div', ...props }, ref) => {
+    const Comp = as;
     return <Comp ref={ref} {...props} />;
   }
 );
