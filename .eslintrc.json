@@ -8,7 +8,7 @@
     "plugin:tailwindcss/recommended",
     "plugin:jsx-a11y/recommended"
   ],
-  "plugins": ["tailwindcss", "react-refresh", "jsx-a11y"],
+  "plugins": ["tailwindcss", "jsx-a11y"],
   "rules": {
     "@next/next/no-html-link-for-pages": "off",
     "react/react-in-jsx-scope": "off",
@@ -22,26 +22,7 @@
         "reservedFirst": true
       }
     ],
-    "tailwindcss/no-custom-classname": "off",
-    "react-refresh/only-export-components": [
-      "warn",
-      {
-        "allowExportNames": [
-          "runtime",
-          "metadata",
-          "viewport",
-          "revalidate",
-          "dynamic",
-          "dynamicParams",
-          "maxDuration",
-          "fetchCache",
-          "generateStaticParams",
-          "generateImageMetadata",
-          "generateMetadata",
-          "preferredRegion"
-        ]
-      }
-    ]
+    "tailwindcss/no-custom-classname": "off"
   },
   "settings": {
     "tailwindcss": {
