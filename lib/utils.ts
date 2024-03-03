@@ -1,9 +1,7 @@
 export const isSSR = typeof window === 'undefined';
 
 export const svgToBase64 = (str: string) =>
-  typeof window === 'undefined'
-    ? Buffer.from(str).toString('base64')
-    : window.btoa(str);
+  isSSR ? Buffer.from(str).toString('base64') : window.btoa(str);
 
 export const shimmer = (w: number | `${number}`, h: number | `${number}`) => {
   const color = { center: '#efefef', side: '#dfdfdf' };

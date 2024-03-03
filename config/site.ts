@@ -12,7 +12,6 @@ export const siteConfig: {
   metadata: Metadata;
   viewport: Viewport;
   nav: NavType[];
-  underConstruction: NavType[];
 } = {
   metadata: {
     title: {
@@ -37,5 +36,4 @@ export const siteConfig: {
     { title: 'home', href: '/home' },
     { title: 'images', href: '/images' },
   ],
-  underConstruction: [{ title: 'about', href: '/about' }],
 };

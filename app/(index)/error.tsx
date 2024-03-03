@@ -8,10 +8,12 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <center>
+    <center className="min-h-[50vh]">
       <h2>Something went wrong!</h2>
       <p>{error.message}</p>
-      <button onClick={() => reset()}>Try again</button>
+      <button className="rounded-lg border px-2 py-1" onClick={() => reset()}>
+        Try again
+      </button>
     </center>
   );
 }

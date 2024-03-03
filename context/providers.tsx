@@ -1,15 +1,12 @@
 'use client';
 
-import { TailwindIndicator } from '@sohanemon/utils/components';
-import { ThemeProvider } from 'next-themes';
+import { ResponsiveIndicator } from '@sohanemon/utils/components';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <ThemeProvider defaultTheme="system">
-        {children}
-        <TailwindIndicator />
-      </ThemeProvider>
+      {children}
+      <ResponsiveIndicator />
     </>
   );
 }

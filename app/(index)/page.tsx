@@ -1,8 +1,5 @@
-import { Suspense } from 'react';
-
 import { Img } from '@/components/image';
-
-import { ThemeToggle } from './_components/theme-toggle';
+import { Motion } from '@/components/motion';
 
 export const metadata = {
   title: 'Home',
@@ -10,9 +7,12 @@ export const metadata = {
 export default async function IndexPage() {
   return (
     <section>
-      <h4 className="mt-20 text-7xl ">
-        Update Readme, Site.ts and package.json
-      </h4>
+      <div className="my-5 h-[200vh]" />
+      <Motion initial="top">
+        <h4 className="mt-20 text-7xl ">
+          Update Readme, Site.ts and package.json
+        </h4>
+      </Motion>
       <Img
         className="my-5 aspect-video rounded-md object-cover center-x"
         placeholder="shimmer"
@@ -20,9 +20,6 @@ export default async function IndexPage() {
         width={700}
       />
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      <Suspense fallback={<center>Loading ...</center>}>
-        <ThemeToggle />
-      </Suspense>
     </section>
   );
 }
