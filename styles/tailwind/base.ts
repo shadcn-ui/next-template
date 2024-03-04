@@ -1,7 +1,12 @@
 import plugin from 'tailwindcss/plugin';
 
-export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
-  const states = { selected: true, state: 'open' };
+export const base = plugin(function ({ addBase, addVariant, matchVariant, e }) {
+  const states = {
+    selected: 'data-selected=true',
+    open: 'data-state=open',
+    on: 'data-state=on',
+  };
+
   addBase({
     '::-webkit-scrollbar': { width: '8px', height: '8px' },
     '::-webkit-scrollbar-thumb': {
@@ -30,13 +35,17 @@ export const base = plugin(function ({ addBase, addVariant, matchVariant }) {
       '@apply bg-transparent outline-none w-full': {},
     },
   });
-  Object.keys(states).forEach((state) =>
-    addVariant(
-      state,
-      `&[data-${state}="${states[state as keyof typeof states]}"]`
-    )
+  Object.entries(states).forEach(([name, definition]) =>
+    addVariant(name, `&[${definition}]`)
   );
   matchVariant('nth', (value) => {
     return `&:nth-child(${value})`;
   });
+  addVariant('keyboard', (({ modifySelectors, separator }: any) => {
+    modifySelectors(({ className }: { className: string }) => {
+      return `body[data-keyboard='open'] .${e(
+        `keyboard${separator}${className}`
+      )}`;
+    });
+  }) as any);
 });
