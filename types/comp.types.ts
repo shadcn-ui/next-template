@@ -1,7 +1,14 @@
-import { ComponentPropsWithRef } from 'react';
-import Image from 'next/image';
+import * as React from 'react';
+import type { ImageProps } from 'next/image';
 
-export type ImgProps = {
-  alt?: string;
-  placeholder?: 'blur' | 'color' | 'shimmer' | 'empty' | `data:image/${string}`;
-} & Omit<ComponentPropsWithRef<typeof Image>, 'placeholder' | 'alt'>;
+type OmittedImageProps = 'height' | 'width' | 'srcSet' | 'placeholder' | 'alt';
+type ModifiedImageProps = Partial<{
+  alt: string;
+  width: number;
+  height: number;
+  placeholder: 'blur' | 'color' | 'shimmer' | 'empty' | `data:image/${string}`;
+}>;
+
+export type ImgProps = ModifiedImageProps &
+  Omit<ImageProps, OmittedImageProps> &
+  Omit<React.ImgHTMLAttributes<HTMLImageElement>, OmittedImageProps>;

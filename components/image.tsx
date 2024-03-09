@@ -19,7 +19,7 @@ function Image({
 }: ImgProps) {
   return (
     <NextImageComponent
-      alt={alt || 'Picture Element'}
+      alt={alt || src.substring(src.lastIndexOf('/') + 1) || 'Picture Element'}
       height={height || width || 300}
       placeholder={placeholder as any}
       src={cleanSrc(src as string)}
@@ -32,7 +32,7 @@ function Image({
   );
 }
 
-export const Img = ({ placeholder, ...props }: ImgProps) => {
+export const Img: React.FC<ImgProps> = ({ placeholder, ...props }) => {
   const imgComp: Record<string, React.ReactNode> = {
     shimmer: (
       <Image
