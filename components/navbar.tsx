@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn, isNavActive } from '@sohanemon/utils';
+import { Iconify } from '@sohanemon/utils/components';
 import { useClickOutside } from '@sohanemon/utils/hooks';
 import { AnimatePresence } from 'framer-motion';
 
@@ -11,7 +12,6 @@ import { siteConfig } from '@/config/site';
 import useNavToggle from '@/hooks/nav-toggle';
 
 import { Brand } from './brand';
-import { Icons } from './icons';
 import { Motion } from './motion';
 
 export function Navbar() {
@@ -28,18 +28,18 @@ export function Navbar() {
       })}
     >
       <nav className="container flex items-center justify-between py-4">
-        <div className="flex items-center gap-4">
-          <Brand />
-        </div>
+        <Brand />
         <NavContent />
         {!isMenuOpen ? (
-          <Icons.menu
+          <Iconify
             className="cursor-pointer text-foreground lg:hidden"
+            icon="lucide:menu"
             onClick={() => setIsMenuOpen(true)}
           />
         ) : (
-          <Icons.x
+          <Iconify
             className="cursor-pointer text-foreground lg:hidden"
+            icon="lucide:x"
             onClick={() => setIsMenuOpen(false)}
           />
         )}
