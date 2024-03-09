@@ -5,7 +5,10 @@ import { usePathname } from 'next/navigation';
 
 import { Brand } from '@/components/brand';
 
-export default function CatchPage() {
+export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
+export default function NotFound() {
   const pathname = usePathname();
 
   return (
