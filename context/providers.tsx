@@ -1,14 +1,14 @@
 'use client';
 
-import { isSSR } from "@/lib/utils";
-import { ResponsiveIndicator } from "@sohanemon/utils/components";
+import { ResponsiveIndicator } from '@sohanemon/utils/components';
 
+import { isSSR } from '@/lib/utils';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-        {children}
-        {isSSR || <ResponsiveIndicator />}
+      {children}
+      {isSSR || <ResponsiveIndicator />}
     </>
   );
 }
