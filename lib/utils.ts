@@ -1,11 +1,11 @@
-export const isSSR = typeof window === 'undefined';
+export const isSSR = typeof window === "undefined";
 
 export const svgToBase64 = (str: string) =>
-  isSSR ? Buffer.from(str).toString('base64') : window.btoa(str);
+	isSSR ? Buffer.from(str).toString("base64") : window.btoa(str);
 
 export const shimmer = (w: number | `${number}`, h: number | `${number}`) => {
-  const color = { center: '#efefef', side: '#dfdfdf' };
-  return `
+	const color = { center: "#efefef", side: "#dfdfdf" };
+	return `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <linearGradient id="g">
@@ -21,11 +21,11 @@ export const shimmer = (w: number | `${number}`, h: number | `${number}`) => {
 };
 
 export function convertToNormalCase(inputString: string) {
-  const splittedString = inputString.split('.').pop();
-  const string = splittedString || inputString;
-  const words = string.replace(/([a-z])([A-Z])/g, '$1 $2').split(/_|\s+/);
-  const capitalizedWords = words.map(
-    (word) => word.charAt(0).toUpperCase() + word.slice(1)
-  );
-  return capitalizedWords.join(' ');
+	const splittedString = inputString.split(".").pop();
+	const string = splittedString || inputString;
+	const words = string.replace(/([a-z])([A-Z])/g, "$1 $2").split(/_|\s+/);
+	const capitalizedWords = words.map(
+		(word) => word.charAt(0).toUpperCase() + word.slice(1),
+	);
+	return capitalizedWords.join(" ");
 }

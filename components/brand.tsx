@@ -1,16 +1,16 @@
-import { HtmlHTMLAttributes } from 'react';
-import Link from 'next/link';
-import { cn } from '@sohanemon/utils';
+import { cn } from "@sohanemon/utils";
+import Link from "next/link";
+import type { HtmlHTMLAttributes } from "react";
 
-interface CompType {}
+type CompType = {};
 
 export function Brand({
-  className,
-  ...props
+	className,
+	...props
 }: HtmlHTMLAttributes<HTMLAnchorElement> & CompType) {
-  return (
-    <Link href={'/'} {...props} className={cn('', className)}>
-      LOGO
-    </Link>
-  );
+	return (
+		<Link href={"/"} {...props} className={cn("", className)}>
+			LOGO
+		</Link>
+	);
 }
