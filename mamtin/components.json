@@ -1,0 +1,12 @@
+{
+  "style": "default",
+  "tsx": true,
+  "rsc": true,
+  "tailwind": {
+    "baseColor": "neutral",
+    "config": "tailwind.config.ts",
+    "css": "styles/globals.css",
+    "cssVariables": true
+  },
+  "aliases": { "components": "@/components", "utils": "@sohanemon/utils" }
+}

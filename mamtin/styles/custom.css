@@ -1,0 +1,18 @@
+/* done: fixed layout shift of select box */
+body[style] {
+  margin-right: 0 !important;
+}
+
+a {
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
