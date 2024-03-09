@@ -5,6 +5,7 @@ import { fonts } from '@/lib/fonts';
 
 import '@/styles/custom.css';
 import '@/styles/globals.css';
+
 import { cn } from '@sohanemon/utils';
 import { Analytics } from '@vercel/analytics/react';
 

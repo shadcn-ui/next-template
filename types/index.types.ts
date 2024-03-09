@@ -1,7 +1,6 @@
-import { NextMiddleware } from 'next/server';
-
-import type { ImageProps } from 'next/image';
 import * as React from 'react';
+import type { ImageProps } from 'next/image';
+import { NextMiddleware } from 'next/server';
 
 export type PageProps = Readonly<{
   params: { slug: string };
@@ -24,4 +23,3 @@ type ModifiedImageProps = Partial<{
 export type ImgProps = ModifiedImageProps &
   Omit<ImageProps, OmittedImageProps> &
   Omit<React.ImgHTMLAttributes<HTMLImageElement>, OmittedImageProps>;
-

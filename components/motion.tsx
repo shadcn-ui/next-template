@@ -2,11 +2,11 @@
 'use client';
 
 import { ComponentPropsWithRef, ElementType, forwardRef, useId } from 'react';
-import { Variants, motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 import {
-  MotionVariantsType,
   motionVariants,
+  MotionVariantsType,
 } from '@/config/variants/motion.variant';
 
 interface MotionProps extends ComponentPropsWithRef<'div'> {

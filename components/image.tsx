@@ -1,11 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 
-import { cleanSrc } from '@sohanemon/utils';
-import NextImageComponent from 'next/image';
 import React from 'react';
+import NextImageComponent from 'next/image';
+import { cleanSrc } from '@sohanemon/utils';
 
-import { shimmer, svgToBase64 } from '@/lib/utils';
 import type { ImgProps } from '@/types/index.types';
+import { shimmer, svgToBase64 } from '@/lib/utils';
 
 function Image({
   src,
