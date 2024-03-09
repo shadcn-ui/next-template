@@ -20,7 +20,6 @@ const nextConfig = {
     },
   },
   reactStrictMode: true,
-  webVitalsAttribution: ['CLS', 'LCP'],
   compiler: { removeConsole: process.env.NODE_ENV === 'production' },
   typescript: { ignoreBuildErrors: process.env.NODE_ENV === 'development' },
 };
