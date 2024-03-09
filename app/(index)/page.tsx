@@ -7,7 +7,7 @@ export const metadata = {
 export default async function IndexPage() {
   return (
     <section>
-      <div className="my-5 h-[200vh]" />
+      <div className="my-5" />
       <Motion initial="top">
         <h4 className="mt-20 text-7xl ">
           Update Readme, Site.ts and package.json
