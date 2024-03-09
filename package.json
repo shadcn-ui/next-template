@@ -14,7 +14,7 @@
 		"lint:fix": "biome check --apply .",
 		"preview": "next build && next start",
 		"typecheck": "tsc --noEmit",
-		"format:write": "biome format . --write",
+		"format:write": "biome format {./app,./lib} --write",
 		"format:check": "biome format .",
 		"prepare": "husky install"
 	},

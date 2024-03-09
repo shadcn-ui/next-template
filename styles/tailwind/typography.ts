@@ -21,10 +21,12 @@ export const typography = plugin(
 			},
 			extend: {
 				fontFamily: fontVariables.reduce(
-					(p, c) => ({
-						...p,
-						[c.split("-font-")[1] as string]: [`var(${c})`],
-					}),
+					(p: { [key: string]: string[] }, c: string) => {
+						const key = c.split("-font-")[1] as string;
+						const newObj = Object.assign({}, p);
+						newObj[key] = [`var(${c})`];
+						return newObj;
+					},
 					{},
 				),
 			},

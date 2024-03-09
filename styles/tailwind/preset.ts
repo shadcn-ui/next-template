@@ -1,4 +1,3 @@
-import containerQueries from "@tailwindcss/container-queries";
 import type { Config } from "tailwindcss";
 import animations from "tailwindcss-animate";
 import { createThemes } from "tw-colors";
@@ -16,7 +15,6 @@ const themePreset = {
 		base,
 		utilities,
 		typography,
-		containerQueries,
 		animations,
 		createThemes(colors),
 	],
