@@ -18,14 +18,12 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <>
-      <html suppressHydrationWarning className="scroll-pt-16 default" lang="en">
-        <head />
-        <body className={cn('flex min-h-screen flex-col font-sans', fonts)}>
-          <Providers>{children}</Providers>
-          <Analytics />
-        </body>
-      </html>
-    </>
+    <html suppressHydrationWarning className="scroll-pt-16 default" lang="en">
+      <head />
+      <body className={cn('flex min-h-screen flex-col font-sans', fonts)}>
+        <Providers>{children}</Providers>
+        <Analytics />
+      </body>
+    </html>
   );
 }
