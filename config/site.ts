@@ -9,10 +9,12 @@ export type SiteConfig = typeof siteConfig;
 const favicon = packageJson.icon;
 
 export const siteConfig: {
+  remoteUrl: string;
   metadata: Metadata;
   viewport: Viewport;
   nav: NavType[];
 } = {
+  remoteUrl: `https://${packageJson.name.toLowerCase()}.vercel.app`,
   metadata: {
     title: {
       default: packageJson.name.toUpperCase(),

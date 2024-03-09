@@ -11,7 +11,6 @@ export const colors = {
     destructive: '#f95757',
     'destructive-foreground': '#fafafa',
     border: '#e4e4e4',
-    input: '#e4e4e4',
     ring: '#ff6767',
   },
 };
