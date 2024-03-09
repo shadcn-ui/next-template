@@ -9,7 +9,7 @@ const useNavToggle = () => {
   const update = useCallback(() => {
     if (scrollY.get() > 300) setLeaved(true);
     else setLeaved(false);
-    if (scrollY.get() > scrollY.getPrevious() && leaved) {
+    if (scrollY.get() > (scrollY.getPrevious() || 0) && leaved) {
       return setHidden(true);
     }
 
