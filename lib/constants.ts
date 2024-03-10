@@ -1,1 +1,1 @@
-export const HOME_ROUTE = "/home";
+export const HOME_ROUTE = '/home';
